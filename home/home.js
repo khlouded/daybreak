@@ -100,43 +100,35 @@ $(window).scroll(function() {
         block.css("background-color", "#D4DCDE"); // background colour of bodys
     } else if (wScroll >= desStart + desLength - windowH*titleChange && wScroll < C_oneStart + C_oneLength - windowH*titleChange) {
         //case one
-        block.css("background-color", "#000000"); // background colour of bodys
-        
-        // quick maths
-        let scrollValue1 = Math.abs(wScroll - (C_oneStart - windowH*titleChange)); // get the value of the scroll starting from the beginning of this section
-        let scrollPercent1 = (scrollValue1 / C_oneLength) * 100; //get the percentage of scroll in the specific breakpoint section
-        
+        block.css("background-color", "#000000");
+        let scrollValue1 = Math.abs(wScroll - (C_oneStart - windowH*titleChange));
+        let scrollPercent1 = (scrollValue1 / C_oneLength) * 100;        
         c1_i1.css({"background-position":"50% " + scrollPercent1 +"%"});
         c1_i2.css({"background-position": scrollPercent1 +"% 50%"});
         c1_i3.css({"background-position":"50% " + (100 - scrollPercent1) +"%"});
     } else if (wScroll >= C_oneStart + C_oneLength - windowH*titleChange && wScroll < C_twoStart + C_twoLength - windowH*titleChange) {
         //case two
-        block.css("background-color", "#FFE66A"); // background colour of bodys
-        
-        // quick maths
-        let scrollValue2 = Math.abs(wScroll - (C_twoStart - windowH*titleChange)); // get the value of the scroll starting from the beginning of this section
-        let scrollPercent2 = (scrollValue2 / (C_twoLength + windowH*titleChange)) * 100; //get the percentage of scroll in the specific breakpoint section
+        block.css("background-color", "#FFE66A");       
+        let scrollValue2 = Math.abs(wScroll - (C_twoStart - windowH*titleChange)); 
+        let scrollPercent2 = (scrollValue2 / (C_twoLength + windowH*titleChange)) * 100;
         c2_i1.css({"background-position":"50% " + scrollPercent2 +"%"});
         c2_i2.css({"background-position": scrollPercent2 +"% 50%"});
         c2_i3.css({"background-position":"50% " + (100 - scrollPercent2) +"%"});
     } else if (wScroll >= C_twoStart + C_twoLength - windowH*titleChange && wScroll < C_threeStart + C_threeLength - windowH*titleChange) {
         //case three
-        block.css("background-color", "#FCFAF7"); // background colour of bodys
-        
-        // quick maths
-        let scrollValue3 = Math.abs(wScroll - (C_threeStart - windowH*titleChange)); // get the value of the scroll starting from the beginning of this section
-        let scrollPercent3 = (scrollValue3 / C_threeLength) * 100; //get the percentage of scroll in the specific breakpoint section
+        block.css("background-color", "#FCFAF7"); 
+        let scrollValue3 = Math.abs(wScroll - (C_threeStart - windowH*titleChange));
+        let scrollPercent3 = (scrollValue3 / C_threeLength) * 100;
         c3_i1.css({"background-position":"50% " + scrollPercent3 +"%"});
         c3_i2.css({"background-position": scrollPercent3 +"% 50%"});
         c3_i3.css({"background-position":"50% " + (100 - scrollPercent3) +"%"});
     } else if (wScroll >= C_threeStart + C_threeLength - windowH*titleChange && wScroll < footerStart + footerLength - windowH*titleChange) {
         //footer
-        block.css("background-color", "#FCFAF7"); // background colour of bodys
+        block.css("background-color", "#FCFAF7");
     }
 });
 }
 
-// Checks & runs
 (function($) {
     winScroll();
     footerReveal();
