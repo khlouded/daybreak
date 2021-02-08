@@ -59,9 +59,10 @@ $(window).scroll(function() {
         //header section
         let scrollValue = Math.abs(wScroll - headStart);
         let scrollPercent = (scrollValue / (headLength - windowH*titleChange)) * 100;
+        console.log(scrollPercent);
 
         navLogo_cont.addClass('nav_start').css({"transform":"translate(0," + startTransform()*((100 - scrollPercent)/100) +"px)"});
-        navHead.addClass('nav_start').css({"font-size": (startSizing()-logoFinalSize)*((100 - scrollPercent)/100) + logoFinalSize + "px", "opacity":1});
+        navHead.addClass('nav_start').css({"font-size": ((startSizing()-logoFinalSize)*((100 - scrollPercent)/100)) + logoFinalSize + "px", "opacity":1});
         navLogo_icon.addClass('nav_start');
         nav.addClass('nav_start');
         navSelect.addClass('nav_start');
