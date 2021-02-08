@@ -58,7 +58,7 @@ $(window).scroll(function() {
     if (wScroll >= -20 && wScroll < headStart + headLength - windowH*titleChange) {
         //header section
         let scrollValue = Math.abs(wScroll - headStart);
-        let scrollPercent = (scrollValue / headLength) * 100;
+        let scrollPercent = (scrollValue / (headLength - windowH*titleChange)) * 100;
 
         navLogo_cont.addClass('nav_start').css({"transform":"translate(0," + startTransform()*((100 - scrollPercent)/100) +"px)"});
         navHead.addClass('nav_start').css({"font-size": (startSizing()-logoFinalSize)*((100 - scrollPercent)/100) + logoFinalSize + "px", "opacity":1});
