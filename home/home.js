@@ -42,7 +42,7 @@ function winScroll() {
     const titleChange = 0.25;
     const logoFinalSize = 27;
     const logoHeaderWidth = 50;
-
+    console.log(s"working");
 $(window).scroll(function() {		
     let wScroll = $(window).scrollTop();
 
