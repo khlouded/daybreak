@@ -2,7 +2,8 @@ function winScroll() {
     //sections
     const secHead = $('#sec_heading');
     const secDes = $('#sec_description');
-    const secSticky = $('#sec_sticky');
+    const secType = $('#sec_type');
+    //
     const secArch = $('#sec_arch');
     const secArch_end = $('#sec_arch_end');
     const secPeople = $('#sec_people');
@@ -30,9 +31,9 @@ function winScroll() {
     const nextGradient = $('.next_ending_gradient');
     const nextText_des = $('next_explanation_p');
     //image
-    const napScroll1 = $('.scroll_image.nap_img3');
-    const napScroll2 = $('.scroll_image.imagetwo');
-    const napScroll3 = $('.scroll_image.todo_img2');
+    const napScroll1 = $('.nap_scroll_image.nap_img3');
+    const napScroll2 = $('.nap_scroll_image.imagetwo');
+    const napScroll3 = $('.nap_scroll_image.todo_img2');
     //mobile transform
     const img_des3 = $('.nap_img3');
     const img_people1 = $('.people_image1');
@@ -105,7 +106,7 @@ function winScroll() {
             archH1.css("opacity",1);
             gradient.css({"background-image":"linear-gradient(90deg, transparent " + scrollPercentArch*2 + "%, #000 " + scrollPercentArch*4 + "%)"});
             napScroll2.css({"background-position": 100 +"% 50%"});
-
+            //type
             mainP.addClass('cs_dark');
             bulletD.addClass('cs_dark');
             imgD.addClass('cs_dark');
@@ -116,7 +117,7 @@ function winScroll() {
             gradient.css({ "background-image": "linear-gradient(90deg, transparent " + 100 + "%, #000 " + 100 + "%)" });
             let scrollValuePeople = Math.abs(wScroll - (peopleStart - windowH*titleChange));
             let scrollPercentPeople = (scrollValuePeople / (peopleLength + people_endLength)) * 100;
-
+            //type
             mainP.addClass('cs_dark');
             bulletD.addClass('cs_dark');
             imgD.addClass('cs_dark');
@@ -175,14 +176,14 @@ function winScroll() {
             nextLink.css({"transform":"translate( 0,-" + scrollPercentNext**2/ + "%)"});
             // nextGradient.css({
             //     "display":"block",
-            //     "background-image":"linear-gradient(180deg, hsla(0, 0%, 100%, 0) , #fff)"
+            //     "background-image":"linear-gradient(180deg, hsla(0, 0%, 100%, 0), #fff)"
             // });
         } else {
             nextLink.css({ "transform": "translate( 0, 0%)" });
-            nextGradient.css({
-                "display":"none",
-                "background-image":"linear-gradient(180deg, hsla(0, 0%, 100%, 0), #fff)"
-            });
+            // nextGradient.css({
+            //     "display":"none",
+            //     "background-image":"linear-gradient(180deg, hsla(0, 0%, 100%, 0), #fff)"
+            // });
         }
 
         let timeout = null;
