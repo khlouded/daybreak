@@ -3,13 +3,10 @@ function winScroll() {
     const secHead = $('#sec_heading');
     const secDes = $('#sec_description');
     const secType = $('#sec_type');
+    const secAdv = $('#sec_adventure');
+
     //
-    const secArch = $('#sec_arch');
-    const secArch_end = $('#sec_arch_end');
-    const secPeople = $('#sec_people');
-    const secPeople_end = $('#sec_people_end');
-    const secTodo = $('#sec_todo');
-    const secOrg = $('#sec_org');
+
     const secNext = $('#sec_next');
     //size
     let headLength = secHead.innerHeight();
@@ -41,10 +38,7 @@ function winScroll() {
     const img_todo2 = $('.todo_img2');
     const img_org1 = $('org_img1');
     // typography
-    const mainP = $('.cs_main_p');
-    const bulletD = $('.cs_bullet_description');
-    const imgD = $('.cs_img_description');
-    const imgNumb = $(".cs_img_num");
+    const mainP = $('.clyx_colour');
 
     $(window).scroll(function() {
         let wScroll = $(window).scrollTop();
