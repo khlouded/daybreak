@@ -62,7 +62,7 @@ function winScroll() {
         else if (wScroll >= advStart + advLength - windowH*titleChange && wScroll < cluStart + cluLength - windowH*titleChange) {
             //clu
             block.css("background-color", "#FCED5F");
-            mainP.css({"color":"4303A7"});
+            mainP.css({"color":"#4303A7"});
         }
         else if (wScroll >= cluStart + cluLength - windowH*titleChange && wScroll < gymStart + gymLength - windowH*titleChange) {
             //gym
@@ -72,7 +72,7 @@ function winScroll() {
         else if (wScroll >= gymStart + gymLength - windowH*titleChange && wScroll < orgStart + orgLength - windowH*titleChange) {
             //org
             block.css("background-color", "#FCED5F");
-            mainP.css({"color":"4303A7"});
+            mainP.css({"color":"#4303A7"});
         }
         else if (wScroll >= orgStart + orgLength - windowH*titleChange && wScroll < caseStart + caseLength - windowH*titleChange) {
             block.css("background-color", "#f6f6f6");
