@@ -103,12 +103,10 @@ function winScroll() {
         function cancelNext() {
             timeout = null;
             clearTimeout(timeout);
-            nextText_des.html("Continue scrolling to view the next case study");
         }
 
         if (wScroll >= nextStart + nextLength*0.8 - windowH) {
             timeout = setTimeout(function() {
-                nextText_des.html("going to next case study");
                 let goTo = nextLink.attr("href");
                 window.location = goTo;
             }, 2500);

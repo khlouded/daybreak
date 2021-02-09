@@ -28,7 +28,6 @@ function winScroll() {
     const archH1 = $('.arch_heading');
     const nextLink = $('.next_cs_link');
     const nextGradient = $('.next_ending_gradient');
-    const nextText_des = $('next_explanation_p');
     //image
     const napScroll1 = $('.scroll_image.nap_img3');
     const napScroll2 = $('.scroll_image.imagetwo');
@@ -190,12 +189,10 @@ function winScroll() {
         function cancelNext() {
             timeout = null;
             clearTimeout(timeout);
-            nextText_des.html("Continue scrolling to view the next case study");
         }
 
         if (wScroll >= nextStart + nextLength*0.8 - windowH) {
             timeout = setTimeout(function() {
-                nextText_des.html("going to next case study");
                 let goTo = nextLink.attr("href");
                 window.location = goTo;
             }, 2500);
