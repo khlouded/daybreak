@@ -172,7 +172,7 @@ function winScroll() {
         if (wScroll >= nextStart - windowH*titleChange) {
             let scrollValueNext = Math.abs(wScroll - (nextStart - windowH*titleChange));
             let scrollPercentNext = (scrollValueNext /  (nextLength*0.5)) * 100;
-            nextLink.css({"transform":"translate( 0,-" + Math.sqrt(scrollPercentNext)*10 + "%)"});
+            nextLink.css({"transform":"translate( 0,-" + 20*Math.sqrt(Math.sqrt(scrollPercentNext)) + "%)"});
             // nextGradient.css({
             //     "display":"block",
             //     "background-image":"linear-gradient(180deg, hsla(0, 0%, 100%, 0) , #fff)"
