@@ -42,7 +42,7 @@ function winScroll() {
     const imgD = $('.cs_img_description');
     const imgNumb = $(".cs_img_num");
 
-    $(window).scroll(function() {
+    $(window).scroll($.throttle( 50, function() {
         let wScroll = $(window).scrollTop();
         let headStart = secHead.offset().top;
         let desStart = secDes.offset().top;
@@ -197,7 +197,7 @@ function winScroll() {
         } else {
             cancelNext();
         }
-    });
+    }));
 }
 function nextSlide() {
 

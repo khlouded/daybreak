@@ -39,7 +39,7 @@ function winScroll() {
     let C_threeLength = secC_three.innerHeight();
     let footerLength = secFooter.innerHeight();
 
-$(window).scroll(function() {		
+$(window).scroll($.throttle( 50, function() {		
     let wScroll = $(window).scrollTop();
 
     //position information
@@ -54,8 +54,9 @@ $(window).scroll(function() {
     if (wScroll >= -20 && wScroll < headStart + headLength - windowH*titleChange) {
         //header section
         let scrollValue = Math.abs(wScroll - headStart);
-        let scrollPercent = (scrollValue / (headLength - windowH*titleChange)) * 100;
-        console.log(scrollPercent);
+        let scrollPercent = (scrollValue / (headLength - windowH*titleChange)) * 100;453
+        
+        
 
         navLogo_cont.addClass('nav_start').css({"transform":"translate(0," + startTransform()*((100 - scrollPercent)/100) +"px)"});
         navHead.addClass('nav_start').css({"font-size": ((startSizing()-logoFinalSize)*((100 - scrollPercent)/100)) + logoFinalSize + "px", "opacity":1});
@@ -121,7 +122,7 @@ $(window).scroll(function() {
         //footer
         block.css("background-color", "#FCFAF7");
     }
-});
+}));
 }
 function startTransform() {
     //media queries

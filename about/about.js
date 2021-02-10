@@ -20,7 +20,7 @@ function winScroll() {
     const titleChange = 0.25; // shifting the scroll position in order to manipulate the breakpoints
     //const logoFinalSize = 27; // the final size of the logo text
 
-    $(window).scroll(function() {
+    $(window).scroll($.throttle( 50,function() {
         // variables that need to be calculated every time someone scrolls
         let wScroll = $(window).scrollTop();
 
@@ -59,7 +59,7 @@ function winScroll() {
         } else {
             introText.removeClass("word_enter");
         }
-    });
+    }));
 }
 // Checks & runs
 (function($) {
