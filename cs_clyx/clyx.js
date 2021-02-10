@@ -1,4 +1,3 @@
-function winScroll() {
     //sections
     const secHead = $('#sec_heading');
     const secDes = $('#sec_description');
@@ -10,6 +9,14 @@ function winScroll() {
     const secCase = $('#sec_case');
     const secNext = $('#sec_next');
     
+    
+    //objects
+    const nextLink = $('.next_cs_link');
+    const nextGradient = $('.next_ending_gradient');
+    //image
+    // typography
+    const mainP = $('.clyx_colour');
+function winScroll() {
     //size
     let headLength = secHead.innerHeight();
     let desLength = secDes.innerHeight();
@@ -20,12 +27,6 @@ function winScroll() {
     let orgLength = secOrg.innerHeight();
     let caseLength = secCase.innerHeight();
     let nextLength = secNext.innerHeight();
-    //objects
-    const nextLink = $('.next_cs_link');
-    const nextGradient = $('.next_ending_gradient');
-    //image
-    // typography
-    const mainP = $('.clyx_colour');
 
     $(window).scroll($.throttle( 50, function() {
         let wScroll = $(window).scrollTop();

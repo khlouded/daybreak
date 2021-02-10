@@ -16,7 +16,6 @@ function winScroll() {
     //let abIllLength = aboutIll.innerHeight();
     //let abSkillLength = aboutSkill.innerHeight();
     //let abWorkLength = aboutWork.innerHeight();
-
     $(window).scroll($.throttle( 50,function() {
         let wScroll = $(window).scrollTop();
 

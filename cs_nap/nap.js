@@ -9,17 +9,7 @@ const secPeople_end = $('#sec_people_end');
 const secTodo = $('#sec_todo');
 const secOrg = $('#sec_org');
 const secNext = $('#sec_next');
-//size
-let headLength = secHead.innerHeight();
-let desLength = secDes.innerHeight();
-let stickyLength = secSticky.innerHeight();
-let archLength = secArch.innerHeight();
-let arch_endLength = secArch_end.innerHeight();
-let peopleLength = secPeople.innerHeight();
-let people_endLength = secPeople_end.innerHeight();
-let todoLength = secTodo.innerHeight();
-let orgLength = secOrg.innerHeight();
-let nextLength = secNext.innerHeight();
+
 //objects
 const gradient = $('.reveal_gradient');
 const archH1 = $('.arch_heading');
@@ -42,7 +32,17 @@ const imgD = $('.cs_img_description');
 const imgNumb = $(".cs_img_num");
 
 function winScroll() {
-
+//size
+let headLength = secHead.innerHeight();
+let desLength = secDes.innerHeight();
+let stickyLength = secSticky.innerHeight();
+let archLength = secArch.innerHeight();
+let arch_endLength = secArch_end.innerHeight();
+let peopleLength = secPeople.innerHeight();
+let people_endLength = secPeople_end.innerHeight();
+let todoLength = secTodo.innerHeight();
+let orgLength = secOrg.innerHeight();
+let nextLength = secNext.innerHeight();
 
     $(window).scroll($.throttle( 50, function() {
         let wScroll = $(window).scrollTop();

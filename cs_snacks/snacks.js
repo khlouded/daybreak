@@ -1,22 +1,23 @@
-function winScroll() {
     //sections
     const secHead = $('#sec_heading');
     const secDes = $('#sec_description');
     const secYear = $('#sec_year');
     const secCase = $('#sec_case');
     const secNext = $('#sec_next');
-    //size
-    let headLength = secHead.innerHeight();
-    let desLength = secDes.innerHeight();
-    let yearLength = secYear.innerHeight();
-    let caseLength = secCase.innerHeight();
-    let nextLength = secNext.innerHeight();
+    
     //objects
     const nextLink = $('.next_cs_link');
     const nextGradient = $('.next_ending_gradient');
     //image
     // typography
     const mainP = $('.snacks_colour');
+function winScroll() {
+    //size
+    let headLength = secHead.innerHeight();
+    let desLength = secDes.innerHeight();
+    let yearLength = secYear.innerHeight();
+    let caseLength = secCase.innerHeight();
+    let nextLength = secNext.innerHeight();
 
     $(window).scroll($.throttle( 50,function() {
         let wScroll = $(window).scrollTop();
