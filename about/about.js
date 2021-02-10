@@ -61,12 +61,12 @@ function winScroll() {
         }
     });
 }
-
 // Checks & runs
 (function($) {
     typeWriter();
     winScroll();
     $(window).resize(function() {
+
         winScroll();
     });
 }(jQuery));

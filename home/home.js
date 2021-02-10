@@ -73,22 +73,19 @@ $(window).scroll(function() {
             navPseudoSVG.css({"fill":"#000"});
         }
     } else {
-        
         navLink_event.css({"pointer-events":"all"});
         navLogo_cont.removeClass('nav_start').css({"transform":"translate(0,0vH)"});
         nav.removeClass('nav_start');
         navSelect.removeClass('nav_start');
         navPseudoSVG.css({"fill":"#fff"});
+        navLogo_icon.removeClass('nav_start');
+        navPseudo.removeClass('nav_start').css({"margin-left":0 + "px", "opacity":0});
         if(screenMobileTop()) {
-            navPseudo.addClass('nav_start').css({"margin-left":0 + "px", "opacity":1});
             navHead.removeClass('nav_start').css({"font-size": logoFinalSize + "px", "opacity":0});
-            navLogo_box.removeClass('nav_start').css({"grid-template-columns": "1fr " + logoHeaderWidth + "px","-ms-grid-columns": "1fr " + logoHeaderWidth + "px"});
-            navLogo_icon.addClass('nav_start');
+            navLogo_box.removeClass('nav_start').css({"grid-template-columns": "0px " + logoHeaderWidth + "px","-ms-grid-columns": "0px " + logoHeaderWidth + "px"});
         } else {
-            navPseudo.removeClass("nav_start").css({"margin-left":0 + "px", "opacity":0});
             navHead.removeClass('nav_start').css({"font-size": logoFinalSize + "px", "opacity":1});
             navLogo_box.removeClass('nav_start').css({"grid-template-columns": "1fr " + logoHeaderWidth + "px", "-ms-grid-columns": "1fr " + logoHeaderWidth + "px"});
-            navLogo_icon.removeClass('nav_start');
         }
     }
 
