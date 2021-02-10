@@ -21,8 +21,6 @@ function winScroll() {
     let todoLength = secTodo.innerHeight();
     let orgLength = secOrg.innerHeight();
     let nextLength = secNext.innerHeight();
-    //timing
-    const titleChange = 0.25;
     //objects
     const gradient = $('.reveal_gradient');
     const archH1 = $('.arch_heading');
@@ -170,8 +168,8 @@ function winScroll() {
         }
         if (wScroll >= nextStart - windowH*titleChange) {
             let scrollValueNext = Math.abs(wScroll - (nextStart - windowH*titleChange));
-            let scrollPercentNext = (scrollValueNext /  (nextLength*0.25)) * 100;
-            nextLink.css({"transform":"translate( 0,-" + 10*Math.sqrt(scrollPercentNext) + "%)"});
+            let scrollPercentNext = (scrollValueNext /  (nextLength*0.5)) * 100;
+            nextLink.css({"transform":"translate( 0,-" + Math.sqrt(scrollPercentNext*100) + "%)"});
             nextGradient.css({
                 "display":"block",
                 "background-image":"linear-gradient(180deg, transparent " + (100 - scrollPercentNext) + "%, #fff 100%)"
@@ -212,17 +210,17 @@ function mobileMenu() {
     let navPseudo = $('.nav_pseudo_container');
     let navPseudoSVG = $(".nav_pseudo_container svg path");
     let navLink_event = $('.nav_logo_link');
+    
     navPseudoSVG.css({"fill":"#fff"});
+    navLogo_box.removeClass('nav_start').css({"grid-template-columns": "1fr " + logoHeaderWidth + "px", "-ms-grid-columns": "1fr " + logoHeaderWidth + "px"});
     navLink_event.css({"pointer-events":"all"});
     if(screenMobileTop()) {
         navPseudo.addClass('nav_start').css({"margin-left":0 + "px", "opacity":1});
         navHead.removeClass('nav_start').css({"font-size": logoFinalSize + "px", "opacity":0});
-        navLogo_box.removeClass('nav_start').css({"grid-template-columns": "1fr " + logoHeaderWidth + "px","-ms-grid-columns": "1fr " + logoHeaderWidth + "px"});
         navLogo_icon.addClass('nav_start');
     } else {
         navPseudo.removeClass("nav_start").css({"margin-left":0 + "px", "opacity":0});
         navHead.removeClass('nav_start').css({"font-size": logoFinalSize + "px", "opacity":1});
-        navLogo_box.removeClass('nav_start').css({"grid-template-columns": "1fr " + logoHeaderWidth + "px", "-ms-grid-columns": "1fr " + logoHeaderWidth + "px"});
         navLogo_icon.removeClass('nav_start');
     }
 }

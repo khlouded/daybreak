@@ -39,11 +39,6 @@ function winScroll() {
     let C_threeLength = secC_three.innerHeight();
     let footerLength = secFooter.innerHeight();
 
-    //numbers
-    const titleChange = 0.25;
-    const logoFinalSize = 27;
-    const logoHeaderWidth = 50;
-
 $(window).scroll(function() {		
     let wScroll = $(window).scrollTop();
 
@@ -79,7 +74,7 @@ $(window).scroll(function() {
         }
     } else {
         
-navLink_event.css({"pointer-events":"all"});
+        navLink_event.css({"pointer-events":"all"});
         navLogo_cont.removeClass('nav_start').css({"transform":"translate(0,0vH)"});
         nav.removeClass('nav_start');
         navSelect.removeClass('nav_start');

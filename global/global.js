@@ -20,6 +20,10 @@ const block = $('.white_block');
 let maxHeight = $('body').innerHeight();
 let windowH = $(window).innerHeight();
 //global actions and effects
+//numbers
+const titleChange = 0.25;
+const logoFinalSize = 27;
+const logoHeaderWidth = 50;
 
 function navClick() {
     navButt.click(function () {
