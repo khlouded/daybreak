@@ -16,7 +16,7 @@ const navMContact = $('.menu_link_contact');
 const nav_link = $('.nav_link');
 const navDelay = $('.nav_delay');
 // main large size variables
-const block = $('.white_block');
+let block = $('#block');
 let maxHeight = $('body').innerHeight();
 let windowH = $(window).innerHeight();
 //global actions and effects

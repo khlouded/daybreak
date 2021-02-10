@@ -10,7 +10,6 @@ function winScroll() {
     const secTodo = $('#sec_todo');
     const secOrg = $('#sec_org');
     const secNext = $('#sec_next');
-    let block = $('.nap_block');
     //size
     let headLength = secHead.innerHeight();
     let desLength = secDes.innerHeight();

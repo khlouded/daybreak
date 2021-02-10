@@ -5,7 +5,6 @@ function winScroll() {
     const secYear = $('#sec_year');
     const secCase = $('#sec_case');
     const secNext = $('#sec_next');
-    let block = $('.snacks_block');
     //size
     let headLength = secHead.innerHeight();
     let desLength = secDes.innerHeight();

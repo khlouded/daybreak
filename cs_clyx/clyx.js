@@ -9,7 +9,6 @@ function winScroll() {
     const secOrg = $('#sec_organize');
     const secCase = $('#sec_case');
     const secNext = $('#sec_next');
-    let block = $('.clyx_block');
     
     //size
     let headLength = secHead.innerHeight();
