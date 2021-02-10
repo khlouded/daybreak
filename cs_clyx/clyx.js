@@ -88,7 +88,7 @@ function winScroll() {
             let scrollPercentNext = (scrollValueNext /  (nextLength*0.5)) * 100;
             nextLink.css({"transform":"translate( 0,-" + Math.sqrt(scrollPercentNext*100) + "%)"});
             nextGradient.css({
-                "display":"block",
+                "display":"flex",
                 "background-image":"linear-gradient(180deg, transparent " + (100 - scrollPercentNext) + "%, #fff 100%)"
             });
         } else {
@@ -124,6 +124,7 @@ function nextSlide() {
 
 }
 (function($) {
+    nextSlide();
     winScroll();
     $(window).resize(function() {
         winScroll();
