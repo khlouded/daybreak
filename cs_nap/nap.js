@@ -1,46 +1,47 @@
+//sections
+const secHead = $('#sec_heading');
+const secDes = $('#sec_description');
+const secSticky = $('#sec_sticky');
+const secArch = $('#sec_arch');
+const secArch_end = $('#sec_arch_end');
+const secPeople = $('#sec_people');
+const secPeople_end = $('#sec_people_end');
+const secTodo = $('#sec_todo');
+const secOrg = $('#sec_org');
+const secNext = $('#sec_next');
+//size
+let headLength = secHead.innerHeight();
+let desLength = secDes.innerHeight();
+let stickyLength = secSticky.innerHeight();
+let archLength = secArch.innerHeight();
+let arch_endLength = secArch_end.innerHeight();
+let peopleLength = secPeople.innerHeight();
+let people_endLength = secPeople_end.innerHeight();
+let todoLength = secTodo.innerHeight();
+let orgLength = secOrg.innerHeight();
+let nextLength = secNext.innerHeight();
+//objects
+const gradient = $('.reveal_gradient');
+const archH1 = $('.arch_heading');
+const nextLink = $('.next_cs_link');
+const nextGradient = $('.next_ending_gradient');
+//image
+const napScroll1 = $('.scroll_image.nap_img3');
+const napScroll2 = $('.scroll_image.imagetwo');
+const napScroll3 = $('.scroll_image.todo_img2');
+//mobile transform
+const img_des3 = $('.nap_img3');
+const img_people1 = $('.people_image1');
+const img_todo1 = $('.todo_img1');
+const img_todo2 = $('.todo_img2');
+const img_org1 = $('org_img1');
+// typography
+const mainP = $('.cs_main_p');
+const bulletD = $('.cs_bullet_description');
+const imgD = $('.cs_img_description');
+const imgNumb = $(".cs_img_num");
+
 function winScroll() {
-    //sections
-    const secHead = $('#sec_heading');
-    const secDes = $('#sec_description');
-    const secSticky = $('#sec_sticky');
-    const secArch = $('#sec_arch');
-    const secArch_end = $('#sec_arch_end');
-    const secPeople = $('#sec_people');
-    const secPeople_end = $('#sec_people_end');
-    const secTodo = $('#sec_todo');
-    const secOrg = $('#sec_org');
-    const secNext = $('#sec_next');
-    //size
-    let headLength = secHead.innerHeight();
-    let desLength = secDes.innerHeight();
-    let stickyLength = secSticky.innerHeight();
-    let archLength = secArch.innerHeight();
-    let arch_endLength = secArch_end.innerHeight();
-    let peopleLength = secPeople.innerHeight();
-    let people_endLength = secPeople_end.innerHeight();
-    let todoLength = secTodo.innerHeight();
-    let orgLength = secOrg.innerHeight();
-    let nextLength = secNext.innerHeight();
-    //objects
-    const gradient = $('.reveal_gradient');
-    const archH1 = $('.arch_heading');
-    const nextLink = $('.next_cs_link');
-    const nextGradient = $('.next_ending_gradient');
-    //image
-    const napScroll1 = $('.scroll_image.nap_img3');
-    const napScroll2 = $('.scroll_image.imagetwo');
-    const napScroll3 = $('.scroll_image.todo_img2');
-    //mobile transform
-    const img_des3 = $('.nap_img3');
-    const img_people1 = $('.people_image1');
-    const img_todo1 = $('.todo_img1');
-    const img_todo2 = $('.todo_img2');
-    const img_org1 = $('org_img1');
-    // typography
-    const mainP = $('.cs_main_p');
-    const bulletD = $('.cs_bullet_description');
-    const imgD = $('.cs_img_description');
-    const imgNumb = $(".cs_img_num");
 
 
     $(window).scroll($.throttle( 50, function() {
@@ -185,17 +186,17 @@ function winScroll() {
     }));
 }
 function nextSlide() {
-    const secNext = $('#sec_next');
     let nextLength = secNext.innerHeight();
-    let nextStart = secNext.offset().top;
+    
     let timeout = null;
-
 
     function cancelNext() {
         timeout = null;
         clearTimeout(timeout);
     }
     $(window).scroll($.throttle( 50, function() {
+        let nextStart = secNext.offset().top;
+
         if (wScroll >= nextStart + nextLength*0.8 - windowH) {
             timeout = setTimeout(function() {
                 let goTo = nextLink.attr("href");

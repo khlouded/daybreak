@@ -63,13 +63,19 @@ function winScroll() {
                 "background-image":"linear-gradient(180deg, transparent 100%, #fff 100%);"
             });
         }
+    }));
+}
+function nextSlide() {
+    let nextLength = secNext.innerHeight();
+    
+    let timeout = null;
 
-        let timeout = null;
-
-        function cancelNext() {
-            timeout = null;
-            clearTimeout(timeout);
-        }
+    function cancelNext() {
+        timeout = null;
+        clearTimeout(timeout);
+    }
+    $(window).scroll($.throttle( 50, function() {
+        let nextStart = secNext.offset().top;
 
         if (wScroll >= nextStart + nextLength*0.8 - windowH) {
             timeout = setTimeout(function() {
@@ -80,6 +86,7 @@ function winScroll() {
             cancelNext();
         }
     }));
+
 }
 (function($) {
         winScroll();

@@ -27,7 +27,7 @@ function winScroll() {
     // typography
     const mainP = $('.clyx_colour');
 
-    $(window).scroll($.throttle( 50,function() {
+    $(window).scroll($.throttle( 50, function() {
         let wScroll = $(window).scrollTop();
         let headStart = secHead.offset().top;
         let desStart = secDes.offset().top;
@@ -47,12 +47,13 @@ function winScroll() {
         else if (wScroll >= headStart + headLength - windowH*titleChange && wScroll < desStart + desLength - windowH*titleChange) {
             block.css("background-color", "#f6f6f6");
             mainP.css({"color":"#5018a8"});
+            console.log('is_working');
+
         }
         else if (wScroll >= desStart + desLength - windowH*titleChange && wScroll < typeStart + typeLength - windowH*titleChange) {
             //type
             block.css("background-color", "#F6EFE2");
             mainP.css({"color":"#2f40c9"});
-            
         }
         else if (wScroll >= typeStart + typeLength - windowH*titleChange && wScroll < advStart + advLength - windowH*titleChange) {
             //adventure
@@ -97,13 +98,19 @@ function winScroll() {
                 "background-image":"linear-gradient(180deg, transparent 100%, #fff 100%);"
             });
         }
+    }));
+}
+function nextSlide() {
+    let nextLength = secNext.innerHeight();
+    
+    let timeout = null;
 
-        let timeout = null;
-
-        function cancelNext() {
-            timeout = null;
-            clearTimeout(timeout);
-        }
+    function cancelNext() {
+        timeout = null;
+        clearTimeout(timeout);
+    }
+    $(window).scroll($.throttle( 50, function() {
+        let nextStart = secNext.offset().top;
 
         if (wScroll >= nextStart + nextLength*0.8 - windowH) {
             timeout = setTimeout(function() {
@@ -114,9 +121,10 @@ function winScroll() {
             cancelNext();
         }
     }));
+
 }
 (function($) {
-        winScroll();
+    winScroll();
     $(window).resize(function() {
         winScroll();
     });
