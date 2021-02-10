@@ -2,15 +2,10 @@ function winScroll() {
     //sections
     const secHead = $('#sec_heading');
     const secDes = $('#sec_description');
-    const secType = $('#sec_type');
-    const secAdv = $('#sec_adventure');
-    const secClu = $('#sec_clue');
-    const secGym = $('#sec_gym');
-    const secOrg = $('#sec_organize');
+    const secYear = $('#sec_year');
     const secCase = $('#sec_case');
     const secNext = $('#sec_next');
-    let block = $('.clyx_block');
-    
+    let block = $('.snacks_block');
     //size
     let headLength = secHead.innerHeight();
     let desLength = secDes.innerHeight();
@@ -26,7 +21,7 @@ function winScroll() {
     const nextGradient = $('.next_ending_gradient');
     //image
     // typography
-    const mainP = $('.clyx_colour');
+    const mainP = $('.snacks_colour');
 
     $(window).scroll($.throttle( 50,function() {
         let wScroll = $(window).scrollTop();
@@ -39,7 +34,6 @@ function winScroll() {
         let orgStart = secOrg.offset().top;
         let caseStart = secCase.offset().top;
         let nextStart = secNext.offset().top;
-        
 
         if (wScroll >= -20 && wScroll < headStart + headLength - windowH*titleChange) {
             block.css("background-color", "#f6f6f6");

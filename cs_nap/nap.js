@@ -10,6 +10,7 @@ function winScroll() {
     const secTodo = $('#sec_todo');
     const secOrg = $('#sec_org');
     const secNext = $('#sec_next');
+    let block = $('.nap_block');
     //size
     let headLength = secHead.innerHeight();
     let desLength = secDes.innerHeight();
@@ -42,6 +43,7 @@ function winScroll() {
     const imgD = $('.cs_img_description');
     const imgNumb = $(".cs_img_num");
 
+
     $(window).scroll($.throttle( 50, function() {
         let wScroll = $(window).scrollTop();
         let headStart = secHead.offset().top;
@@ -56,7 +58,7 @@ function winScroll() {
         let nextStart = secNext.offset().top;
 
         if (wScroll >= -20 && wScroll < headStart + headLength - windowH*titleChange) {
-            block.css("background-color", "#D4DCDE");
+            block.css("background-color", "#f6f6f6");
             napScroll1.css({"background-position": 0 +"% 50%"});
         }
         else if (wScroll >= headStart + headLength - windowH*titleChange && wScroll < desStart + desLength - windowH*titleChange) {
@@ -68,7 +70,7 @@ function winScroll() {
             bulletD.removeClass('cs_dark');
             imgD.removeClass('cs_dark');
             imgNumb.removeClass('cs_dark');
-            block.css("background-color", "#D4DCDE");
+            block.css("background-color", "#f6f6f6");
 
             if (screenLandscapeTop()) {
                 img_des3.css({ "transform": "translate(-" + 50 * (scrollPercentDes / 100) + "%, 0%)" });
@@ -93,7 +95,7 @@ function winScroll() {
             mainP.removeClass('cs_dark');
             bulletD.removeClass('cs_dark');
             imgD.removeClass('cs_dark');
-            block.css("background-color", "#D4DCDE");
+            block.css("background-color", "#f6f6f6");
             }
         }
         else if (wScroll >= stickyStart + stickyLength - windowH*titleChange && wScroll < arch_endStart + arch_endLength - windowH*titleChange) {
@@ -157,14 +159,14 @@ function winScroll() {
             bulletD.removeClass('cs_dark');
             imgD.removeClass('cs_dark');
             imgNumb.removeClass('cs_dark');
-            block.css("background-color", "#D4DCDE");
+            block.css("background-color", "#f6f6f6");
         }
         else {
             mainP.removeClass('.cs_dark');
             bulletD.removeClass('.cs_dark');
             imgD.removeClass('cs_dark');
             imgNumb.removeClass('cs_dark');
-            block.css("background-color", "#D4DCDE");
+            block.css("background-color", "#f6f6f6");
         }
         if (wScroll >= nextStart - windowH*titleChange) {
             let scrollValueNext = Math.abs(wScroll - (nextStart - windowH*titleChange));
@@ -181,25 +183,24 @@ function winScroll() {
                 "background-image":"linear-gradient(180deg, hsla(0, 0%, 100%, 0), #fff)"
             });
         }
-
-        let timeout = null;
-
-        function cancelNext() {
-            timeout = null;
-            clearTimeout(timeout);
-        }
-
-        if (wScroll >= nextStart + nextLength*0.8 - windowH) {
-            timeout = setTimeout(function() {
-                let goTo = nextLink.attr("href");
-                window.location = goTo;
-            }, 2500);
-        } else {
-            cancelNext();
-        }
     }));
 }
 function nextSlide() {
+    let timeout = null;
+
+    function cancelNext() {
+        timeout = null;
+        clearTimeout(timeout);
+    }
+
+    if (wScroll >= nextStart + nextLength*0.8 - windowH) {
+        timeout = setTimeout(function() {
+            let goTo = nextLink.attr("href");
+            window.location = goTo;
+        }, 2500);
+    } else {
+        cancelNext();
+    }
 
 }
 function mobileMenu() {
@@ -211,6 +212,7 @@ function mobileMenu() {
 (function($) {
         winScroll();
         mobileMenu();
+        nextSlide();
     $(window).resize(function() {
         winScroll();
     });
