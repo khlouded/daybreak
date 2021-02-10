@@ -17,7 +17,8 @@ function winScroll() {
     let nav = $('.navigation');
     let navSelect = $('.nav_select');
     let navPseudoSVG = $(".nav_pseudo_container svg path");
-
+    let navLink_event = $('.nav_logo_link');
+    
     // Case Study Images
     const caseImg = $('.case_item');
     const c1_i1 = $('.caseone_imageone');
@@ -77,6 +78,8 @@ $(window).scroll(function() {
             navPseudoSVG.css({"fill":"#000"});
         }
     } else {
+        
+navLink_event.css({"pointer-events":"all"});
         navLogo_cont.removeClass('nav_start').css({"transform":"translate(0,0vH)"});
         nav.removeClass('nav_start');
         navSelect.removeClass('nav_start');

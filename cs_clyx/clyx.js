@@ -123,6 +123,8 @@ function mobileMenu() {
     let navPseudo = $('.nav_pseudo_container');
     let navPseudoSVG = $(".nav_pseudo_container svg path");
     navPseudoSVG.css({"fill":"#fff"});
+    let navLink_event = $('.nav_logo_link');
+navLink_event.css({"pointer-events":"all"});
     if(screenMobileTop()) {
         navPseudo.addClass('nav_start').css({"margin-left":0 + "px", "opacity":1});
         navHead.removeClass('nav_start').css({"font-size": logoFinalSize + "px", "opacity":0});

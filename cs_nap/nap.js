@@ -211,7 +211,9 @@ function mobileMenu() {
     let navLogo_box = $('.nav_logo_box');
     let navPseudo = $('.nav_pseudo_container');
     let navPseudoSVG = $(".nav_pseudo_container svg path");
+    let navLink_event = $('.nav_logo_link');
     navPseudoSVG.css({"fill":"#fff"});
+    navLink_event.css({"pointer-events":"all"});
     if(screenMobileTop()) {
         navPseudo.addClass('nav_start').css({"margin-left":0 + "px", "opacity":1});
         navHead.removeClass('nav_start').css({"font-size": logoFinalSize + "px", "opacity":0});
@@ -226,7 +228,7 @@ function mobileMenu() {
 }
 (function($) {
         winScroll();
-        mobileMenu()
+        mobileMenu();
     $(window).resize(function() {
         winScroll();
         mobileMenu();
