@@ -9,11 +9,7 @@ function winScroll() {
     //size
     let headLength = secHead.innerHeight();
     let desLength = secDes.innerHeight();
-    let typeLength = secType.innerHeight();
-    let advLength = secAdv.innerHeight();
-    let cluLength = secClu.innerHeight();
-    let gymLength = secGym.innerHeight();
-    let orgLength = secOrg.innerHeight();
+    let yearLength = secYear.innerHeight();
     let caseLength = secCase.innerHeight();
     let nextLength = secNext.innerHeight();
     //objects
@@ -27,11 +23,7 @@ function winScroll() {
         let wScroll = $(window).scrollTop();
         let headStart = secHead.offset().top;
         let desStart = secDes.offset().top;
-        let typeStart = secType.offset().top;
-        let advStart = secAdv.offset().top;
-        let cluStart = secClu.offset().top;
-        let gymStart = secGym.offset().top;
-        let orgStart = secOrg.offset().top;
+        let yearStart = secYear.offset().top;
         let caseStart = secCase.offset().top;
         let nextStart = secNext.offset().top;
 
@@ -43,33 +35,13 @@ function winScroll() {
             block.css("background-color", "#f6f6f6");
             mainP.css({"color":"#5018a8"});
         }
-        else if (wScroll >= desStart + desLength - windowH*titleChange && wScroll < typeStart + typeLength - windowH*titleChange) {
+        else if (wScroll >= desStart + desLength - windowH*titleChange && wScroll < yearStart + yearLength - windowH*titleChange) {
             //type
             block.css("background-color", "#F6EFE2");
             mainP.css({"color":"#2f40c9"});
             
         }
-        else if (wScroll >= typeStart + typeLength - windowH*titleChange && wScroll < advStart + advLength - windowH*titleChange) {
-            //adventure
-            block.css("background-color", "#D9F4AA");
-            mainP.css({"color":"#272753"});
-        }
-        else if (wScroll >= advStart + advLength - windowH*titleChange && wScroll < cluStart + cluLength - windowH*titleChange) {
-            //clu
-            block.css("background-color", "#FCED5F");
-            mainP.css({"color":"#4303A7"});
-        }
-        else if (wScroll >= cluStart + cluLength - windowH*titleChange && wScroll < gymStart + gymLength - windowH*titleChange) {
-            //gym
-            block.css("background-color", "#D9F4AA");
-            mainP.css({"color":"#272753"});
-        }
-        else if (wScroll >= gymStart + gymLength - windowH*titleChange && wScroll < orgStart + orgLength - windowH*titleChange) {
-            //org
-            block.css("background-color", "#FCED5F");
-            mainP.css({"color":"#4303A7"});
-        }
-        else if (wScroll >= orgStart + orgLength - windowH*titleChange && wScroll < caseStart + caseLength - windowH*titleChange) {
+        else if (wScroll >= yearStart + yearLength - windowH*titleChange && wScroll < caseStart + caseLength - windowH*titleChange) {
             block.css("background-color", "#f6f6f6");
             mainP.css({"color":"#272753"});
         }
