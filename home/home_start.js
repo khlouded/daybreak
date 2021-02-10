@@ -18,34 +18,6 @@ $(window).on('load', function(){
     startSizing();
 
 });
-function startTransform() {
-    //media queries
-    if(screenMobileTop()) {
-        let startSize = 100;
-        return startSize;
-    } else if (screenLandscapeBase() && screenLandscapeTop()) {
-        let startSize = 125;
-        return startSize;
-    } else if (screenTabletBase() && screenTabletTop()) {
-        let startSize = 135;
-        return startSize;
-    } else if (screenDesktopBase() && screenDesktopTop()) {
-        let startSize = 200;
-        return startSize;
-    } else if (screenLargeOneBase() && screenLargeOneTop()) {
-        let startSize = 220;
-        return startSize;
-    } else if (screenLargeTwoBase() && screenLargeTwoTop()) {
-        let startSize = 230;
-        return startSize;
-    } else if (screenLarger()) {
-        let startSize = 270;
-        return startSize;
-    } else {
-        let startSize = 150;
-        return startSize;
-    }
-}
 function startSizing() {
     if(screenMobileTop()) {
         let startHeading = 81;

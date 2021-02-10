@@ -115,9 +115,31 @@ function winScroll() {
         }
     });
 }
+function mobileMenu() {
+    // navigation
+    let navHead = $('.nav_heading');
+    let navLogo_icon = $('.nav_logo_box .nav_logo');
+    let navLogo_box = $('.nav_logo_box');
+    let navPseudo = $('.nav_pseudo_container');
+    let navPseudoSVG = $(".nav_pseudo_container svg path");
+    navPseudoSVG.css({"fill":"#fff"});
+    if(screenMobileTop()) {
+        navPseudo.addClass('nav_start').css({"margin-left":0 + "px", "opacity":1});
+        navHead.removeClass('nav_start').css({"font-size": logoFinalSize + "px", "opacity":0});
+        navLogo_box.removeClass('nav_start').css({"grid-template-columns": "1fr " + logoHeaderWidth + "px","-ms-grid-columns": "1fr " + logoHeaderWidth + "px"});
+        navLogo_icon.addClass('nav_start');
+    } else {
+        navPseudo.removeClass("nav_start").css({"margin-left":0 + "px", "opacity":0});
+        navHead.removeClass('nav_start').css({"font-size": logoFinalSize + "px", "opacity":1});
+        navLogo_box.removeClass('nav_start').css({"grid-template-columns": "1fr " + logoHeaderWidth + "px", "-ms-grid-columns": "1fr " + logoHeaderWidth + "px"});
+        navLogo_icon.removeClass('nav_start');
+    }
+}
 (function($) {
         winScroll();
+        mobileMenu();
     $(window).resize(function() {
         winScroll();
+        mobileMenu();
     });
 }(jQuery));
