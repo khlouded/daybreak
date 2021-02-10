@@ -57,7 +57,7 @@ function winScroll() {
         let nextStart = secNext.offset().top;
 
         if (wScroll >= -20 && wScroll < headStart + headLength - windowH*titleChange) {
-            block.css("background-color", "#f6f6f6");
+            block.css("background-color", "#d4dcde");
             napScroll1.css({"background-position": 0 +"% 50%"});
         }
         else if (wScroll >= headStart + headLength - windowH*titleChange && wScroll < desStart + desLength - windowH*titleChange) {
@@ -69,7 +69,7 @@ function winScroll() {
             bulletD.removeClass('cs_dark');
             imgD.removeClass('cs_dark');
             imgNumb.removeClass('cs_dark');
-            block.css("background-color", "#f6f6f6");
+            block.css("background-color", "#d4dcde");
 
             if (screenLandscapeTop()) {
                 img_des3.css({ "transform": "translate(-" + 50 * (scrollPercentDes / 100) + "%, 0%)" });
@@ -94,7 +94,7 @@ function winScroll() {
             mainP.removeClass('cs_dark');
             bulletD.removeClass('cs_dark');
             imgD.removeClass('cs_dark');
-            block.css("background-color", "#f6f6f6");
+            block.css("background-color", "#d4dcde");
             }
         }
         else if (wScroll >= stickyStart + stickyLength - windowH*titleChange && wScroll < arch_endStart + arch_endLength - windowH*titleChange) {
@@ -158,14 +158,14 @@ function winScroll() {
             bulletD.removeClass('cs_dark');
             imgD.removeClass('cs_dark');
             imgNumb.removeClass('cs_dark');
-            block.css("background-color", "#f6f6f6");
+            block.css("background-color", "#d4dcde");
         }
         else {
             mainP.removeClass('.cs_dark');
             bulletD.removeClass('.cs_dark');
             imgD.removeClass('cs_dark');
             imgNumb.removeClass('cs_dark');
-            block.css("background-color", "#f6f6f6");
+            block.css("background-color", "#d4dcde");
         }
         if (wScroll >= nextStart - windowH*titleChange) {
             let scrollValueNext = Math.abs(wScroll - (nextStart - windowH*titleChange));
@@ -185,21 +185,26 @@ function winScroll() {
     }));
 }
 function nextSlide() {
+    const secNext = $('#sec_next');
+    let nextLength = secNext.innerHeight();
+    let nextStart = secNext.offset().top;
     let timeout = null;
+
 
     function cancelNext() {
         timeout = null;
         clearTimeout(timeout);
     }
-
-    if (wScroll >= nextStart + nextLength*0.8 - windowH) {
-        timeout = setTimeout(function() {
-            let goTo = nextLink.attr("href");
-            window.location = goTo;
-        }, 2500);
-    } else {
-        cancelNext();
-    }
+    $(window).scroll($.throttle( 50, function() {
+        if (wScroll >= nextStart + nextLength*0.8 - windowH) {
+            timeout = setTimeout(function() {
+                let goTo = nextLink.attr("href");
+                window.location = goTo;
+            }, 2500);
+        } else {
+            cancelNext();
+        }
+    }));
 
 }
 function mobileMenu() {
