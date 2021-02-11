@@ -28,10 +28,9 @@ function winScroll() {
     const c2_i1 = $('.casetwo_imageone');
     const c2_i2 = $('.casetwo_imagetwo');
     const c2_i3 = $('.casetwo_imagethree');
-    const c3_i2 = $('.casethree_imagetwo');
 
-    const c3_i3_m1 = $('.home_caseImage_snacks.c3_vid1');
-    const c3_i3_m2 = $('.home_caseImage_snacks.c3_vid2');
+    const c3_i3_m1 = $('.home_caseimage_snacks.c3_vid1');
+    const c3_i3_m2 = $('.home_caseimage_snacks.c3_vid2');
 
     // Heights
     let headLength = secHead.innerHeight();
