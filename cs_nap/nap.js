@@ -44,7 +44,7 @@ let todoLength = secTodo.innerHeight();
 let orgLength = secOrg.innerHeight();
 let nextLength = secNext.innerHeight();
 
-    $(window).scroll($.throttle( 50, function() {
+    $(window).scroll($.throttle( 20, function() {
         let wScroll = $(window).scrollTop();
         let headStart = secHead.offset().top;
         let desStart = secDes.offset().top;
@@ -194,7 +194,7 @@ function nextSlide() {
         timeout = null;
         clearTimeout(timeout);
     }
-    $(window).scroll($.throttle( 50, function() {
+    $(window).scroll($.throttle( 20, function() {
         let wScroll = $(window).scrollTop();
         let nextStart = secNext.offset().top;
 
