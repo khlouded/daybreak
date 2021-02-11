@@ -43,7 +43,7 @@ function winScroll() {
             let scrollPercentYear = (scrollValueYear /  (yearLength));
             //year ((input - min) * 100) / (max - min) = percent range is between 10 and -10 0% = 0  100% = 20
             snackRight.css({"transform":"rotate(" + ((10 - (-10))*scrollPercentYear - 10 )+ "deg)"});
-            snackLeft.css({"transform":"rotate(" + ((10 - (-10))*(1-scrollPercentYear) W- 10 )+ "deg)"});
+            snackLeft.css({"transform":"rotate(" + ((10 - (-10))*(1-scrollPercentYear) - 10 ) + "deg)"});
             block.css("background-color", "#f6f6f6");
             mainP.css({"color":"#000000"});
             yearHead.css("background-color", "#f6f6f6");
