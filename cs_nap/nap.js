@@ -195,6 +195,7 @@ function nextSlide() {
         clearTimeout(timeout);
     }
     $(window).scroll($.throttle( 50, function() {
+        let wScroll = $(window).scrollTop();
         let nextStart = secNext.offset().top;
 
         if (wScroll >= nextStart + nextLength*0.8 - windowH) {
