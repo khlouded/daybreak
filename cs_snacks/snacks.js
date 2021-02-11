@@ -8,7 +8,10 @@
     //objects
     const nextLink = $('.next_cs_link');
     const nextGradient = $('.next_ending_gradient');
+    const yearHead = $('.year_heading');
     //image
+    let snackRight = $('.snack_right');
+    let snackLeft = $('.snack_left');
     // typography
     const mainP = $('.snacks_colour');
 function winScroll() {
@@ -36,15 +39,21 @@ function winScroll() {
             mainP.css({"color":"#000000"});
         }
         else if (wScroll >= desStart + desLength - windowH*titleChange && wScroll < yearStart + yearLength - windowH*titleChange) {
-            //year
+            let scrollValueYear = Math.abs(wScroll - (yearStart - windowH*titleChange));
+            let scrollPercentYear = (scrollValueYear /  (yearLength));
+            //year ((input - min) * 100) / (max - min) = percent range is between 10 and -10 0% = 0  100% = 20
+            snackRight.css({"transform":"rotate(" + ((10 - (-10))*scrollPercentYear - 10 )+ "deg)"});
+            snackLeft.css({"transform":"rotate(" + ((10 - (-10))*(1-scrollPercentYear) W- 10 )+ "deg)"});
             block.css("background-color", "#f6f6f6");
             mainP.css({"color":"#000000"});
+            yearHead.css("background-color", "#f6f6f6");
             
         }
         else if (wScroll >= yearStart + yearLength - windowH*titleChange && wScroll < caseStart + caseLength - windowH*titleChange) {
             // case
             block.css("background-color", "#CAE6E2");
             mainP.css({"color":"#295849"});
+            yearHead.css("background-color", "#CAE6E2");
         }
         else if (wScroll >= caseStart + caseLength - windowH*titleChange && wScroll < nextStart + nextLength - windowH*titleChange) {
             // next
@@ -61,7 +70,7 @@ function winScroll() {
             nextLink.css({"transform":"translate( 0,-" + Math.sqrt(scrollPercentNext*100) + "%)"});
             nextGradient.css({
                 "display":"flex",
-                "background-image":"linear-gradient(180deg, transparent " + (100 - scrollPercentNext) + "%, #fff 100%)"
+                "background-image":"linear-gradient(180deg, transparent " + (200 - scrollPercentNext) + "%, #fff 100%)"
             });
         } else {
             nextLink.css({ "transform": "translate( 0, 0%)" });

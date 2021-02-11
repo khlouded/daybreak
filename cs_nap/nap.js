@@ -174,7 +174,7 @@ let nextLength = secNext.innerHeight();
             nextLink.css({"transform":"translate( 0,-" + Math.sqrt(scrollPercentNext*100) + "%)"});
             nextGradient.css({
                 "display":"flex",
-                "background-image":"linear-gradient(180deg, transparent " + (100 - scrollPercentNext) + "%, #fff 100%)"
+                "background-image":"linear-gradient(180deg, transparent " + (200 - scrollPercentNext) + "%, #fff 100%)"
             });
         } else {
             nextLink.css({ "transform": "translate( 0, 0%)" });
