@@ -97,8 +97,8 @@ $(window).scroll($.throttle( 20, function() {
         block.css("background-color", "#000000");
         let scrollValue1 = Math.abs(wScroll - (C_oneStart - windowH*titleChange));
         let scrollPercent1 = (scrollValue1 / C_oneLength) * 100;        
-        c1_i1.css({"background-position":"50% " + scrollPercent1 +"%"});
-        c1_i2.css({"background-position": scrollPercent1 +"% 50%"});
+        c1_i1.css({"background-position": scrollPercent1 + "% " + scrollPercent1 +"%"});
+        c1_i2.css({"background-position":  scrollPercent1 + "% " + scrollPercent1 +"%"});
         c1_i3.css({"background-position":"50% " + (100 - scrollPercent1) +"%"});
     } else if (wScroll >= C_oneStart + C_oneLength - windowH*titleChange && wScroll < C_twoStart + C_twoLength - windowH*titleChange) {
         //case two

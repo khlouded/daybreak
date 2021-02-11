@@ -26,10 +26,7 @@ const img_todo1 = $('.todo_img1');
 const img_todo2 = $('.todo_img2');
 const img_org1 = $('org_img1');
 // typography
-const mainP = $('.cs_main_p');
-const bulletD = $('.cs_bullet_description');
-const imgD = $('.cs_img_description');
-const imgNumb = $(".cs_img_num");
+const mainP = $('.nap_colour');
 
 function winScroll() {
 //size
@@ -66,10 +63,7 @@ let nextLength = secNext.innerHeight();
             let scrollPercentDes = (scrollValueDes / desLength) * 100;
             napScroll1.css({"background-position": scrollPercentDes +"% 50%"});
             napScroll2.css({"background-position": 0 +"% 50%"});
-            mainP.removeClass('cs_dark');
-            bulletD.removeClass('cs_dark');
-            imgD.removeClass('cs_dark');
-            imgNumb.removeClass('cs_dark');
+            mainP.removeClass('cs_dark').css({"color":"#000"}); 
             block.css("background-color", "#d4dcde");
 
             if (screenLandscapeTop()) {
@@ -87,15 +81,11 @@ let nextLength = secNext.innerHeight();
             gradient.css({"background-image":"linear-gradient(90deg, transparent " + 0 + "%, #000 " + 0 + "%)"});
             archH1.css("opacity",0);
             if (wScroll >= stickyStart + stickyLength*0.85 - windowH*titleChange) {
-            bulletD.addClass('cs_dark');
-            mainP.addClass('cs_dark');
-            imgD.addClass('cs_dark');
-            block.css("background-color", "#000");
+                mainP.addClass('cs_dark').css({"color":"#fff"}); 
+                block.css("background-color", "#000");
             } else {
-            mainP.removeClass('cs_dark');
-            bulletD.removeClass('cs_dark');
-            imgD.removeClass('cs_dark');
-            block.css("background-color", "#d4dcde");
+                mainP.removeClass('cs_dark').css({"color":"#000"}); 
+                block.css("background-color", "#d4dcde");
             }
         }
         else if (wScroll >= stickyStart + stickyLength - windowH*titleChange && wScroll < arch_endStart + arch_endLength - windowH*titleChange) {
@@ -105,10 +95,7 @@ let nextLength = secNext.innerHeight();
             gradient.css({"background-image":"linear-gradient(90deg, transparent " + scrollPercentArch*2 + "%, #000 " + scrollPercentArch*4 + "%)"});
             napScroll2.css({"background-position": 100 +"% 50%"});
 
-            mainP.addClass('cs_dark');
-            bulletD.addClass('cs_dark');
-            imgD.addClass('cs_dark');
-            imgNumb.removeClass('cs_dark');
+            mainP.addClass('cs_dark').css({"color":"#fff"}); 
             block.css("background-color", "#000");
         }
         else if (wScroll >= arch_endStart + arch_endLength - windowH*titleChange && wScroll < people_endStart + people_endLength - windowH*titleChange) {
@@ -116,10 +103,7 @@ let nextLength = secNext.innerHeight();
             let scrollValuePeople = Math.abs(wScroll - (peopleStart - windowH*titleChange));
             let scrollPercentPeople = (scrollValuePeople / (peopleLength + people_endLength)) * 100;
 
-            mainP.addClass('cs_dark');
-            bulletD.addClass('cs_dark');
-            imgD.addClass('cs_dark');
-            imgNumb.removeClass('cs_dark');
+            mainP.addClass('cs_dark').css({"color":"#fff"}); 
             block.css("background-color", "#000");
             if (screenLandscapeTop()) {
                 img_people1.css({ "transform": "translate(-" + 50 * (scrollPercentPeople / 100) + "%, 0%)" });
@@ -131,6 +115,7 @@ let nextLength = secNext.innerHeight();
             let scrollValueTodo = Math.abs(wScroll - (todoStart - windowH*titleChange));
             let scrollPercentTodo = (scrollValueTodo /  (todoLength)) * 100;
             napScroll3.css({"background-position": "50% " + scrollPercentTodo +"%"});
+            mainP.addClass('cs_dark').css({"color":"#fff"}); 
             block.css("background-color", "#000");
             if (screenLandscapeTop()) {
                 img_todo1.css({ "transform": "translate(-" + 50 * (scrollPercentTodo / 100) + "%, 0%)" });
@@ -144,10 +129,7 @@ let nextLength = secNext.innerHeight();
             let scrollValueOrg = Math.abs(wScroll - (orgStart - windowH*titleChange));
             let scrollPercentOrg = (scrollValueOrg /  (orgLength)) * 100;
             block.css("background-color", "#000");
-            mainP.addClass('cs_dark');
-            bulletD.addClass('cs_dark');
-            imgD.addClass('cs_dark');
-            imgNumb.removeClass('cs_dark');
+            mainP.addClass('cs_dark').css({"color":"#fff"}); 
             if (screenLandscapeTop()) {
                 img_org1.css({ "transform": "translate(-" + 50 * (scrollPercentOrg / 100) + "%, 0%)" });
             } else {
@@ -155,20 +137,16 @@ let nextLength = secNext.innerHeight();
             }
         }
         else if (wScroll >= orgStart + orgLength - windowH*titleChange && wScroll < nextStart + nextLength - windowH*titleChange) {
-            mainP.removeClass('cs_dark');
-            bulletD.removeClass('cs_dark');
-            imgD.removeClass('cs_dark');
-            imgNumb.removeClass('cs_dark');
-            block.css("background-color", "#d4dcde");
+            mainP.removeClass('cs_dark').css({"color":"#000"}); 
+            block.css("background-color", "#f6f6f6");
         }
         else {
-            mainP.removeClass('.cs_dark');
-            bulletD.removeClass('.cs_dark');
-            imgD.removeClass('cs_dark');
-            imgNumb.removeClass('cs_dark');
+            mainP.removeClass('cs_dark').css({"color":"#000"}); 
             block.css("background-color", "#d4dcde");
         }
         if (wScroll >= nextStart - windowH*titleChange) {
+            block.css("background-color", "#f6f6f6");
+            mainP.removeClass('cs_dark').css({"color":"#000"}); 
             let scrollValueNext = Math.abs(wScroll - (nextStart - windowH*titleChange));
             let scrollPercentNext = (scrollValueNext /  (nextLength*0.5)) * 100;
             nextLink.css({"transform":"translate( 0,-" + Math.sqrt(scrollPercentNext*100) + "%)"});
@@ -176,6 +154,7 @@ let nextLength = secNext.innerHeight();
                 "display":"flex",
                 "background-image":"linear-gradient(180deg, transparent " + (200 - scrollPercentNext) + "%, #fff 100%)"
             });
+
         } else {
             nextLink.css({ "transform": "translate( 0, 0%)" });
             nextGradient.css({
