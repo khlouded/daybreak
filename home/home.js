@@ -20,6 +20,7 @@ function winScroll() {
     let navLink_event = $('.nav_logo_link');
     
     // Case Study Images
+    const mainP = $('.home_colour');
     const caseImg = $('.case_item');
     const c1_i1 = $('.caseone_imageone');
     const c1_i2 = $('.caseone_imagetwo');
@@ -71,6 +72,7 @@ $(window).scroll($.throttle( 20, function() {
             navPseudo.addClass("nav_start").css({"margin-left": (-118)*((100 - scrollPercent)/100) + "px", "opacity":1});
             navPseudoSVG.css({"fill":"#000"});
         }
+
     } else {
         navLink_event.css({"pointer-events":"all"});
         navLogo_cont.removeClass('nav_start').css({"transform":"translate(0,0vH)"});
@@ -89,35 +91,51 @@ $(window).scroll($.throttle( 20, function() {
     }
 
     if (wScroll >= -20 && wScroll < headStart + headLength - windowH*titleChange) {
-        block.css("background-color", "#D4DCDE"); // background colour of bodys
+        mainP.css({"color":"#000"});
+        caseImg.css({"background-color":"#f1f1f1"});
+        block.css("background-color", "#D4DCDE");
     } else if (wScroll >= headStart + headLength - windowH*titleChange && wScroll < desStart + desLength - windowH*titleChange) {
-        block.css("background-color", "#D4DCDE"); // background colour of bodys
+        mainP.css({"color":"#000"});
+        caseImg.css({"background-color":"#f1f1f1"});
+        block.css("background-color", "#D4DCDE");
     } else if (wScroll >= desStart + desLength - windowH*titleChange && wScroll < C_oneStart + C_oneLength - windowH*titleChange) {
         //case one
+        mainP.css({"color":"#000"});
+        caseImg.css({"background-color":"#f1f1f1"});
         block.css("background-color", "#000000");
         let scrollValue1 = Math.abs(wScroll - (C_oneStart - windowH*titleChange));
-        let scrollPercent1 = (scrollValue1 / C_oneLength) * 100;        
+        let scrollPercent1 = (scrollValue1 / C_oneLength) * 100;  
+
+        // images
         c1_i1.css({"background-position": scrollPercent1 + "% " + scrollPercent1 +"%"});
         c1_i2.css({"background-position":  scrollPercent1 + "% " + scrollPercent1 +"%"});
         c1_i3.css({"background-position":"50% " + (100 - scrollPercent1) +"%"});
     } else if (wScroll >= C_oneStart + C_oneLength - windowH*titleChange && wScroll < C_twoStart + C_twoLength - windowH*titleChange) {
         //case two
+        mainP.css({"color":"#4303A7"});
+        caseImg.css({"background-color":"#FFF9DB"});
         block.css("background-color", "#FFE66A");       
         let scrollValue2 = Math.abs(wScroll - (C_twoStart - windowH*titleChange)); 
         let scrollPercent2 = (scrollValue2 / (C_twoLength + windowH*titleChange)) * 100;
+        // images
         c2_i1.css({"background-position":"50% " + scrollPercent2 +"%"});
         c2_i2.css({"background-position": scrollPercent2 +"% 50%"});
         c2_i3.css({"background-position":"50% " + (100 - scrollPercent2) +"%"});
     } else if (wScroll >= C_twoStart + C_twoLength - windowH*titleChange && wScroll < C_threeStart + C_threeLength - windowH*titleChange) {
         //case three
+        mainP.css({"color":"#295849"});
+        caseImg.css({"background-color":"#ADDAD5"});
         block.css("background-color", "#FCFAF7"); 
         let scrollValue3 = Math.abs(wScroll - (C_threeStart - windowH*titleChange));
         let scrollPercent3 = (scrollValue3 / C_threeLength) * 100;
+        // images
         c3_i1.css({"background-position":"50% " + scrollPercent3 +"%"});
         c3_i2.css({"background-position": scrollPercent3 +"% 50%"});
         c3_i3.css({"background-position":"50% " + (100 - scrollPercent3) +"%"});
     } else if (wScroll >= C_threeStart + C_threeLength - windowH*titleChange && wScroll < footerStart + footerLength - windowH*titleChange) {
         //footer
+        mainP.css({"color":"#000"});
+        caseImg.css({"background-color":"#f1f1f1"});
         block.css("background-color", "#FCFAF7");
     }
 }));
