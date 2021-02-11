@@ -28,9 +28,10 @@ function winScroll() {
     const c2_i1 = $('.casetwo_imageone');
     const c2_i2 = $('.casetwo_imagetwo');
     const c2_i3 = $('.casetwo_imagethree');
-    const c3_i1 = $('.casethree_imageone');
     const c3_i2 = $('.casethree_imagetwo');
-    const c3_i3 = $('.casethree_imagethree');
+
+    const c3_i3_m1 = $('.home_caseImage_snacks.c3_vid1');
+    const c3_i3_m2 = $('.home_caseImage_snacks.c3_vid2');
 
     // Heights
     let headLength = secHead.innerHeight();
@@ -118,9 +119,11 @@ $(window).scroll($.throttle( 20, function() {
         let scrollValue2 = Math.abs(wScroll - (C_twoStart - windowH*titleChange)); 
         let scrollPercent2 = (scrollValue2 / (C_twoLength + windowH*titleChange)) * 100;
         // images
-        c2_i1.css({"background-position":"50% " + scrollPercent2 +"%"});
-        c2_i2.css({"background-position": scrollPercent2 +"% 50%"});
-        c2_i3.css({"background-position":"50% " + (100 - scrollPercent2) +"%"});
+        c2_i1.css({"background-position":  scrollPercent2 + "% " + scrollPercent2 +"%"});
+        c2_i2.css({"background-position":  scrollPercent2 + "% " + scrollPercent2 +"%"});
+        c2_i3.css({"background-position":  scrollPercent2 + "% " + scrollPercent2 +"%"});
+        c3_i3_m1.css({"transform":"translate(0, -" + 50 + "vh)"});
+        c3_i3_m2.css({"transform":"translate(0, " + 50 + "vh)"});
     } else if (wScroll >= C_twoStart + C_twoLength - windowH*titleChange && wScroll < C_threeStart + C_threeLength - windowH*titleChange) {
         //case three
         mainP.css({"color":"#295849"});
@@ -128,15 +131,18 @@ $(window).scroll($.throttle( 20, function() {
         block.css("background-color", "#FCFAF7"); 
         let scrollValue3 = Math.abs(wScroll - (C_threeStart - windowH*titleChange));
         let scrollPercent3 = (scrollValue3 / C_threeLength) * 100;
-        // images
-        c3_i1.css({"background-position":"50% " + scrollPercent3 +"%"});
-        c3_i2.css({"background-position": scrollPercent3 +"% 50%"});
-        c3_i3.css({"background-position":"50% " + (100 - scrollPercent3) +"%"});
+        // vids
+        c3_i3_m1.css({"transform":"translate(0, -" + 50*(100-scrollPercent3) + "vh)"});
+        c3_i3_m2.css({"transform":"translate(0, " + 50*(100-scrollPercent3) + "vh)"});
     } else if (wScroll >= C_threeStart + C_threeLength - windowH*titleChange && wScroll < footerStart + footerLength - windowH*titleChange) {
+
         //footer
         mainP.css({"color":"#000"});
         caseImg.css({"background-color":"#f1f1f1"});
         block.css("background-color", "#FCFAF7");
+        //prep
+        c3_i3_m1.css({"transform":"translate(0, " + 0 + "vh)"});
+        c3_i3_m2.css({"transform":"translate(0, " + 0 + "vh)"});
     }
 }));
 }
