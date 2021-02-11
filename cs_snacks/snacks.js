@@ -9,6 +9,7 @@
     const nextLink = $('.next_cs_link');
     const nextGradient = $('.next_ending_gradient');
     const yearHead = $('.year_heading');
+    const stick = $('.stick');
     //image
     let snackRight = $('.snack_right');
     let snackLeft = $('.snack_left');
@@ -37,6 +38,7 @@ function winScroll() {
         else if (wScroll >= headStart + headLength - windowH*titleChange && wScroll < desStart + desLength - windowH*titleChange) {
             block.css("background-color", "#f6f6f6");
             mainP.css({"color":"#000000"});
+            stick.css({"color":"#000000"});
         }
         else if (wScroll >= desStart + desLength - windowH*titleChange && wScroll < yearStart + yearLength - windowH*titleChange) {
             let scrollValueYear = Math.abs(wScroll - (yearStart - windowH*titleChange));
@@ -46,6 +48,7 @@ function winScroll() {
             snackLeft.css({"transform":"rotate(" + ((10 - (-10))*(1-scrollPercentYear) - 10 ) + "deg)"});
             block.css("background-color", "#f6f6f6");
             mainP.css({"color":"#000000"});
+            stick.css({"color":"#000000"});
             yearHead.css("background-color", "#f6f6f6");
             
         }
@@ -53,6 +56,7 @@ function winScroll() {
             // case
             block.css("background-color", "#CAE6E2");
             mainP.css({"color":"#295849"});
+            stick.css({"color":"#295849"});
             yearHead.css("background-color", "#CAE6E2");
         }
         else if (wScroll >= caseStart + caseLength - windowH*titleChange && wScroll < nextStart + nextLength - windowH*titleChange) {
