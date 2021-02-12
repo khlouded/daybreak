@@ -261,6 +261,9 @@ function pageTransition() {
 
         let goTo = this.getAttribute("href");
         navText.removeClass("nav_linkShow");
+        function slide_over(){
+            
+        }
 
         function close_menu() {
             navMenu.removeClass("menu_transition");
