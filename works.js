@@ -42,7 +42,7 @@ function winScroll() {
         }
         else if (wScroll >= c2Start + c2Length - windowH*titleChange && wScroll < c3Start + c3Length - windowH*titleChange) {
             // case3
-            block.css("background-color", "#CAE6E2");
+            block.css("background-color", "#FCFAF7");
             mainP.css({"color":"#295849"});
         }
         else if (wScroll >= c3Start + c3Length - windowH*titleChange && wScroll < footStart + footLength - windowH*titleChange) {
