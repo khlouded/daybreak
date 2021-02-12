@@ -24,6 +24,8 @@ function winScroll() {
         let footStart = secFoot.offset().top;
 
         if (screenLandscapeTop()) {
+            typeWriter();
+        } else {
             if (wScroll >= -20 && wScroll < headStart + headLength - windowH*titleChange) {
                 block.css("background-color", "#D4DCDE");
                 mainP.css({"color":"#000000"});
@@ -35,11 +37,13 @@ function winScroll() {
                 block.css("background-color", "#000");
                 mainP.css({"color":"#F6F6F6"});
                 pageTrans.css({"display":"none"});
+                console.log('case1');
             }
             else if (wScroll >= c1Start + c1Length - windowH*titleChange && wScroll < c2Start + c2Length - windowH*titleChange) {
                 // case2
                 block.css("background-color", "#FFE66A");
                 mainP.css({"color":"#4303A7"});
+                console.log('case2');
                 
             }
             else if (wScroll >= c2Start + c2Length - windowH*titleChange && wScroll < c3Start + c3Length - windowH*titleChange) {
@@ -47,6 +51,7 @@ function winScroll() {
                 block.css("background-color", "#FCFAF7");
                 mainP.css({"color":"#295849"});
                 $('works_title').removeClass('word_enter');
+                console.log('case3');
             }
             else if (wScroll >= c3Start + c3Length - windowH*titleChange && wScroll < footStart + footLength - windowH*titleChange) {
                 // footer
@@ -56,8 +61,7 @@ function winScroll() {
             else {
                 block.css("background-color", "#f6f6f6");
             }
-        } else {
-            typeWriter();
+
         }
     }));
 }
