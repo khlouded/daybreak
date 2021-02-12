@@ -22,7 +22,7 @@ function winScroll() {
         let c2Start = secC2.offset().top;
         let c3Start = secC3.offset().top;
         let footStart = secFoot.offset().top;
-
+if (screenLandscapeTop()) {
         if (wScroll >= -20 && wScroll < headStart + headLength - windowH*titleChange) {
             block.css("background-color", "#D4DCDE");
             mainP.css({"color":"#000000"});
@@ -54,7 +54,9 @@ function winScroll() {
         else {
             block.css("background-color", "#f6f6f6");
         }
+    }
     }));
+    }
 }
 (function($) {
     typeWriter();
