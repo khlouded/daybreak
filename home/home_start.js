@@ -9,13 +9,12 @@ $(window).on('load', function(){
     const navPseudoSVG = $(".nav_pseudo_container svg path");
 
     navLogo_cont.addClass('nav_start');
-    navHead.addClass('nav_start').css({'opacity':1});
     navLogo_icon.addClass('nav_start');
     navSelect.addClass('nav_start');
     nav.addClass('nav_start');
     navPseudo.addClass("nav_start");
     navPseudoSVG.css({"fill":"#000"});
-    
+    navHead.addClass('nav_start').css({"font-size": (startSizing()-logoFinalSize) + logoFinalSize + "px", "opacity":1});
     navLogo_box.addClass('nav_start').css({"grid-template-columns": "1fr " + 0 + "px","-ms-grid-columns": "1fr " + 0 + "px"});
     navPseudo.addClass("nav_start").css({"margin-left": 0 + "px", "opacity":1});
 
