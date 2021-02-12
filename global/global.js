@@ -60,24 +60,6 @@ function navClick() {
             }, 300);
         }, 700);
     });
-
-    navMWork.click(function () {
-
-        navText.removeClass("nav_linkShow");
-
-        function close_menu() {
-            navMenu.removeClass("menu_transition");
-        }
-        function hide_menu() {
-            navMenu.removeClass("nav_menu");
-        }
-        window.setTimeout(function () {
-            close_menu();
-            setTimeout(function () {
-                hide_menu();
-            }, 300);
-        }, 700);
-    });
 }
 function navButtonFix() {
     navButt.removeAttr("href");
@@ -223,6 +205,7 @@ function splitFont() {
 }
 function pageTransition() {
     //const navDelay = $('.nav_delay');
+    //general transition
     navDelay.click(function (e) {
         e.preventDefault();
 
@@ -244,7 +227,56 @@ function pageTransition() {
                 }, 200);
             }, 300);
         }, 700);
+    });
 
+    //const navMHome = $('.menu_link_home');
+    //const navMWork = $('.menu_link_work');
+    //const navMAbout = $('.menu_link_about');
+    //const navMContact = $('.menu_link_contact');
+    navMHome.click(function (e) {
+        e.preventDefault();
+
+        let goTo = this.getAttribute("href");
+        navText.removeClass("nav_linkShow");
+        function close_menu() {
+            navMenu.removeClass("menu_transition");
+        }
+        function hide_menu() {
+            navMenu.removeClass("nav_menu");
+        }
+
+        window.setTimeout(function () {
+            close_menu();
+            setTimeout(function () {
+                hide_menu();
+                setTimeout(function () {
+                    window.location = goTo;
+                }, 200);
+            }, 300);
+        }, 700);
+    });
+
+    navMWork.click(function () {
+        e.preventDefault();
+
+        let goTo = this.getAttribute("href");
+        navText.removeClass("nav_linkShow");
+
+        function close_menu() {
+            navMenu.removeClass("menu_transition");
+        }
+        function hide_menu() {
+            navMenu.removeClass("nav_menu");
+        }
+        window.setTimeout(function () {
+            close_menu();
+            setTimeout(function () {
+                hide_menu();
+                setTimeout(function () {
+                    window.location = goTo;
+                }, 200);
+            }, 300);
+        }, 700);
     });
 }
 function screenMobileTop() {
