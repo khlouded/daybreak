@@ -15,10 +15,11 @@ $(window).on('load', function(){
     nav.addClass('nav_start');
     navPseudo.addClass("nav_start");
     navPseudoSVG.css({"fill":"#000"});
-    startSizing();
+    
     navLogo_box.addClass('nav_start').css({"grid-template-columns": "1fr " + 0 + "px","-ms-grid-columns": "1fr " + 0 + "px"});
     navPseudo.addClass("nav_start").css({"margin-left": 0 + "px", "opacity":1});
-
+    
+    startSizing();
 });
 function startSizing() {
     if(screenMobileTop()) {

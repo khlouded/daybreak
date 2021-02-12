@@ -119,7 +119,7 @@ $(window).scroll($.throttle( 10, function() {
         // images
         c2_i1.css({"background-position":  scrollPercent2 + "% " + scrollPercent2 +"%"});
         c2_i2.css({"background-position":  scrollPercent2 + "% " + scrollPercent2 +"%"});
-        c2_i3.css({"background-position":  scrollPercent2/3 + "% " + scrollPercent2/3 +"%"});
+        c2_i3.css({"background-position":  scrollPercent2/3 + "% " + scrollPercent2/3 + (-10) +"%"});
         c3_i3_m1.css({"transform":"translate(0, -" + 100 + "%)"});
         c3_i3_m2.css({"transform":"translate(0, " + 100 + "%)"});
     } else if (wScroll >= C_twoStart + C_twoLength - windowH*titleChange && wScroll < C_threeStart + C_threeLength - windowH*titleChange) {
