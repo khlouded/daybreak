@@ -26,7 +26,7 @@ function winScroll() {
         if (wScroll >= -20 && wScroll < headStart + headLength - windowH*titleChange) {
             block.css("background-color", "#D4DCDE");
             mainP.css({"color":"#000000"});
-            typeWritter();
+            typeWriter();
             console.log('head');
         }
         else if (wScroll >= headStart + headLength - windowH*titleChange && wScroll < c1Start + c1Length - windowH*titleChange) {
