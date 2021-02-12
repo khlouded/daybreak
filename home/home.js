@@ -40,7 +40,7 @@ function winScroll() {
     let C_threeLength = secC_three.innerHeight();
     let footerLength = secFooter.innerHeight();
 
-$(window).scroll($.throttle( 20, function() {		
+$(window).scroll($.throttle( 10, function() {		
     let wScroll = $(window).scrollTop();
 
     //position information
