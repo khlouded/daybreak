@@ -57,6 +57,7 @@ function winScroll() {
     }));
 }
 (function($) {
+    typeWriter();
     winScroll();
     $(window).resize(function() {
         winScroll();

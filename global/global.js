@@ -220,7 +220,7 @@ function splitFont() {
     $(".variable_word").lettering('words');
 }
 function pageTransition() {
-
+    //const navDelay = $('.nav_delay');
     navDelay.click(function (e) {
         e.preventDefault();
 
