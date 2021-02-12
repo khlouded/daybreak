@@ -131,7 +131,7 @@ $(window).scroll($.throttle( 10, function() {
         let scrollValue3 = Math.abs(wScroll - (C_threeStart - windowH*titleChange));
         let scrollPercent3 = (scrollValue3 / C_threeLength) * 100;
         // vids
-        c3_i3_m1.css({"transform":"translate(0, -" + 50*((100 - scrollPercent3*3)/100) + "vh)"});
+        c3_i3_m1.css({"transform":"translate(0, " + (-50)*((100 - scrollPercent3*3)/100) + "vh)"});
         c3_i3_m2.css({"transform":"translate(0, " + 50*((100 - scrollPercent3*3)/100) + "vh)"});
     } else if (wScroll >= C_threeStart + C_threeLength - windowH*titleChange && wScroll < footerStart + footerLength - windowH*titleChange) {
 
