@@ -34,11 +34,13 @@ function winScroll() {
         if (wScroll >= -20 && wScroll < headStart + headLength - windowH*titleChange) {
             block.css("background-color", "#f6f6f6");
             mainP.css({"color":"#000000"});
+            pageTrans.css({"display":"flex"});
         }
         else if (wScroll >= headStart + headLength - windowH*titleChange && wScroll < desStart + desLength - windowH*titleChange) {
             block.css("background-color", "#f6f6f6");
             mainP.css({"color":"#000000"});
             stick.css({"color":"#000000"});
+            pageTrans.css({"display":"none"});
         }
         else if (wScroll >= desStart + desLength - windowH*titleChange && wScroll < yearStart + yearLength - windowH*titleChange) {
             let scrollValueYear = Math.abs(wScroll - (yearStart - windowH*titleChange));

@@ -57,6 +57,7 @@ let nextLength = secNext.innerHeight();
         if (wScroll >= -20 && wScroll < headStart + headLength - windowH*titleChange) {
             block.css("background-color", "#d4dcde");
             napScroll1.css({"background-position": 0 +"% 50%"});
+            pageTrans.css({"display":"flex"});
         }
         else if (wScroll >= headStart + headLength - windowH*titleChange && wScroll < desStart + desLength - windowH*titleChange) {
             let scrollValueDes = Math.abs(wScroll - (desStart - windowH*titleChange));
@@ -65,7 +66,7 @@ let nextLength = secNext.innerHeight();
             napScroll2.css({"background-position": 0 +"% 50%"});
             mainP.removeClass('cs_dark').css({"color":"#000"}); 
             block.css("background-color", "#d4dcde");
-
+            pageTrans.css({"display":"none"});
             if (screenLandscapeTop()) {
                 img_des3.css({ "transform": "translate(-" + 50 * (scrollPercentDes / 100) + "%, 0%)" });
             } else {

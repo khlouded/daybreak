@@ -28,12 +28,13 @@ function winScroll() {
                 block.css("background-color", "#D4DCDE");
                 mainP.css({"color":"#000000"});
                 typeWriter();
+                pageTrans.css({"display":"flex"});
             }
             else if (wScroll >= headStart + headLength - windowH*titleChange && wScroll < c1Start + c1Length - windowH*titleChange) {
                 // case1
                 block.css("background-color", "#000");
                 mainP.css({"color":"#F6F6F6"});
-                
+                pageTrans.css({"display":"none"});
             }
             else if (wScroll >= c1Start + c1Length - windowH*titleChange && wScroll < c2Start + c2Length - windowH*titleChange) {
                 // case2

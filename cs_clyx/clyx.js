@@ -44,11 +44,13 @@ function winScroll() {
         if (wScroll >= -20 && wScroll < headStart + headLength - windowH*titleChange) {
             block.css("background-color", "#f6f6f6");
             mainP.css({"color":"#5018a8"});
+            pageTrans.css({"display":"flex"});
         }
         else if (wScroll >= headStart + headLength - windowH*titleChange && wScroll < desStart + desLength - windowH*titleChange) {
             block.css("background-color", "#f6f6f6");
             mainP.css({"color":"#5018a8"});
             console.log('is_working');
+            pageTrans.css({"display":"none"});
 
         }
         else if (wScroll >= desStart + desLength - windowH*titleChange && wScroll < typeStart + typeLength - windowH*titleChange) {

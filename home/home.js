@@ -62,15 +62,14 @@ $(window).scroll($.throttle( 10, function() {
         navLogo_icon.addClass('nav_start');
         nav.addClass('nav_start');
         navSelect.addClass('nav_start');
-        
+        navPseudoSVG.css({"fill":"#000"});
         if(screenMobileTop()) {
             navLogo_box.removeClass('nav_start').css({"grid-template-columns": "1fr " + 0 + "px","-ms-grid-columns": "1fr " + 0 + "px"});
             navPseudo.addClass("nav_start").css({"margin-left": 0 + "px", "opacity":1});
-            navPseudoSVG.css({"fill":"#000"});
+            
         } else {
             navLogo_box.addClass('nav_start').css({"grid-template-columns": "1fr " + (logoHeaderWidth)*((scrollPercent)/100) + "px","-ms-grid-columns": "1fr " + (logoHeaderWidth)*((scrollPercent)/100) + "px"});
             navPseudo.addClass("nav_start").css({"margin-left": (-118)*((100 - scrollPercent)/100) + "px", "opacity":1});
-            navPseudoSVG.css({"fill":"#000"});
         }
 
     } else {

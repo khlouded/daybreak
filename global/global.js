@@ -15,6 +15,7 @@ const navMAbout = $('.menu_link_about');
 const navMContact = $('.menu_link_contact');
 const nav_link = $('.nav_link');
 const navDelay = $('.nav_delay');
+const pageTrans = $('.pagetransition');
 // main large size variables
 let block = $('#block');
 let maxHeight = $('body').innerHeight();
@@ -24,6 +25,7 @@ let windowH = $(window).innerHeight();
 const titleChange = 0.25;
 const logoFinalSize = 27;
 const logoHeaderWidth = 50;
+
 
 function navClick() {
     navButt.click(function () {
