@@ -21,7 +21,7 @@ function winScroll() {
         let c1Start = secC1.offset().top;
         let c2Start = secC2.offset().top;
         let c3Start = secC3.offset().top;
-        let footStart = secfoot.offset().top;
+        let footStart = secFoot.offset().top;
 
         if (wScroll >= -20 && wScroll < headStart + headLength - windowH*titleChange) {
             block.css("background-color", "#D4DCDE");
