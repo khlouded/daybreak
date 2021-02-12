@@ -81,8 +81,8 @@ $(window).scroll($.throttle( 10, function() {
         navLogo_icon.removeClass('nav_start');
         navPseudo.removeClass('nav_start').css({"margin-left":0 + "px", "opacity":0});
         if(screenMobileTop()) {
-            navHead.removeClass('nav_start').css({"font-size": logoFinalSize + "px", "opacity":0});
-            navLogo_box.removeClass('nav_start').css({"grid-template-columns": "0px " + logoHeaderWidth + "px","-ms-grid-columns": "0px " + logoHeaderWidth + "px"});
+            navHead.addClass('nav_start').css({"font-size": logoFinalSize + "px", "opacity":0});
+            navLogo_box.addClass('nav_start').css({"grid-template-columns": "0px " + logoHeaderWidth + "px","-ms-grid-columns": "0px " + logoHeaderWidth + "px"});
         } else {
             navHead.removeClass('nav_start').css({"font-size": logoFinalSize + "px", "opacity":1});
             navLogo_box.removeClass('nav_start').css({"grid-template-columns": "1fr " + logoHeaderWidth + "px", "-ms-grid-columns": "1fr " + logoHeaderWidth + "px"});
