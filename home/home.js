@@ -119,8 +119,8 @@ $(window).scroll($.throttle( 20, function() {
         let scrollPercent2 = (scrollValue2 / (C_twoLength + windowH*titleChange)) * 100;
         // images
         c2_i1.css({"background-position":  scrollPercent2 + "% " + scrollPercent2 +"%"});
-        c2_i2.css({"background-position":  scrollPercent2/3 + "% " + scrollPercent2/3 +"%"});
-        c2_i3.css({"background-position":  scrollPercent2 + "% " + scrollPercent2 +"%"});
+        c2_i2.css({"background-position":  scrollPercent2 + "% " + scrollPercent2 +"%"});
+        c2_i3.css({"background-position":  scrollPercent2/3 + "% " + scrollPercent2/3 +"%"});
         c3_i3_m1.css({"transform":"translate(0, -" + 50 + "vh)"});
         c3_i3_m2.css({"transform":"translate(0, " + 50 + "vh)"});
     } else if (wScroll >= C_twoStart + C_twoLength - windowH*titleChange && wScroll < C_threeStart + C_threeLength - windowH*titleChange) {
@@ -131,8 +131,8 @@ $(window).scroll($.throttle( 20, function() {
         let scrollValue3 = Math.abs(wScroll - (C_threeStart - windowH*titleChange));
         let scrollPercent3 = (scrollValue3 / C_threeLength) * 100;
         // vids
-        c3_i3_m1.css({"transform":"translate(0, -" + 50*((100 - scrollPercent3)/100) + "vh)"});
-        c3_i3_m2.css({"transform":"translate(0, " + 50*((100 - scrollPercent3)/100) + "vh)"});
+        c3_i3_m1.css({"transform":"translate(0, -" + 50*((100 - scrollPercent3)/100)*2 + "vh)"});
+        c3_i3_m2.css({"transform":"translate(0, " + 50*((100 - scrollPercent3)/100)*2 + "vh)"});
     } else if (wScroll >= C_threeStart + C_threeLength - windowH*titleChange && wScroll < footerStart + footerLength - windowH*titleChange) {
 
         //footer
