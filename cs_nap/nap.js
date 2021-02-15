@@ -24,7 +24,7 @@ const img_des3 = $('.nap_img3');
 const img_people1 = $('.people_image1');
 const img_todo1 = $('.todo_img1');
 const img_todo2 = $('.todo_img2');
-const img_org1 = $('org_img1');
+const img_org1 = $('.org_img1');
 // typography
 const mainP = $('.nap_colour');
 
@@ -70,7 +70,7 @@ let windowH = $(window).innerHeight();
             block.css("background-color", "#d4dcde");
             pageTrans.css({"display":"none"});
             if (screenLandscapeTop()) {
-                img_des3.css({ "transform": "translate(-" + 50 * (scrollPercentDes / 100) + "%, 0%)" });
+                img_des3.css({ "transform": "translate(-" + 50 * (scrollPercentDes/100) + "%, 0%)" });
             } else {
                 img_des3.css({ "transform": "translate(0%, 0%)" });
             }
@@ -121,10 +121,10 @@ let windowH = $(window).innerHeight();
             mainP.addClass('cs_dark').css({"color":"#fff"}); 
             block.css("background-color", "#000");
             if (screenLandscapeTop()) {
-                img_todo1.css({ "transform": "translate(-" + 50 * (scrollPercentTodo / 100) + "%, 0%)" });
-                img_todo2.css({"transform":"translate(-"+50*(scrollPercentTodo/100)+"%, 0%)"});
+                img_todo1.css({ "transform": "translate(-" + 50*(scrollPercentTodo/100) + "%, 0%)" });
+                img_todo2.css({"transform":"translate(-" + 50*(scrollPercentTodo/100)+"%, 0%)"});
             } else {
-                img_todo1.css({ "transform": "translate(0%, 0%)" });
+                img_todo1.css({ "transform": "translate(0%, 0%)"});
                 img_todo2.css({"transform":"translate(0%, 0%)"});
             }
         }
