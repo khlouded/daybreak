@@ -25,7 +25,6 @@ function winScroll() {
     const c1_i1 = $('.caseone_imageone');
     const c1_i2 = $('.caseone_imagetwo');
     const c1_i3 = $('.caseone_imagethree');
-    const c2_i1 = $('.casetwo_imageone');
     const c2_i2 = $('.casetwo_imagetwo');
     const c2_i3 = $('.casetwo_imagethree');
 
@@ -104,7 +103,6 @@ $(window).scroll($.throttle( 10, function() {
         block.css("background-color", "#000000");
         let scrollValue1 = Math.abs(wScroll - (C_oneStart - windowH*titleChange));
         let scrollPercent1 = (scrollValue1 / C_oneLength) * 100;  
-
         // images
         c1_i1.css({"background-position": scrollPercent1 + "% " + scrollPercent1 +"%"});
         c1_i2.css({"background-position":  scrollPercent1 + "% " + scrollPercent1 +"%"});
@@ -117,9 +115,8 @@ $(window).scroll($.throttle( 10, function() {
         let scrollValue2 = Math.abs(wScroll - (C_twoStart - windowH*titleChange)); 
         let scrollPercent2 = (scrollValue2 / (C_twoLength + windowH*titleChange)) * 100;
         // images
-        c2_i1.css({"background-position":  scrollPercent2 + "% " + scrollPercent2 +"%"});
         c2_i2.css({"background-position":  scrollPercent2 + "% " + scrollPercent2 +"%"});
-        c2_i3.css({"background-position":  scrollPercent2/4 + "% " + scrollPercent2/4 + (-10) +"%"});
+        c2_i3.css({"background-position":  "50% " + (scrollPercent2/4)-5 +"%"});
         c3_i3_m1.css({"transform":"translate(0, -" + 100 + "%)"});
         c3_i3_m2.css({"transform":"translate(0, " + 100 + "%)"});
     } else if (wScroll >= C_twoStart + C_twoLength - windowH*titleChange && wScroll < C_threeStart + C_threeLength - windowH*titleChange) {

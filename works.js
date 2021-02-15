@@ -15,6 +15,8 @@ function winScroll() {
     let c3Length = secC3.innerHeight();
     let footLength = secFoot.innerHeight();
 
+    let windowH = $(window).innerHeight();  
+
     $(window).scroll($.throttle( 10,function() {
         let wScroll = $(window).scrollTop();
         let headStart = secHead.offset().top;
@@ -22,6 +24,7 @@ function winScroll() {
         let c2Start = secC2.offset().top;
         let c3Start = secC3.offset().top;
         let footStart = secFoot.offset().top;
+
 
         if (screenLandscapeTop()) {
             typeWriter();

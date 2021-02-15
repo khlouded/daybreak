@@ -41,6 +41,8 @@ let todoLength = secTodo.innerHeight();
 let orgLength = secOrg.innerHeight();
 let nextLength = secNext.innerHeight();
 
+let windowH = $(window).innerHeight();  
+
     $(window).scroll($.throttle( 10, function() {
         let wScroll = $(window).scrollTop();
         let headStart = secHead.offset().top;
