@@ -292,16 +292,27 @@ function pageTransition() {
     });
 
     navMContact.click(function (e) {
-        console.log('transition start');
+        if (document.location.pathname !== "/contact" ){
+            console.log('transition start');
 
+            e.preventDefault();
+
+            let goTo = this.getAttribute("href");
+            navText.removeClass("nav_linkShow");
+
+            window.setTimeout(function () {
+                window.location = goTo;
+            }, 500);
+    } else {
         e.preventDefault();
-
-        let goTo = this.getAttribute("href");
         navText.removeClass("nav_linkShow");
-
         window.setTimeout(function () {
-            window.location = goTo;
-        }, 500);
+            navMenu.removeClass("menu_transition");
+            setTimeout(function () {
+                navMenu.removeClass("nav_menu");
+            }, 300);
+        }, 700);
+    }
     });
 
 }
