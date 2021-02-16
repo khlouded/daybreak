@@ -63,14 +63,14 @@ $(window).scroll($.throttle( 10, function() {
             
         } else {
             navLogo_box.addClass('nav_start').css({"grid-template-columns": "1fr " + (logoHeaderWidth)*((scrollPercent)/100) + "px","-ms-grid-columns": "1fr " + (logoHeaderWidth)*((scrollPercent)/100) + "px"});
-            navPseudo.addClass("nav_start").css({"margin-left": (-118)*((100 - scrollPercent)/100) + "px", "opacity":1});
+            navPseudo.addClass("nav_start").css({"margin-left": (-logoHeaderWidth)*((100 - scrollPercent)/100) + "px", "opacity":1});
         }
 
     } else {
         navLink_event.css({"pointer-events":"all"});
         navLogo_cont.removeClass('nav_start').css({"transform":"translate(0,0vH)"});
         navLogo_icon.removeClass('nav_start');
-        navPseudo.removeClass('nav_start').css({"margin-left":0 + "px", "opacity":0});
+        navPseudo.removeClass("nav_start").css({"margin-left":0 + "px", "opacity":0});
         if(screenMobileTop()) {
             navHead.addClass('nav_start').css({"font-size": logoFinalSize + "px", "opacity":0});
             navLogo_box.addClass('nav_start').css({"grid-template-columns": "0px " + logoHeaderWidth + "px","-ms-grid-columns": "0px " + logoHeaderWidth + "px"});
