@@ -224,7 +224,7 @@ function pageTransition() {
             }, 500);
         });
     }
-    navMWork.click(function () {
+    navMWork.click(function (e) {
         console.log('transition start');
 
         e.preventDefault();
@@ -237,7 +237,7 @@ function pageTransition() {
             window.location = goTo;
         }, 4000);
     });
-    navMAbout.click(function () {
+    navMAbout.click(function (e) {
         console.log('transition start');
 
         e.preventDefault();
@@ -258,7 +258,7 @@ function pageTransition() {
         }, 700);
     });
 
-    navMContact.click(function () {
+    navMContact.click(function (e) {
         console.log('transition start');
 
         e.preventDefault();
