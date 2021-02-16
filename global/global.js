@@ -269,15 +269,11 @@ function pageTransition() {
             navText.removeClass("nav_linkShow");
 
             window.setTimeout(function () {
-            
-                linkTrans.css({"display":"flex", "background-color":"#d4dcde","opacity":"1" });
+                linkTrans.addClass('toabout');
                 setTimeout(function () {
-                    linkTrans.css({"transform":"translate(0, 0)"});
-                    setTimeout(function () {
-                        console.log('transition complete');
-                        window.location = goTo;
-                    }, 200);
-                }, 300);
+                    console.log('transition complete');
+                    window.location = goTo;
+                }, 200);
             }, 700);
         } else {
             e.preventDefault();
