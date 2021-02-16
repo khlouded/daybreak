@@ -57,6 +57,7 @@ $(window).scroll($.throttle( 10, function() {
         navHead.addClass('nav_start').css({"font-size": ((startSizing()-logoFinalSize)*((100 - scrollPercent)/100)) + logoFinalSize + "px", "opacity":1});
         navLogo_icon.addClass('nav_start');
         navLink_event.css({"pointer-events":"none"});
+        navPseudoSVG.css({"fill":"#fff"});
         if(screenMobileTop()) {
             navLogo_box.removeClass('nav_start').css({"grid-template-columns": "1fr " + 0 + "px","-ms-grid-columns": "1fr " + 0 + "px"});
             navPseudo.addClass("nav_start").css({"margin-left": 0 + "px", "opacity":1});
@@ -71,6 +72,7 @@ $(window).scroll($.throttle( 10, function() {
         navLogo_cont.removeClass('nav_start').css({"transform":"translate(0,0vH)"});
         navLogo_icon.removeClass('nav_start');
         navPseudo.removeClass("nav_start").css({"margin-left":0 + "px", "opacity":0});
+        navPseudoSVG.css({"fill":"#000"});
         if(screenMobileTop()) {
             navHead.addClass('nav_start').css({"font-size": logoFinalSize + "px", "opacity":0});
             navLogo_box.addClass('nav_start').css({"grid-template-columns": "0px " + logoHeaderWidth + "px","-ms-grid-columns": "0px " + logoHeaderWidth + "px"});
