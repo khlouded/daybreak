@@ -13,8 +13,9 @@ $(window).on('load', function(){
     navPseudo.addClass("nav_start").css({"margin-left": 0 + "px", "opacity":1});
     navPseudoSVG.css({"fill":"#fff"});
     startSizing();
-    block.removeClass('home_transition').css({"margin-top":"0"});
-
+    window.setTimeout(function () {
+        block.removeClass('home_transition');
+    }, 200);
 
 });
 function startSizing() {
