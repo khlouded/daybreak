@@ -14,9 +14,6 @@ function winScroll() {
     let navLogo_icon = $('.nav_logo_box .nav_logo');
     let navLogo_box = $('.nav_logo_box');
     let navPseudo = $('.nav_pseudo_container');
-    let nav = $('.navigation');
-    let navSelect = $('.nav_select');
-    let navPseudoSVG = $(".nav_pseudo_container svg path");
     let navLink_event = $('.nav_logo_link');
     
     // Case Study Images
@@ -59,9 +56,7 @@ $(window).scroll($.throttle( 10, function() {
         navLogo_cont.addClass('nav_start').css({"transform":"translate(0," + startTransform()*((100 - scrollPercent)/100) +"px)"});
         navHead.addClass('nav_start').css({"font-size": ((startSizing()-logoFinalSize)*((100 - scrollPercent)/100)) + logoFinalSize + "px", "opacity":1});
         navLogo_icon.addClass('nav_start');
-        nav.addClass('nav_start');
-        navSelect.addClass('nav_start');
-        navPseudoSVG.css({"fill":"#000"});
+        navLink_event.css({"pointer-events":"none"});
         if(screenMobileTop()) {
             navLogo_box.removeClass('nav_start').css({"grid-template-columns": "1fr " + 0 + "px","-ms-grid-columns": "1fr " + 0 + "px"});
             navPseudo.addClass("nav_start").css({"margin-left": 0 + "px", "opacity":1});
@@ -74,9 +69,6 @@ $(window).scroll($.throttle( 10, function() {
     } else {
         navLink_event.css({"pointer-events":"all"});
         navLogo_cont.removeClass('nav_start').css({"transform":"translate(0,0vH)"});
-        nav.removeClass('nav_start');
-        navSelect.removeClass('nav_start');
-        navPseudoSVG.css({"fill":"#fff"});
         navLogo_icon.removeClass('nav_start');
         navPseudo.removeClass('nav_start').css({"margin-left":0 + "px", "opacity":0});
         if(screenMobileTop()) {
