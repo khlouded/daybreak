@@ -176,8 +176,6 @@ function smoothScroll() {
 }
 function footerReveal() {
     const secFooter = $('#sec_footer');
-    // Heights
-    let footerLength = secFooter.innerHeight();
     const footerText = $('.footer_link');
 
     $(window).scroll(function () {
