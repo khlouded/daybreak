@@ -7,14 +7,12 @@ $(window).on('load', function(){
 
     navLogo_cont.addClass('nav_start');
     navLogo_icon.addClass('nav_start');
-    navHead.addClass('nav_start').css({"font-size": (startSizing()-logoFinalSize) + logoFinalSize + "px", "opacity":1});
+    navHead.addClass('nav_start').css({"font-size": (startSizing()-logoFinalSize)*$(window).scrollTop() + logoFinalSize + "px", "opacity":1});
     navLogo_box.addClass('nav_start').css({"grid-template-columns": "1fr " + 0 + "px","-ms-grid-columns": "1fr " + 0 + "px"});
     navPseudo.addClass("nav_start").css({"margin-left": 0 + "px", "opacity":1});
     navPseudoSVG.css({"fill":"#fff"});
     startSizing();
-    window.setTimeout(function () {
-        block.removeClass('home_transition');
-    }, 200);
+    navLink_event.css({"pointer-events":"none"});
 
 });
 function startSizing() {

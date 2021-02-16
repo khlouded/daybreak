@@ -14,7 +14,6 @@ function winScroll() {
     let navLogo_icon = $('.nav_logo_box .nav_logo');
     let navLogo_box = $('.nav_logo_box');
     let navPseudo = $('.nav_pseudo_container');
-    let navLink_event = $('.nav_logo_link');
     
     // Case Study Images
     const mainP = $('.home_colour');
@@ -109,7 +108,7 @@ $(window).scroll($.throttle( 10, function() {
         let scrollValue2 = Math.abs(wScroll - (C_twoStart - windowH*titleChange)); 
         let scrollPercent2 = (scrollValue2 / (C_twoLength + windowH*titleChange)) * 100;
         // images
-        c2_i2.css({"background-position":  scrollPercent2 + "% " + scrollPercent2 +"%"});
+        $('.home_imageclyx').css({""});
         c2_i3.css({"background-position":  "50% " + (scrollPercent2/4)-5 +"%"});
         c3_i3_m1.css({"transform":"translate(0, -" + 100 + "%)"});
         c3_i3_m2.css({"transform":"translate(0, " + 100 + "%)"});

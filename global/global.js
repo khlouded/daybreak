@@ -17,6 +17,7 @@ const nav_link = $('.nav_link');
 const navDelay = $('.nav_delay');
 const pageTrans = $('.pagetransition');
 const navPseudoSVG = $(".nav_pseudo_container svg path");
+const navLink_event = $('.nav_logo_link');
 // main large size variables
 let block = $('#block');
 let maxHeight = $('body').innerHeight();
@@ -235,7 +236,6 @@ function pageTransition() {
                 }, 700);
             }
         });
-  
     navMWork.click(function (e) {
         if (document.location.pathname !== "/work" ){
             console.log('transition start');
