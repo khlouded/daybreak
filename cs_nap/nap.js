@@ -28,9 +28,6 @@ const img_org1 = $('.org_img1');
 // typography
 const mainP = $('.nap_colour');
 
-//page transition
-let linkTrans = $('.linktransition');
-
 function winScroll() {
 //size
 let headLength = secHead.innerHeight();

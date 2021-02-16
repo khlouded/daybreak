@@ -236,41 +236,44 @@ function pageTransition() {
     //const navMWork = $('.menu_link_work');
     //const navMAbout = $('.menu_link_about');
     //const navMContact = $('.menu_link_contact');
-    navMHome.click(function (e) {
-        e.preventDefault();
+    if (document.location.pathname !== '/home'){
+        navMHome.click(function (e) {
 
-        let goTo = this.getAttribute("href");
-        navText.removeClass("nav_linkShow");
-        function close_menu() {
-            navMenu.removeClass("menu_transition");
-        }
-        function hide_menu() {
-            navMenu.removeClass("nav_menu");
-        }
-        function slide_exist(){
-            //let linkTrans = $('.linktransition');
-            linkTrans.css({"display":"block","background-color":"#f6f6f6"});
-        }
-        function slide_over(){
-            linkTrans.css({"transform":"translate(" + 0 + "vh,0)"});
-        }
+            e.preventDefault();
 
-        window.setTimeout(function () {
-            close_menu();
-            setTimeout(function () {
-                hide_menu();
+            let goTo = this.getAttribute("href");
+            navText.removeClass("nav_linkShow");
+            function close_menu() {
+                navMenu.removeClass("menu_transition");
+            }
+            function hide_menu() {
+                navMenu.removeClass("nav_menu");
+            }
+            function slide_exist(){
+                //let linkTrans = $('.linktransition');
+                linkTrans.css({"display":"block","background-color":"#f6f6f6"});
+            }
+            function slide_over(){
+                linkTrans.css({"transform":"translate(" + 0 + "vh,0)"});
+            }
+
+            window.setTimeout(function () {
+                close_menu();
                 setTimeout(function () {
-                    slide_exist();
+                    hide_menu();
                     setTimeout(function () {
-                        slide_over();
+                        slide_exist();
                         setTimeout(function () {
-                            window.location = goTo;
+                            slide_over();
+                            setTimeout(function () {
+                                window.location = goTo;
+                            }, 200);
                         }, 200);
                     }, 200);
-                }, 200);
-            }, 300);
-        }, 700);
-    });
+                }, 300);
+            }, 700);
+        });
+    }
 
     navMWork.click(function () {
         e.preventDefault();
@@ -309,6 +312,7 @@ function pageTransition() {
         let goTo = this.getAttribute("href");
         navText.removeClass("nav_linkShow");
         function slide_exist(){
+            console.log('slide_exist')
             //let linkTrans = $('.linktransition');
             linkTrans.css({"display":"block", "background-color":""});
         }
@@ -316,12 +320,6 @@ function pageTransition() {
             linkTrans.css({"transform":"translate(" + 0 + "vh,0)"});
         }
 
-        // function close_menu() {
-        //     navMenu.removeClass("menu_transition");
-        // }
-        // function hide_menu() {
-        //     navMenu.removeClass("nav_menu");
-        // }
         window.setTimeout(function () {
             
             slide_exist();
@@ -334,7 +332,7 @@ function pageTransition() {
             }, 300);
         }, 700);
     });
-    navMAbout.click(function () {
+    navMContact.click(function () {
         e.preventDefault();
 
         let goTo = this.getAttribute("href");
@@ -346,13 +344,6 @@ function pageTransition() {
         function slide_over() {
             linkTrans.css({"transform":"translate(" + 0 + "vh,0)"});
         }
-
-        // function close_menu() {
-        //     navMenu.removeClass("menu_transition");
-        // }
-        // function hide_menu() {
-        //     navMenu.removeClass("nav_menu");
-        // }
         window.setTimeout(function () {
             
             slide_exist();
