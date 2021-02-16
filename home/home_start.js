@@ -63,7 +63,7 @@ function winScroll() {
     let C_threeLength = secC_three.innerHeight();
     let footerLength = secFooter.innerHeight();
 
-$(window).scroll($.throttle( 10, function() {		
+$(window).scroll(function() {		
     let wScroll = $(window).scrollTop();
 
     //position information
@@ -158,7 +158,7 @@ $(window).scroll($.throttle( 10, function() {
         block.css("background-color", "#FCFAF7");
         //prep
     }
-}));
+});
 }
 function startTransform() {
     //media queries
