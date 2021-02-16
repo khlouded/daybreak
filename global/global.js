@@ -207,140 +207,68 @@ function splitFont() {
     $(".variable_word").lettering('words');
 }
 function pageTransition() {
-    //const navDelay = $('.nav_delay');
-    // //general transition
-    // navDelay.click(function (e) {
-    //     e.preventDefault();
-
-    //     let goTo = this.getAttribute("href");
-    //     navText.removeClass("nav_linkShow");
-    //     function close_menu() {
-    //         navMenu.removeClass("menu_transition");
-    //     }
-    //     function hide_menu() {
-    //         navMenu.removeClass("nav_menu");
-    //     }
-
-    //     window.setTimeout(function () {
-    //         close_menu();
-    //         setTimeout(function () {
-    //             hide_menu();
-    //             setTimeout(function () {
-    //                 window.location = goTo;
-    //             }, 200);
-    //         }, 300);
-    //     }, 700);
-    // });
-
-    //const navMHome = $('.menu_link_home');
-    //const navMWork = $('.menu_link_work');
-    //const navMAbout = $('.menu_link_about');
-    //const navMContact = $('.menu_link_contact');
-    if (document.location.pathname !== '/home'){
+    if (document.location.pathname !== "/" ){
         navMHome.click(function (e) {
-
+            console.log('transition start');
             e.preventDefault();
 
             let goTo = this.getAttribute("href");
             navText.removeClass("nav_linkShow");
-            function close_menu() {
-                navMenu.removeClass("menu_transition");
-            }
-            function hide_menu() {
-                navMenu.removeClass("nav_menu");
-            }
-            function slide_exist(){
-                //let linkTrans = $('.linktransition');
-                linkTrans.css({"display":"flex","background-color":"#f6f6f6"});
-            }
-            function slide_over(){
-                linkTrans.css({"transform":"translate(" + 0 + "vh,0)"});
-            }
 
             window.setTimeout(function () {
-                close_menu();
+                navMenu.css({"background-color":"#f6f6f6"});
                 setTimeout(function () {
-                    hide_menu();
-                    setTimeout(function () {
-                        slide_exist();
-                        setTimeout(function () {
-                            slide_over();
-                            setTimeout(function () {
-                                window.location = goTo;
-                            }, 200);
-                        }, 200);
-                    }, 200);
-                }, 300);
-            }, 700);
+                    window.location = goTo;
+                    console.log('transition complete');
+                }, 400);
+            }, 500);
         });
     }
-
     navMWork.click(function () {
+        console.log('transition start');
+
         e.preventDefault();
 
         let goTo = this.getAttribute("href");
         navText.removeClass("nav_linkShow");
-        function slide_exist(){
-            //let linkTrans = $('.linktransition');
-            linkTrans.css({"display":"flex", "background-color":""});
-        }
-        function slide_over() {
-            linkTrans.css({"transform":"translate(" + 0 + "vh,0)"});
-        }
 
-        // function close_menu() {
-        //     navMenu.removeClass("menu_transition");
-        // }
-        // function hide_menu() {
-        //     navMenu.removeClass("nav_menu");
-        // }
         window.setTimeout(function () {
-
-            slide_exist();
-            setTimeout(function () {
-                slide_over();   
-
-                setTimeout(function () {
-                    window.location = goTo;
-                }, 200);
-            }, 300);
-        }, 700);
+            console.log('transition complete');
+            window.location = goTo;
+        }, 4000);
     });
     navMAbout.click(function () {
+        console.log('transition start');
+
         e.preventDefault();
 
         let goTo = this.getAttribute("href");
         navText.removeClass("nav_linkShow");
-        function slide_exist(){
-            console.log('slide_exist')
-            //let linkTrans = $('.linktransition');
-            linkTrans.css({"display":"block", "background-color":"#d4dcde"});
-        }
-        function slide_over() {
-            linkTrans.css({"transform":"translate(" + 0 + "vh,0)"});
-        }
 
         window.setTimeout(function () {
-            
-            slide_exist();
+        
+            linkTrans.css({"display":"block", "background-color":"#d4dcde"});
             setTimeout(function () {
-                slide_over();   
-
+                linkTrans.css({"transform":"translate(" + 0 + "vh,0)"});
                 setTimeout(function () {
+                    console.log('transition complete');
                     window.location = goTo;
                 }, 200);
             }, 300);
         }, 700);
     });
+
     navMContact.click(function () {
+        console.log('transition start');
+
         e.preventDefault();
 
         let goTo = this.getAttribute("href");
         navText.removeClass("nav_linkShow");
+
         window.setTimeout(function () {
-            
-                    window.location = goTo;
-        }, 400);
+            window.location = goTo;
+        }, 500);
     });
 
 }
