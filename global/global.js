@@ -235,7 +235,7 @@ function pageTransition() {
         window.setTimeout(function () {
             console.log('transition complete');
             window.location = goTo;
-        }, 4000);
+        }, 500);
     });
     navMAbout.click(function (e) {
         console.log('transition start');
