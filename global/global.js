@@ -279,22 +279,23 @@ function pageTransition() {
         navText.removeClass("nav_linkShow");
         function slide_exist(){
             //let linkTrans = $('.linktransition');
-            linkTrans.css({"display":"block"});
+            linkTrans.css({"display":"block", "background-color":""});
         }
-        function slide_over(){
+        function slide_over() {
             linkTrans.css({"transform":"translate(" + 0 + "vh,0)"});
         }
 
-        function close_menu() {
-            navMenu.removeClass("menu_transition");
-        }
-        function hide_menu() {
-            navMenu.removeClass("nav_menu");
-        }
+        // function close_menu() {
+        //     navMenu.removeClass("menu_transition");
+        // }
+        // function hide_menu() {
+        //     navMenu.removeClass("nav_menu");
+        // }
         window.setTimeout(function () {
-            close_menu();
+
+            slide_exist();
             setTimeout(function () {
-                hide_menu();
+                slide_over();   
 
                 setTimeout(function () {
                     window.location = goTo;
@@ -302,6 +303,69 @@ function pageTransition() {
             }, 300);
         }, 700);
     });
+    navMAbout.click(function () {
+        e.preventDefault();
+
+        let goTo = this.getAttribute("href");
+        navText.removeClass("nav_linkShow");
+        function slide_exist(){
+            //let linkTrans = $('.linktransition');
+            linkTrans.css({"display":"block", "background-color":""});
+        }
+        function slide_over() {
+            linkTrans.css({"transform":"translate(" + 0 + "vh,0)"});
+        }
+
+        // function close_menu() {
+        //     navMenu.removeClass("menu_transition");
+        // }
+        // function hide_menu() {
+        //     navMenu.removeClass("nav_menu");
+        // }
+        window.setTimeout(function () {
+            
+            slide_exist();
+            setTimeout(function () {
+                slide_over();   
+
+                setTimeout(function () {
+                    window.location = goTo;
+                }, 200);
+            }, 300);
+        }, 700);
+    });
+    navMAbout.click(function () {
+        e.preventDefault();
+
+        let goTo = this.getAttribute("href");
+        navText.removeClass("nav_linkShow");
+        function slide_exist(){
+            //let linkTrans = $('.linktransition');
+            linkTrans.css({"display":"block", "background-color":""});
+        }
+        function slide_over() {
+            linkTrans.css({"transform":"translate(" + 0 + "vh,0)"});
+        }
+
+        // function close_menu() {
+        //     navMenu.removeClass("menu_transition");
+        // }
+        // function hide_menu() {
+        //     navMenu.removeClass("nav_menu");
+        // }
+        window.setTimeout(function () {
+            
+            slide_exist();
+            setTimeout(function () {
+                slide_over();   
+
+                setTimeout(function () {
+                    window.location = goTo;
+                }, 200);
+            }, 300);
+        }, 700);
+    });
+
 }
 function screenMobileTop() {
     var mq = window.matchMedia("(max-width: 477px)");
