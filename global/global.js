@@ -236,37 +236,59 @@ function pageTransition() {
         });
   
     navMWork.click(function (e) {
-        console.log('transition start');
+        if (document.location.pathname !== "/work" ){
+            console.log('transition start');
 
-        e.preventDefault();
+            e.preventDefault();
 
-        let goTo = this.getAttribute("href");
-        navText.removeClass("nav_linkShow");
+            let goTo = this.getAttribute("href");
+            navText.removeClass("nav_linkShow");
 
-        window.setTimeout(function () {
-            console.log('transition complete');
-            window.location = goTo;
-        }, 500);
+            window.setTimeout(function () {
+                console.log('transition complete');
+                window.location = goTo;
+            }, 500);
+        } else {
+            e.preventDefault();
+            navText.removeClass("nav_linkShow");
+            window.setTimeout(function () {
+                navMenu.removeClass("menu_transition");
+                setTimeout(function () {
+                    navMenu.removeClass("nav_menu");
+                }, 300);
+            }, 700);
+        }
     });
     navMAbout.click(function (e) {
-        console.log('transition start');
+        if (document.location.pathname !== "/about" ){
+            console.log('transition start');
 
-        e.preventDefault();
+            e.preventDefault();
 
-        let goTo = this.getAttribute("href");
-        navText.removeClass("nav_linkShow");
+            let goTo = this.getAttribute("href");
+            navText.removeClass("nav_linkShow");
 
-        window.setTimeout(function () {
-        
-            linkTrans.css({"display":"block", "background-color":"#d4dcde"});
-            setTimeout(function () {
-                linkTrans.css({"transform":"translate(" + 0 + "vh,0)"});
+            window.setTimeout(function () {
+            
+                linkTrans.css({"display":"flex", "background-color":"#d4dcde","opacity":"1" });
                 setTimeout(function () {
-                    console.log('transition complete');
-                    window.location = goTo;
-                }, 200);
-            }, 300);
-        }, 700);
+                    linkTrans.css({"transform":"translate(0, 0)"});
+                    setTimeout(function () {
+                        console.log('transition complete');
+                        window.location = goTo;
+                    }, 200);
+                }, 300);
+            }, 700);
+        } else {
+            e.preventDefault();
+            navText.removeClass("nav_linkShow");
+            window.setTimeout(function () {
+                navMenu.removeClass("menu_transition");
+                setTimeout(function () {
+                    navMenu.removeClass("nav_menu");
+                }, 300);
+            }, 700);
+        }
     });
 
     navMContact.click(function (e) {
