@@ -274,8 +274,8 @@ function pageTransition() {
                 setTimeout(function () {
                     console.log('transition complete');
                     window.location = goTo;
-                }, 200);
-            }, 700);
+                }, 700);
+            }, 200);
         } else {
             e.preventDefault();
             navText.removeClass("nav_linkShow");
