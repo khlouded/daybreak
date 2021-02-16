@@ -16,6 +16,7 @@ const navMContact = $('.menu_link_contact');
 const nav_link = $('.nav_link');
 const navDelay = $('.nav_delay');
 const pageTrans = $('.pagetransition');
+const navPseudoSVG = $(".nav_pseudo_container svg path");
 // main large size variables
 let block = $('#block');
 let maxHeight = $('body').innerHeight();

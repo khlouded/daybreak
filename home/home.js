@@ -64,7 +64,7 @@ $(window).scroll($.throttle( 10, function() {
             
         } else {
             navLogo_box.addClass('nav_start').css({"grid-template-columns": "1fr " + (logoHeaderWidth)*((scrollPercent)/100) + "px","-ms-grid-columns": "1fr " + (logoHeaderWidth)*((scrollPercent)/100) + "px"});
-            navPseudo.addClass("nav_start").css({"margin-left": (-logoHeaderWidth)*((100 - scrollPercent)/100) + "px", "opacity":1});
+            navPseudo.addClass("nav_start").css({"margin-left": (-logoHeaderWidth*2)*((100 - scrollPercent)/100) + "px", "opacity":1});
         }
 
     } else {

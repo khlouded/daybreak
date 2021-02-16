@@ -4,7 +4,6 @@ $(window).on('load', function(){
     const navLogo_icon = $('.nav_logo_box .nav_logo');
     const navPseudo = $('.nav_pseudo_container'); 
     const navLogo_box = $('.nav_logo_box');
-    const navPseudoSVG = $(".nav_pseudo_container svg path");
 
     navLogo_cont.addClass('nav_start');
     navLogo_icon.addClass('nav_start');
