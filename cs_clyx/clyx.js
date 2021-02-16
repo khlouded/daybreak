@@ -30,7 +30,7 @@ function winScroll() {
 
     let windowH = $(window).innerHeight();  
 
-    $(window).scroll($.throttle( 10, function() {
+    $(window).scroll($.throttle( 5, function() {
         let wScroll = $(window).scrollTop();
         let headStart = secHead.offset().top;
         let desStart = secDes.offset().top;

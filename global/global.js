@@ -26,6 +26,9 @@ const titleChange = 0.25;
 const logoFinalSize = 27;
 const logoHeaderWidth = 50;
 
+//page transition
+const linkTrans = $('.linktransition');
+
 
 function navClick() {
     navButt.click(function () {
@@ -244,13 +247,26 @@ function pageTransition() {
         function hide_menu() {
             navMenu.removeClass("nav_menu");
         }
+        function slide_exist(){
+            //let linkTrans = $('.linktransition');
+            linkTrans.css({"display":"block","background-color":"#f6f6f6"});
+        }
+        function slide_over(){
+            linkTrans.css({"transform":"translate(" + 0 + "vh,0)"});
+        }
 
         window.setTimeout(function () {
             close_menu();
             setTimeout(function () {
                 hide_menu();
                 setTimeout(function () {
-                    window.location = goTo;
+                    slide_exist();
+                    setTimeout(function () {
+                        slide_over();
+                        setTimeout(function () {
+                            window.location = goTo;
+                        }, 200);
+                    }, 200);
                 }, 200);
             }, 300);
         }, 700);
@@ -261,8 +277,12 @@ function pageTransition() {
 
         let goTo = this.getAttribute("href");
         navText.removeClass("nav_linkShow");
+        function slide_exist(){
+            //let linkTrans = $('.linktransition');
+            linkTrans.css({"display":"block"});
+        }
         function slide_over(){
-            
+            linkTrans.css({"transform":"translate(" + 0 + "vh,0)"});
         }
 
         function close_menu() {
@@ -275,6 +295,7 @@ function pageTransition() {
             close_menu();
             setTimeout(function () {
                 hide_menu();
+
                 setTimeout(function () {
                     window.location = goTo;
                 }, 200);
