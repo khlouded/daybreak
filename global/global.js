@@ -207,23 +207,34 @@ function splitFont() {
     $(".variable_word").lettering('words');
 }
 function pageTransition() {
-    if (document.location.pathname !== "/" ){
+
         navMHome.click(function (e) {
-            console.log('transition start');
-            e.preventDefault();
+            if (document.location.pathname !== "/" ){
+                console.log('transition start');
+                e.preventDefault();
 
-            let goTo = this.getAttribute("href");
-            navText.removeClass("nav_linkShow");
+                let goTo = this.getAttribute("href");
+                navText.removeClass("nav_linkShow");
 
-            window.setTimeout(function () {
-                navMenu.css({"background-color":"#f6f6f6"});
-                setTimeout(function () {
-                    window.location = goTo;
-                    console.log('transition complete');
-                }, 400);
-            }, 500);
+                window.setTimeout(function () {
+                    navMenu.css({"background-color":"#f6f6f6"});
+                    setTimeout(function () {
+                        window.location = goTo;
+                        console.log('transition complete');
+                    }, 400);
+                }, 500);
+            } else {
+                e.preventDefault();
+                navText.removeClass("nav_linkShow");
+                window.setTimeout(function () {
+                    navMenu.removeClass("menu_transition");
+                    setTimeout(function () {
+                        navMenu.removeClass("nav_menu");
+                    }, 300);
+                }, 700);
+            }
         });
-    }
+  
     navMWork.click(function (e) {
         console.log('transition start');
 
