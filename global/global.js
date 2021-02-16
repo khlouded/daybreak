@@ -274,7 +274,7 @@ function pageTransition() {
                 setTimeout(function () {
                     console.log('transition complete');
                     window.location = goTo;
-                }, 700);
+                }, 900);
             }, 200);
         } else {
             e.preventDefault();
