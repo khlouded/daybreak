@@ -208,29 +208,29 @@ function splitFont() {
 }
 function pageTransition() {
     //const navDelay = $('.nav_delay');
-    //general transition
-    navDelay.click(function (e) {
-        e.preventDefault();
+    // //general transition
+    // navDelay.click(function (e) {
+    //     e.preventDefault();
 
-        let goTo = this.getAttribute("href");
-        navText.removeClass("nav_linkShow");
-        function close_menu() {
-            navMenu.removeClass("menu_transition");
-        }
-        function hide_menu() {
-            navMenu.removeClass("nav_menu");
-        }
+    //     let goTo = this.getAttribute("href");
+    //     navText.removeClass("nav_linkShow");
+    //     function close_menu() {
+    //         navMenu.removeClass("menu_transition");
+    //     }
+    //     function hide_menu() {
+    //         navMenu.removeClass("nav_menu");
+    //     }
 
-        window.setTimeout(function () {
-            close_menu();
-            setTimeout(function () {
-                hide_menu();
-                setTimeout(function () {
-                    window.location = goTo;
-                }, 200);
-            }, 300);
-        }, 700);
-    });
+    //     window.setTimeout(function () {
+    //         close_menu();
+    //         setTimeout(function () {
+    //             hide_menu();
+    //             setTimeout(function () {
+    //                 window.location = goTo;
+    //             }, 200);
+    //         }, 300);
+    //     }, 700);
+    // });
 
     //const navMHome = $('.menu_link_home');
     //const navMWork = $('.menu_link_work');
@@ -251,7 +251,7 @@ function pageTransition() {
             }
             function slide_exist(){
                 //let linkTrans = $('.linktransition');
-                linkTrans.css({"display":"block","background-color":"#f6f6f6"});
+                linkTrans.css({"display":"flex","background-color":"#f6f6f6"});
             }
             function slide_over(){
                 linkTrans.css({"transform":"translate(" + 0 + "vh,0)"});
@@ -282,7 +282,7 @@ function pageTransition() {
         navText.removeClass("nav_linkShow");
         function slide_exist(){
             //let linkTrans = $('.linktransition');
-            linkTrans.css({"display":"block", "background-color":""});
+            linkTrans.css({"display":"flex", "background-color":""});
         }
         function slide_over() {
             linkTrans.css({"transform":"translate(" + 0 + "vh,0)"});
@@ -314,7 +314,7 @@ function pageTransition() {
         function slide_exist(){
             console.log('slide_exist')
             //let linkTrans = $('.linktransition');
-            linkTrans.css({"display":"block", "background-color":""});
+            linkTrans.css({"display":"block", "background-color":"#d4dcde"});
         }
         function slide_over() {
             linkTrans.css({"transform":"translate(" + 0 + "vh,0)"});
@@ -337,24 +337,10 @@ function pageTransition() {
 
         let goTo = this.getAttribute("href");
         navText.removeClass("nav_linkShow");
-        function slide_exist(){
-            //let linkTrans = $('.linktransition');
-            linkTrans.css({"display":"block", "background-color":""});
-        }
-        function slide_over() {
-            linkTrans.css({"transform":"translate(" + 0 + "vh,0)"});
-        }
         window.setTimeout(function () {
             
-            slide_exist();
-            setTimeout(function () {
-                slide_over();   
-
-                setTimeout(function () {
                     window.location = goTo;
-                }, 200);
-            }, 300);
-        }, 700);
+        }, 400);
     });
 
 }
