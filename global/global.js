@@ -183,7 +183,7 @@ function footerReveal() {
     $(window).scroll(function () {
         let wScroll = $(window).scrollTop();
         let footerStart = secFooter.offset().top;
-        if (wScroll >= footerStart - (windowH - 300) && wScroll < footerStart + footerLength) {
+        if (wScroll >= footerStart - (windowH - 100)) {
             footerText.addClass('footer_show');
         } else {
             footerText.removeClass('footer_show');

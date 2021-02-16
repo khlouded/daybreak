@@ -136,7 +136,7 @@ $(window).scroll($.throttle( 10, function() {
         let scrollValue2 = Math.abs(wScroll - (C_twoStart - windowH*titleChange)); 
         let scrollPercent2 = (scrollValue2 / (C_twoLength + windowH*titleChange)) * 100;
         // images
-        c2_i2.css({"bottom": "-" + 3*((100-scrollPercent2)) + 100 + "px"});
+        c2_i2.css({"bottom": "-" + 3*(Math.abs(100-scrollPercent2)) + 100 + "px"});
         c2_i3.css({"background-position":  "50% " + (scrollPercent2/4)-5 +"%"});
         c3_i3_m1.css({"transform":"translate(0, -" + 100 + "%)"});
         c3_i3_m2.css({"transform":"translate(0, " + 100 + "%)"});
