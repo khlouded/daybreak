@@ -176,8 +176,8 @@ function winScroll() {
             let scrollValue3 = Math.abs(wScroll - (C_threeStart - windowH*titleChange));
             let scrollPercent3 = (scrollValue3 / C_threeLength) * 100;
             // vids
-            c3_i3_m1.css({"transform":"translate(0, " + (-1)*((100 - scrollPercent3)) + "%)"});
-            c3_i3_m2.css({"transform":"translate(0, " + ((100 - scrollPercent3)) + "%)"});
+            c3_i3_m1.css({"transform":"translate(0, " + (-1)*((100 - scrollPercent3)/2) + "%)"});
+            c3_i3_m2.css({"transform":"translate(0, " + ((100 - scrollPercent3)/2) + "%)"});
         } else if (wScroll >= C_threeStart + C_threeLength - windowH*titleChange && wScroll < footerStart + footerLength - windowH*titleChange) {
 
             //footer
