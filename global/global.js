@@ -221,8 +221,8 @@ function pageTransition() {
                     setTimeout(function () {
                         window.location = goTo;
                         console.log('transition complete');
-                    }, 400);
-                }, 500);
+                    }, 900);
+                }, 200);
             } else {
                 e.preventDefault();
                 navText.removeClass("nav_linkShow");
@@ -232,6 +232,24 @@ function pageTransition() {
                         navMenu.removeClass("nav_menu");
                     }, 300);
                 }, 700);
+            }
+        });
+        navLink_event.click(function (e) {
+            if (document.location.pathname !== "/" ){
+                console.log('transition start');
+                e.preventDefault();
+
+                let goTo = this.getAttribute("href");
+
+                window.setTimeout(function () {
+                    linkTrans.addClass('toabout');
+                    setTimeout(function () {
+                        console.log('transition complete');
+                        window.location = goTo;
+                    }, 900);
+                }, 200);
+            } else {
+                e.preventDefault();
             }
         });
     navMWork.click(function (e) {
