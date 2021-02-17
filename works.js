@@ -108,6 +108,7 @@ function worksTransition() {
 }
 (function($) {
     typeWriter();
+    worksTransition(); 
     winScroll();
     $(window).resize(function() {
         winScroll();

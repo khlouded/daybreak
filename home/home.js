@@ -197,9 +197,5 @@ function winScroll() {
         startTransform();
         startSizing();
     });
-    $(window).on('load', function(){
-        winScroll();
-        startTransform();
-        startSizing();
-    }); 
+    
 }(jQuery));  
