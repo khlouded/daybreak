@@ -167,9 +167,8 @@ function winScroll() {
         caseImg.css({"background-color":"#FFF9DB"});
         block.css("background-color", "#FFE66A");       
         let scrollValue2 = Math.abs(wScroll - (C_twoStart - windowH*titleChange)); 
-        let scrollPercent2 = (scrollValue2 / (C_twoLength + windowH*titleChange)) * 100;
+        let scrollPercent2 = (scrollValue2 / C_twoLength) * 100;
         // images
-        console.log(scrollPercent2+" percent2");
         c2_i2.css({"bottom": "-" + 3*(Math.abs(100-scrollPercent2)) + 150 + "px"});
         c2_i3.css({"background-position":  50+"% 10%"});
         c3_i3_m1.css({"transform":"translate(0, -" + 100 + "%)"});
@@ -180,8 +179,11 @@ function winScroll() {
         caseImg.css({"background-color":"#ADDAD5"});
         block.css("background-color", "#FCFAF7"); 
         let scrollValue3 = Math.abs(wScroll - (C_threeStart - windowH*titleChange));
-        let scrollPercent3 = (scrollValue3 / C_threeLength + windowH*titleChange) * 100;
+        let scrollPercent3 = (scrollValue3 / C_threeLength) * 100;
         console.log(scrollPercent3+" percent3");
+        console.log(C_threeStart+" start3");
+        console.log(windowH+" browserHeight");
+
         // vids
         c3_i3_m1.css({"transform":"translate(0, " + (-1)*((100 - scrollPercent3)/2) + "%)"});
         c3_i3_m2.css({"transform":"translate(0, " + ((100 - scrollPercent3)/2) + "%)"});
