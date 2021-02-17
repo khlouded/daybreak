@@ -44,7 +44,7 @@ function winScroll() {
             }
             else if (wScroll >= c1Start + c1Length - windowH*titleChange && wScroll < c2Start + c2Length - windowH*titleChange) {
                 // case2
-                block.css("background-color", "#FFE66A");
+                block.css("background-color", "#FFF9DB");
                 mainP.css({"color":"#4303A7"});
                 console.log('case2');
                 
