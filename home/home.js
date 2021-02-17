@@ -252,12 +252,15 @@ function worksTransition() {
         }));
         footerReveal();
         $(window).resize(function() {
-            $(window).scroll($.throttle( 10,function() {
-                winScroll();
-            }));
+            winScroll();
             startTransform();
             startSizing();
         });
         $(window).scroll();
+    });
+    $(window).load(function() {
+        winScroll();
+        startTransform();
+        startSizing();
     });
 }(jQuery));  
