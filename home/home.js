@@ -84,7 +84,7 @@ function winScroll() {
     const c3_i3_m2 = $('.home_caseimage_snacks.c3_vid2');
 
     //other
-    const banText = $('.banner_text')
+    const banText = $('.banner_text');
 
     // Heights
     let headLength = secHead.innerHeight();
