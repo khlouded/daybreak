@@ -171,8 +171,8 @@ function winScroll() {
         // images
         c2_i2.css({"bottom": "-" + 3*(Math.abs(100-scrollPercent2)) + 150 + "px"});
         c2_i3.css({"background-position":  50+"% 10%"});
-        c3_i3_m1.css({"transform":"translate(0, -" + 100 + "%)"});
-        c3_i3_m2.css({"transform":"translate(0, " + 100 + "%)"});
+        c3_i3_m1.css({"transform":"translate(0, " + (-1)*((100/1)) + "%)"});
+            c3_i3_m2.css({"transform":"translate(0, " + ((100/1)) + "%)"});
     } else if (wScroll >= C_twoStart + C_twoLength - windowH*titleChange && wScroll < C_threeStart + C_threeLength - windowH*titleChange) {
         //case three
         mainP.css({"color":"#295849"});
@@ -181,12 +181,12 @@ function winScroll() {
         let scrollValue3 = Math.abs(wScroll - (C_threeStart - windowH*titleChange));
         let scrollPercent3 = (scrollValue3 / C_threeLength) * 100;
         console.log(scrollPercent3+" percent3");
-        console.log(C_threeStart+" start3");
-        console.log(windowH+" browserHeight");
 
         // vids
-        c3_i3_m1.css({"transform":"translate(0, " + (-1)*((100 - scrollPercent3)/2) + "%)"});
-        c3_i3_m2.css({"transform":"translate(0, " + ((100 - scrollPercent3)/2) + "%)"});
+        if (scrollPercent3 >= 1 ){
+            c3_i3_m1.css({"transform":"translate(0, " + (-1)*((100/scrollPercent3)) + "%)"});
+            c3_i3_m2.css({"transform":"translate(0, " + ((100/scrollPercent3)) + "%)"});
+        }
     } else if (wScroll >= C_threeStart + C_threeLength - windowH*titleChange && wScroll < footerStart + footerLength - windowH*titleChange) {
 
         //footer
