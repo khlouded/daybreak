@@ -215,7 +215,7 @@ function pageTransition() {
 
                 let goTo = this.getAttribute("href");
                 navText.removeClass("nav_linkShow");
-
+                navDesCont.css({"display":"none"});
                 window.setTimeout(function () {
                     navMenu.css({"background-color":"#f6f6f6"});
                     setTimeout(function () {
@@ -242,7 +242,7 @@ function pageTransition() {
 
             let goTo = this.getAttribute("href");
             navText.removeClass("nav_linkShow");
-
+            navDesCont.css({"display":"none"});
             window.setTimeout(function () {
                 console.log('transition complete');
                 window.location = goTo;
@@ -266,7 +266,7 @@ function pageTransition() {
 
             let goTo = this.getAttribute("href");
             navText.removeClass("nav_linkShow");
-
+            navDesCont.css({"display":"none"});
             window.setTimeout(function () {
                 linkTrans.addClass('toabout');
                 setTimeout(function () {
@@ -277,6 +277,7 @@ function pageTransition() {
         } else {
             e.preventDefault();
             navText.removeClass("nav_linkShow");
+            navDesCont.css({"display":"none"});
             window.setTimeout(function () {
                 navMenu.removeClass("menu_transition");
                 setTimeout(function () {
@@ -294,7 +295,7 @@ function pageTransition() {
 
             let goTo = this.getAttribute("href");
             navText.removeClass("nav_linkShow");
-
+            navDesCont.css({"display":"none"});
             window.setTimeout(function () {
                 window.location = goTo;
             }, 500);
