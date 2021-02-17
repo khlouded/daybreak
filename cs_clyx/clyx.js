@@ -116,7 +116,7 @@ function nextSlide() {
         timeout = null;
         clearTimeout(timeout);
     }
-    $(window).scroll($.throttle( 20, function() {
+    $(window).scroll($.throttle( 20, function(e) {
         let wScroll = $(window).scrollTop();
         let nextStart = secNext.offset().top;
 

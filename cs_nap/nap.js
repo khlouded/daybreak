@@ -176,7 +176,7 @@ function nextSlide() {
         timeout = null;
         clearTimeout(timeout);
     }
-    $(window).scroll($.throttle( 20, function() {
+    $(window).scroll($.throttle( 20, function(e) {
         let wScroll = $(window).scrollTop();
         let nextStart = secNext.offset().top;
 
@@ -188,7 +188,7 @@ function nextSlide() {
 
             let goTo = this.getAttribute("href");
             $('.next_cs_img').css({"transform":"translate(-50vh"});
-            
+
             timeout = window.setTimeout(function () {
                 linkTrans.addClass('toclyx');
                 setTimeout(function () {
