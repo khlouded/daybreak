@@ -72,7 +72,7 @@ function winScroll() {
 
             block.css("background-color", "#f6f6f6");
         }
-        if (wScroll >= nextStart - windowH*titleChange) {
+        if (wScroll >= nextStart - windowH*titleChange*0.5) {
             let scrollValueNext = Math.abs(wScroll - (nextStart - windowH*titleChange));
             let scrollPercentNext = (scrollValueNext /  (nextLength*0.5)) * 100;
             nextLink.css({"transform":"translate( 0,-" + Math.sqrt(5*scrollPercentNext*100) + "%)"});
