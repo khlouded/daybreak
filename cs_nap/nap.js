@@ -187,6 +187,8 @@ function nextSlide() {
             e.preventDefault();
 
             let goTo = this.getAttribute("href");
+            $('.next_cs_img').css({"transform":"translate(-50vh"});
+            
             timeout = window.setTimeout(function () {
                 linkTrans.addClass('toclyx');
                 setTimeout(function () {

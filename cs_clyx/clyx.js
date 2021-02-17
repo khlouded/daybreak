@@ -96,6 +96,7 @@ function winScroll() {
                 "display":"flex",
                 "background-image":"linear-gradient(180deg, transparent " + (200 - scrollPercentNext) + "%, #fff 100%)"
             });
+
         } else {
             nextLink.css({ "transform": "translate( 0, 0%)" });
             nextGradient.css({
@@ -123,7 +124,8 @@ function nextSlide() {
             console.log('transition start');
 
             e.preventDefault();
-
+            
+            $('.next_cs_img').css({"transform":"translate(-50vh"});
             let goTo = this.getAttribute("href");
             timeout = window.setTimeout(function () {
                 linkTrans.addClass('tostacks');
