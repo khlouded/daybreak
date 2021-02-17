@@ -182,7 +182,7 @@ function winScroll() {
         block.css("background-color", "#FCFAF7"); 
         let scrollValue3 = Math.abs(wScroll - (C_threeStart - windowH*titleChange));
         let scrollPercent3 = (scrollValue3 / C_threeLength + windowH*titleChange) * 100;
-        console.log(scrollPercent2+" percent3");
+        console.log(scrollPercent3+" percent3");
         // vids
         c3_i3_m1.css({"transform":"translate(0, " + (-1)*((100 - scrollPercent3)/2) + "%)"});
         c3_i3_m2.css({"transform":"translate(0, " + ((100 - scrollPercent3)/2) + "%)"});
