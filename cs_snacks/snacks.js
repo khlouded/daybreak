@@ -95,7 +95,6 @@ function nextSlide() {
         e.preventDefault();
 
         let goTo = this.getAttribute("href");
-        $('.works_image').css({"transform":"translate(-50%"});
 
         timeout = window.setTimeout(function () {
             linkTrans.addClass('tonap');
