@@ -136,7 +136,6 @@ function winScroll() {
         } else {
             navHead.removeClass('nav_start').css({"font-size": logoFinalSize + "px", "opacity":1});
             navLogo_box.removeClass('nav_start').css({"grid-template-columns": "1fr " + logoHeaderWidth + "px", "-ms-grid-columns": "1fr " + logoHeaderWidth + "px"});
-
         }
     }
 
