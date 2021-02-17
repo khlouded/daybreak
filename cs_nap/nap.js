@@ -180,11 +180,20 @@ function nextSlide() {
         let wScroll = $(window).scrollTop();
         let nextStart = secNext.offset().top;
 
+
         if (wScroll >= nextStart + nextLength*0.8 - windowH) {
-            timeout = setTimeout(function() {
-                let goTo = nextLink.attr("href");
-                window.location = goTo;
-            }, 2500);
+            console.log('transition start');
+
+            e.preventDefault();
+
+            let goTo = this.getAttribute("href");
+            timeout = window.setTimeout(function () {
+                linkTrans.addClass('toclyx');
+                setTimeout(function () {
+                    console.log('transition complete');
+                    window.location = goTo;
+                }, 900);
+            }, 200);
         } else {
             cancelNext();
         }
