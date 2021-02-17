@@ -86,7 +86,7 @@ function navClick() {
         }
     });
     $('.nav_wwu').click(function (e) {
-        if (document.location.pathname !== "/" ){
+        if (document.location.pathname !== "/contact" ){
             console.log('transition start');
             e.preventDefault();
 
