@@ -245,17 +245,19 @@ function worksTransition() {
 }
 
 (function($) {
-    worksTransition();
-    $(window).scroll($.throttle( 10,function() {
-        winScroll();
-    }));
-    footerReveal();
-    $(window).resize(function() {
+    $(document).ready(function() {
+        worksTransition();
         $(window).scroll($.throttle( 10,function() {
             winScroll();
         }));
-        startTransform();
-        startSizing();
+        footerReveal();
+        $(window).resize(function() {
+            $(window).scroll($.throttle( 10,function() {
+                winScroll();
+            }));
+            startTransform();
+            startSizing();
+        });
+        $(window).scroll();
     });
-    
 }(jQuery));  
