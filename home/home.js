@@ -85,6 +85,9 @@ function winScroll() {
     const c3_i3_m1 = $('.home_caseimage_snacks.c3_vid1');
     const c3_i3_m2 = $('.home_caseimage_snacks.c3_vid2');
 
+    //other
+    const banText = $('.banner_text')
+
     // Heights
     let headLength = secHead.innerHeight();
     let desLength = secDes.innerHeight();
@@ -145,14 +148,17 @@ function winScroll() {
             mainP.css({"color":"#000"});
             caseImg.css({"background-color":"#f1f1f1"});
             block.css("background-color", "#D4DCDE");
+            banText.css({"color":"#000"});
         } else if (wScroll >= headStart + headLength - windowH*titleChange && wScroll < desStart + desLength - windowH*titleChange) {
             mainP.css({"color":"#000"});
             caseImg.css({"background-color":"#f1f1f1"});
             block.css("background-color", "#D4DCDE");
+            banText.css({"color":"#000"});
         } else if (wScroll >= desStart + desLength - windowH*titleChange && wScroll < C_oneStart + C_oneLength - windowH*titleChange) {
             //case one
             mainP.css({"color":"#000"});
             caseImg.css({"background-color":"#f1f1f1"});
+            banText.css({"color":"#fff"});
             block.css("background-color", "#000000");
             let scrollValue1 = Math.abs(wScroll - (C_oneStart - windowH*titleChange));
             let scrollPercent1 = (scrollValue1 / C_oneLength) * 100;  
@@ -197,7 +203,7 @@ function worksTransition() {
     let clyxLink = $(".clyx_link");
     let stacksLink = $(".stacks_link");
     napLink.click(function (e) {
-        console.log('transition start');
+        console.log('transition nap');
 
         e.preventDefault();
 
@@ -211,7 +217,7 @@ function worksTransition() {
         }, 200);
     });
     clyxLink.click(function (e) {
-        console.log('transition start');
+        console.log('transition clyx');
 
         e.preventDefault();
 
@@ -225,7 +231,7 @@ function worksTransition() {
         }, 200);
     });
     stacksLink.click(function (e) {
-        console.log('transition start');
+        console.log('transition stacks');
 
         e.preventDefault();
 
