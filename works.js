@@ -69,41 +69,50 @@ function winScroll() {
     }));
 }
 function worksTransition() {
-    const napLink = $('.napLink');
-    navMHome.click(function (e) {
+    let napLink = $(".nap_link");
+    let clyxLink = $(".clyx_link");
+    let stacksLink = $(".stacks_link");
+    napLink.click(function (e) {
+        console.log('transition start');
+
         e.preventDefault();
 
         let goTo = this.getAttribute("href");
-        navText.removeClass("nav_linkShow");
-        function close_menu() {
-            navMenu.removeClass("menu_transition");
-        }
-        function hide_menu() {
-            navMenu.removeClass("nav_menu");
-        }
-        function slide_exist(){
-            //let linkTrans = $('.linktransition');
-            linkTrans.css({"display":"block","background-color":"#f6f6f6"});
-        }
-        function slide_over(){
-            linkTrans.css({"transform":"translate(" + 0 + "vh,0)"});
-        }
-
         window.setTimeout(function () {
-            close_menu();
+            linkTrans.addClass('tonap');
             setTimeout(function () {
-                hide_menu();
-                setTimeout(function () {
-                    slide_exist();
-                    setTimeout(function () {
-                        slide_over();
-                        setTimeout(function () {
-                            window.location = goTo;
-                        }, 200);
-                    }, 200);
-                }, 200);
-            }, 300);
-        }, 700);
+                console.log('transition complete');
+                window.location = goTo;
+            }, 900);
+        }, 200);
+    });
+    clyxLink.click(function (e) {
+        console.log('transition start');
+
+        e.preventDefault();
+
+        let goTo = this.getAttribute("href");
+        window.setTimeout(function () {
+            linkTrans.addClass('toclyx');
+            setTimeout(function () {
+                console.log('transition complete');
+                window.location = goTo;
+            }, 900);
+        }, 200);
+    });
+    stacksLink.click(function (e) {
+        console.log('transition start');
+
+        e.preventDefault();
+
+        let goTo = this.getAttribute("href");
+        window.setTimeout(function () {
+            linkTrans.addClass('tostacks');
+            setTimeout(function () {
+                console.log('transition complete');
+                window.location = goTo;
+            }, 900);
+        }, 200);
     });
 }
 (function($) {

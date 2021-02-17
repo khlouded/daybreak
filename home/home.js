@@ -176,8 +176,8 @@ function winScroll() {
             let scrollValue3 = Math.abs(wScroll - (C_threeStart - windowH*titleChange));
             let scrollPercent3 = (scrollValue3 / C_threeLength) * 100;
             // vids
-            c3_i3_m1.css({"transform":"translate(0, " + (-1)*((100 - scrollPercent3*3)) + "%)"});
-            c3_i3_m2.css({"transform":"translate(0, " + ((100 - scrollPercent3*3)) + "%)"});
+            c3_i3_m1.css({"transform":"translate(0, " + (-1)*((100 - scrollPercent3)) + "%)"});
+            c3_i3_m2.css({"transform":"translate(0, " + ((100 - scrollPercent3)) + "%)"});
         } else if (wScroll >= C_threeStart + C_threeLength - windowH*titleChange && wScroll < footerStart + footerLength - windowH*titleChange) {
 
             //footer
@@ -188,8 +188,56 @@ function winScroll() {
         }
     }));
 }
+function worksTransition() {
+    let napLink = $(".nap_link");
+    let clyxLink = $(".clyx_link");
+    let stacksLink = $(".stacks_link");
+    napLink.click(function (e) {
+        console.log('transition start');
+
+        e.preventDefault();
+
+        let goTo = this.getAttribute("href");
+        window.setTimeout(function () {
+            linkTrans.addClass('tonap');
+            setTimeout(function () {
+                console.log('transition complete');
+                window.location = goTo;
+            }, 900);
+        }, 200);
+    });
+    clyxLink.click(function (e) {
+        console.log('transition start');
+
+        e.preventDefault();
+
+        let goTo = this.getAttribute("href");
+        window.setTimeout(function () {
+            linkTrans.addClass('toclyx');
+            setTimeout(function () {
+                console.log('transition complete');
+                window.location = goTo;
+            }, 900);
+        }, 200);
+    });
+    stacksLink.click(function (e) {
+        console.log('transition start');
+
+        e.preventDefault();
+
+        let goTo = this.getAttribute("href");
+        window.setTimeout(function () {
+            linkTrans.addClass('tostacks');
+            setTimeout(function () {
+                console.log('transition complete');
+                window.location = goTo;
+            }, 900);
+        }, 200);
+    });
+}
 
 (function($) {
+    worksTransition();
     winScroll();
     footerReveal();
     $(window).resize(function() {
