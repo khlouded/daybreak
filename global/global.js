@@ -65,6 +65,44 @@ function navClick() {
             }, 300);
         }, 700);
     });
+
+    // navigation links
+    navLink_event.click(function (e) {
+        if (document.location.pathname !== "/" ){
+            console.log('transition start');
+            e.preventDefault();
+
+            let goTo = this.getAttribute("href");
+
+            window.setTimeout(function () {
+                linkTrans.addClass('toabout');
+                setTimeout(function () {
+                    console.log('transition complete');
+                    window.location = goTo;
+                }, 900);
+            }, 200);
+        } else {
+            e.preventDefault();
+        }
+    });
+    $('.nav_wwu').click(function (e) {
+        if (document.location.pathname !== "/" ){
+            console.log('transition start');
+            e.preventDefault();
+
+            let goTo = this.getAttribute("href");
+
+            window.setTimeout(function () {
+                linkTrans.addClass('tonap');
+                setTimeout(function () {
+                    console.log('transition complete');
+                    window.location = goTo;
+                }, 900);
+            }, 200);
+        } else {
+            e.preventDefault();
+        }
+    });
 }
 function navButtonFix() {
     navButt.removeAttr("href");
@@ -207,51 +245,34 @@ function splitFont() {
     $(".variable_word").lettering('words');
 }
 function pageTransition() {
+    //menu links
+    navMHome.click(function (e) {
+        if (document.location.pathname !== "/" ){
+            console.log('transition start');
+            e.preventDefault();
 
-        navMHome.click(function (e) {
-            if (document.location.pathname !== "/" ){
-                console.log('transition start');
-                e.preventDefault();
+            let goTo = this.getAttribute("href");
+            navText.removeClass("nav_linkShow");
+            navDesCont.css({"display":"none"});
+            window.setTimeout(function () {
+                navMenu.css({"background-color":"#f6f6f6"});
+                setTimeout(function () {
+                    window.location = goTo;
+                    console.log('transition complete');
+                }, 900);
+            }, 200);
+        } else {
+            e.preventDefault();
+            navText.removeClass("nav_linkShow");
+            window.setTimeout(function () {
+                navMenu.removeClass("menu_transition");
+                setTimeout(function () {
+                    navMenu.removeClass("nav_menu");
+                }, 300);
+            }, 700);
+        }
+    });
 
-                let goTo = this.getAttribute("href");
-                navText.removeClass("nav_linkShow");
-                navDesCont.css({"display":"none"});
-                window.setTimeout(function () {
-                    navMenu.css({"background-color":"#f6f6f6"});
-                    setTimeout(function () {
-                        window.location = goTo;
-                        console.log('transition complete');
-                    }, 900);
-                }, 200);
-            } else {
-                e.preventDefault();
-                navText.removeClass("nav_linkShow");
-                window.setTimeout(function () {
-                    navMenu.removeClass("menu_transition");
-                    setTimeout(function () {
-                        navMenu.removeClass("nav_menu");
-                    }, 300);
-                }, 700);
-            }
-        });
-        navLink_event.click(function (e) {
-            if (document.location.pathname !== "/" ){
-                console.log('transition start');
-                e.preventDefault();
-
-                let goTo = this.getAttribute("href");
-
-                window.setTimeout(function () {
-                    linkTrans.addClass('toabout');
-                    setTimeout(function () {
-                        console.log('transition complete');
-                        window.location = goTo;
-                    }, 900);
-                }, 200);
-            } else {
-                e.preventDefault();
-            }
-        });
     navMWork.click(function (e) {
         if (document.location.pathname !== "/work" ){
             console.log('transition start');
