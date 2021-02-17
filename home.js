@@ -159,8 +159,8 @@ function winScroll() {
         let scrollPercent1 = (scrollValue1 / C_oneLength) * 100;  
         // images
         c1_i1.css({"background-position": scrollPercent1 + "% " + scrollPercent1 +"%"});
-        c1_i2.css({"background-position":  scrollPercent1 + "% " + scrollPercent1 +"%"});
-        c1_i3.css({"background-position":"50% " + (100 - scrollPercent1) +"%"});
+        c1_i2.css({"background-position": scrollPercent1 + "% " + scrollPercent1 +"%"});
+        c1_i3.css({"background-position": scrollPercent1 + "% " + scrollPercent1 +"%"});
     } else if (wScroll >= C_oneStart + C_oneLength - windowH*titleChange && wScroll < C_twoStart + C_twoLength - windowH*titleChange) {
         //case two
         mainP.css({"color":"#4303A7"});
@@ -184,8 +184,8 @@ function winScroll() {
 
         // vids
         if (scrollPercent3 >= 1 ){
-            c3_i3_m1.css({"transform":"translate(0, " + (-1)*((100/scrollPercent3)) + "%)"});
-            c3_i3_m2.css({"transform":"translate(0, " + ((100/scrollPercent3)) + "%)"});
+            c3_i3_m1.css({"transform":"translate(0, " + (-1)*(200/(scrollPercent3+1)-2*Math.sqrt(scrollPercent3)+18) + "%)"});
+            c3_i3_m2.css({"transform":"translate(0, " + (200/(scrollPercent3+1)-2*Math.sqrt(scrollPercent3)+18) + "%)"});
         }
     } else if (wScroll >= C_threeStart + C_threeLength - windowH*titleChange && wScroll < footerStart + footerLength - windowH*titleChange) {
 
