@@ -57,6 +57,7 @@ function startTransform() {
 let wScroll = 0;
 
 function winScroll() {
+    console.log(wScroll+ 'cat');
     // sections
     const secHead = $('#sec_heading');
     const secDes = $('#sec_description');
@@ -94,6 +95,8 @@ function winScroll() {
 
     $(window).scroll($.throttle( 10,function() {	
         let wScroll = $(window).scrollTop();
+        console.log(wScroll + 'dragon');
+        
 
         //position information
         let headStart = secHead.offset().top;
