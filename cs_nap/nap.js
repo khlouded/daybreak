@@ -152,7 +152,7 @@ let windowH = $(window).innerHeight();
             mainP.removeClass('cs_dark').css({"color":"#000"}); 
             let scrollValueNext = Math.abs(wScroll - (nextStart - windowH*titleChange));
             let scrollPercentNext = (scrollValueNext /  (nextLength*0.5)) * 100;
-            nextLink.css({"transform":"translate( 0,-" + Math.sqrt(scrollPercentNext*100) + "%)"});
+            nextLink.css({"transform":"translate( 0,-" + Math.sqrt(5*scrollPercentNext*100) + "%)"});
             nextGradient.css({
                 "display":"flex",
                 "background-image":"linear-gradient(180deg, transparent " + (200 - scrollPercentNext) + "%, #fff 100%)"
