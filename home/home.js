@@ -96,8 +96,6 @@ function winScroll() {
 
 	
     let wScroll = $(window).scrollTop();
-    console.log(wScroll + 'dragon');
-    
 
     //position information
     let headStart = secHead.offset().top;
@@ -172,8 +170,9 @@ function winScroll() {
         let scrollValue2 = Math.abs(wScroll - (C_twoStart - windowH*titleChange)); 
         let scrollPercent2 = (scrollValue2 / (C_twoLength + windowH*titleChange)) * 100;
         // images
-        c2_i2.css({"bottom": "-" + 3*(Math.abs(100-scrollPercent2)) + 100 + "px"});
-        c2_i3.css({"background-position":  "50% " + (scrollPercent2/4)-5 +"%"});
+        console.log(scrollPercent2+" percent2");
+        c2_i2.css({"bottom": "-" + 3*(Math.abs(100-scrollPercent2)) + 150 + "px"});
+        c2_i3.css({"background-position":  50+"% 10%"});
         c3_i3_m1.css({"transform":"translate(0, -" + 100 + "%)"});
         c3_i3_m2.css({"transform":"translate(0, " + 100 + "%)"});
     } else if (wScroll >= C_twoStart + C_twoLength - windowH*titleChange && wScroll < C_threeStart + C_threeLength - windowH*titleChange) {
@@ -182,7 +181,8 @@ function winScroll() {
         caseImg.css({"background-color":"#ADDAD5"});
         block.css("background-color", "#FCFAF7"); 
         let scrollValue3 = Math.abs(wScroll - (C_threeStart - windowH*titleChange));
-        let scrollPercent3 = (scrollValue3 / C_threeLength) * 100;
+        let scrollPercent3 = (scrollValue3 / C_threeLength + windowH*titleChange) * 100;
+        console.log(scrollPercent2+" percent3");
         // vids
         c3_i3_m1.css({"transform":"translate(0, " + (-1)*((100 - scrollPercent3)/2) + "%)"});
         c3_i3_m2.css({"transform":"translate(0, " + ((100 - scrollPercent3)/2) + "%)"});
