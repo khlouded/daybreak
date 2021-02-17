@@ -193,7 +193,6 @@ function winScroll() {
         mainP.css({"color":"#000"});
         caseImg.css({"background-color":"#f1f1f1"});
         block.css("background-color", "#FCFAF7");
-        //prep
     }
 
 }
