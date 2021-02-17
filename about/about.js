@@ -33,24 +33,6 @@ function winScroll() {
         } else {
             introText.removeClass("word_enter");
         }
-        // if (wScroll> -10 && wScroll <= abHeadStart + abHeadLength*0.16 ) {
-        //     // console.log('image one');
-        //     aboutLogo.children().addClass('logo_one').removeClass('logo_two logo_three logo_four logo_five');
-        // } else if ( wScroll > abHeadStart + abHeadLength*0.16 && wScroll <= abHeadStart + abHeadLength*0.32) {
-        //     // console.log('image two');
-        //     aboutLogo.children().addClass('logo_two').removeClass('logo_one logo_three logo_four logo_five');
-        // } else if (wScroll > abHeadStart + abHeadLength*0.32 && wScroll <= abHeadStart + abHeadLength*0.48) {
-        //     // console.log('image three');
-        //     aboutLogo.children().addClass('logo_three').removeClass('logo_one logo_two logo_four logo_five');
-        // } else if (wScroll > abHeadStart + abHeadLength*0.48 && wScroll <= abHeadStart + abHeadLength*0.64) {
-        //     // console.log('image four');
-        //     aboutLogo.children().addClass('logo_four').removeClass('logo_one logo_two logo_three logo_five');
-        // } else if (wScroll > abHeadStart + abHeadLength*0.64) {
-        //     // console.log('image five');
-        //     aboutLogo.children().addClass('logo_five').removeClass('logo_one logo_two logo_three logo_four');
-        // } else {
-        //     aboutLogo.children().removeClass('logo_one logo_two logo_three logo_four logo_five');
-        // }
     }));
 }
 // Checks & runs
