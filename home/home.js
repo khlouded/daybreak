@@ -54,6 +54,7 @@ function startTransform() {
         return startSize;
     }
 }
+let wScroll = 0;
 
 function winScroll() {
     // sections

@@ -1,15 +1,5 @@
-(function($) {
-    worksTransition();
+$(document).ready(function() {
     winScroll();
-    footerReveal();
-    $(window).resize(function() {
-        winScroll();
-        startTransform();
-        startSizing();
-    });
-    $(document).ready(function() {
-        winScroll();
-        startTransform();
-        startSizing();
-    });
-}(jQuery));  
+    startTransform();
+    startSizing();
+});
