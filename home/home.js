@@ -258,7 +258,7 @@ function worksTransition() {
         });
         $(window).scroll();
     });
-    $(window).load(function() {
+    $(window).on( "load", function() {
         winScroll();
         startTransform();
         startSizing();
