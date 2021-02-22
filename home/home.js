@@ -26,50 +26,42 @@ function startSizing() {
         return startHeading;
     }
 }
-function startTransform() {
-    //media queries
-    if(screenMobileTop()) {
-        let startSize = 100;
-        return startSize;
-    } else if (screenLandscapeBase() && screenLandscapeTop()) {
-        let startSize = 125;
-        return startSize;
-    } else if (screenTabletBase() && screenTabletTop()) {
-        let startSize = 135;
-        return startSize;
-    } else if (screenDesktopBase() && screenDesktopTop()) {
-        let startSize = 200;
-        return startSize;
-    } else if (screenLargeOneBase() && screenLargeOneTop()) {
-        let startSize = 220;
-        return startSize;
-    } else if (screenLargeTwoBase() && screenLargeTwoTop()) {
-        let startSize = 230;
-        return startSize;
-    } else if (screenLarger()) {
-        let startSize = 270;
-        return startSize;
-    } else {
-        let startSize = 150;
-        return startSize;
-    }
-}
+// function startTransform() {
+//     //media queries
+//     if(screenMobileTop()) {
+//         let startSize = 100;
+//         return startSize;
+//     } else if (screenLandscapeBase() && screenLandscapeTop()) {
+//         let startSize = 125;
+//         return startSize;
+//     } else if (screenTabletBase() && screenTabletTop()) {
+//         let startSize = 135;
+//         return startSize;
+//     } else if (screenDesktopBase() && screenDesktopTop()) {
+//         let startSize = 200;
+//         return startSize;
+//     } else if (screenLargeOneBase() && screenLargeOneTop()) {
+//         let startSize = 220;
+//         return startSize;
+//     } else if (screenLargeTwoBase() && screenLargeTwoTop()) {
+//         let startSize = 230;
+//         return startSize;
+//     } else if (screenLarger()) {
+//         let startSize = 270;
+//         return startSize;
+//     } else {
+//         let startSize = 150;
+//         return startSize;
+//     }
+// }
 
 function winScroll() {
     // sections
     const secHead = $('#sec_heading');
-    const secDes = $('#sec_description');
     const secC_one = $('#sec_caseOne');
     const secC_two = $('#sec_caseTwo');
     const secC_three = $('#sec_caseThree');
     const secFooter = $('#sec_footer');
-    
-    // navigation
-    let navLogo_cont = $('.nav_logo_container');
-    let navHead = $('.nav_heading');
-    let navLogo_icon = $('.nav_logo_box .nav_logo');
-    let navLogo_box = $('.nav_logo_box');
-    let navPseudo = $('.nav_pseudo_container');
     
     // Case Study Images
     const mainP = $('.home_colour');
@@ -88,68 +80,26 @@ function winScroll() {
 
     // Heights
     let headLength = secHead.innerHeight();
-    let desLength = secDes.innerHeight();
     let C_oneLength = secC_one.innerHeight();
     let C_twoLength = secC_two.innerHeight();
     let C_threeLength = secC_three.innerHeight();
     let footerLength = secFooter.innerHeight();
 
-	
     let wScroll = $(window).scrollTop();
 
     //position information
     let headStart = secHead.offset().top;
-    let desStart = secDes.offset().top;
     let C_oneStart = secC_one.offset().top;
     let C_twoStart = secC_two.offset().top;
     let C_threeStart = secC_three.offset().top;
     let footerStart = secFooter.offset().top;
 
-    //HEADER action specific to homepage
-    if (wScroll >= -20 && wScroll < headStart + headLength - windowH*titleChange) {
-        //header section
-        let scrollValue = Math.abs(wScroll - headStart);
-        let scrollPercent = (scrollValue / (headLength - windowH*titleChange)) * 100;        
-
-        navLogo_cont.addClass('nav_start').css({"transform":"translate(0," + startTransform()*((100 - scrollPercent)/100) +"px)"});
-        navHead.addClass('nav_start').css({"font-size": ((startSizing()-logoFinalSize)*((100 - scrollPercent)/100)) + logoFinalSize + "px", "opacity":1});
-        navLogo_icon.addClass('nav_start');
-        navLink_event.css({"pointer-events":"none"});
-        navPseudoSVG.css({"fill":"#fff"});
-        if(screenMobileTop()) {
-            navLogo_box.removeClass('nav_start').css({"grid-template-columns": "1fr " + 0 + "px","-ms-grid-columns": "1fr " + 0 + "px"});
-            navPseudo.addClass("nav_start").css({"margin-left": 0 + "px", "opacity":1});
-            
-        } else {
-            navLogo_box.addClass('nav_start').css({"grid-template-columns": "1fr " + (logoHeaderWidth)*((scrollPercent)/100) + "px","-ms-grid-columns": "1fr " + (logoHeaderWidth)*((scrollPercent)/100) + "px"});
-            navPseudo.addClass("nav_start").css({"margin-left": (-logoHeaderWidth*2)*((100 - scrollPercent)/100) + "px", "opacity":1});
-        }
-
-    } else {
-        navLink_event.css({"pointer-events":"all"});
-        navLogo_cont.removeClass('nav_start').css({"transform":"translate(0,0vH)"});
-        navLogo_icon.removeClass('nav_start');
-        navPseudo.removeClass("nav_start").css({"margin-left":0 + "px", "opacity":0});
-        if(screenMobileTop()) {
-            navHead.addClass('nav_start').css({"font-size": logoFinalSize + "px", "opacity":0});
-            navLogo_box.addClass('nav_start').css({"grid-template-columns": "0px " + logoHeaderWidth + "px","-ms-grid-columns": "0px " + logoHeaderWidth + "px"});
-        } else {
-            navHead.removeClass('nav_start').css({"font-size": logoFinalSize + "px", "opacity":1});
-            navLogo_box.removeClass('nav_start').css({"grid-template-columns": "1fr " + logoHeaderWidth + "px", "-ms-grid-columns": "1fr " + logoHeaderWidth + "px"});
-        }
-    }
-
     if (wScroll >= -20 && wScroll < headStart + headLength - windowH*titleChange) {
         mainP.css({"color":"#000"});
         caseImg.css({"background-color":"#f1f1f1"});
         block.css("background-color", "#D4DCDE");
         banText.css({"color":"#000"});
-    } else if (wScroll >= headStart + headLength - windowH*titleChange && wScroll < desStart + desLength - windowH*titleChange) {
-        mainP.css({"color":"#000"});
-        caseImg.css({"background-color":"#f1f1f1"});
-        block.css("background-color", "#D4DCDE");
-        banText.css({"color":"#000"});
-    } else if (wScroll >= desStart + desLength - windowH*titleChange && wScroll < C_oneStart + C_oneLength - windowH*titleChange) {
+    } else if (wScroll >= headStart + headLength  - windowH*titleChange && wScroll < C_oneStart + C_oneLength - windowH*titleChange) {
         //case one
         mainP.css({"color":"#000"});
         caseImg.css({"background-color":"#f1f1f1"});
