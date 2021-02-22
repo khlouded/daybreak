@@ -1,60 +1,4 @@
 
-function startSizing() {
-    if(screenMobileTop()) {
-        let startHeading = 81;
-        return startHeading;
-    } else if (screenLandscapeBase() && screenLandscapeTop()) {
-        let startHeading = 150;
-        return startHeading;
-    } else if (screenTabletBase() && screenTabletTop()) {
-        let startHeading = 200;
-        return startHeading;
-    } else if (screenDesktopBase() && screenDesktopTop()) {
-        let startHeading = 280;
-        return startHeading;
-    } else if (screenLargeOneBase() && screenLargeOneTop()) {
-        let startHeading = 300;
-        return startHeading;
-    } else if (screenLargeTwoBase() && screenLargeTwoTop()) {
-        let startHeading = 370;
-        return startHeading;
-    } else if (screenLarger()) {
-        let startHeading = 440;
-        return startHeading;
-    } else {
-        let startHeading = 280;
-        return startHeading;
-    }
-}
-// function startTransform() {
-//     //media queries
-//     if(screenMobileTop()) {
-//         let startSize = 100;
-//         return startSize;
-//     } else if (screenLandscapeBase() && screenLandscapeTop()) {
-//         let startSize = 125;
-//         return startSize;
-//     } else if (screenTabletBase() && screenTabletTop()) {
-//         let startSize = 135;
-//         return startSize;
-//     } else if (screenDesktopBase() && screenDesktopTop()) {
-//         let startSize = 200;
-//         return startSize;
-//     } else if (screenLargeOneBase() && screenLargeOneTop()) {
-//         let startSize = 220;
-//         return startSize;
-//     } else if (screenLargeTwoBase() && screenLargeTwoTop()) {
-//         let startSize = 230;
-//         return startSize;
-//     } else if (screenLarger()) {
-//         let startSize = 270;
-//         return startSize;
-//     } else {
-//         let startSize = 150;
-//         return startSize;
-//     }
-// }
-
 function winScroll() {
     // sections
     const secHead = $('#sec_heading');
@@ -203,14 +147,10 @@ function worksTransition() {
         footerReveal();
         $(window).resize(function() {
             winScroll();
-            startTransform();
-            startSizing();
         });
         $(window).scroll();
     });
     $(window).on( "load", function() {
         winScroll();
-        startTransform();
-        startSizing();
     });
 }(jQuery));  
