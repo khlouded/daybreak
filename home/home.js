@@ -9,6 +9,7 @@ function winScroll() {
     
     // Case Study Images
     const mainP = $('.home_colour');
+    const aboutArrow = $('.about_arrow svg path');
     const caseImg = $('.case_item');
     const c1_i1 = $('.caseone_imageone');
     const c1_i2 = $('.caseone_imagetwo');
@@ -43,12 +44,14 @@ function winScroll() {
         caseImg.css({"background-color":"#f1f1f1"});
         block.css("background-color", "#D4DCDE");
         banText.css({"color":"#000"});
+        aboutArrow.css({"color":"#000"});
     } else if (wScroll >= headStart + headLength  - windowH*titleChange && wScroll < C_oneStart + C_oneLength - windowH*titleChange) {
         //case one
         mainP.css({"color":"#000"});
         caseImg.css({"background-color":"#f1f1f1"});
         banText.css({"color":"#fff"});
-        block.css("background-color", "#000000");
+        aboutArrow.css({"color":"#fff"});
+        block.css("background-color", "#000");
         let scrollValue1 = Math.abs(wScroll - (C_oneStart - windowH*titleChange));
         let scrollPercent1 = (scrollValue1 / C_oneLength) * 100;  
         // images
