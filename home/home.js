@@ -48,7 +48,7 @@ function winScroll() {
     } else if (wScroll >= headStart + headLength  - windowH*titleChange && wScroll < C_oneStart + C_oneLength - windowH*titleChange) {
         //case one
         mainP.css({"color":"#000"});
-        caseImg.css({"background-color":"#f1f1f1"});
+        caseImg.css({"background-image": "linear-gradient(180deg, #BCCAEF 0%, #E5D4E2 100%)"});
         banText.css({"color":"#fff"});
         aboutArrow.css({"color":"#fff"});
         block.css("background-color", "#000");
