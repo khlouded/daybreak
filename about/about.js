@@ -21,7 +21,7 @@ function winScroll() {
     let workLength = aboutWork.innerHeight();
     let footLength = aboutFoot.innerHeight();
 
-    $(window).scroll($.throttle( 10,function() {
+
         // Heights
         //position information || - windowH*titleChange
         let headStart = aboutHead.offset().top;
@@ -66,13 +66,18 @@ function winScroll() {
             mainP.css('color','#fff');
             block.css("background-color", "#000"); 
         }
-
-    }));
 }
 (function($) {
-    typeWriter();
-    winScroll();
-    $(window).resize(function() {
+    $(document).ready(function() {
+        typeWriter();
+        $(window).scroll($.throttle( 10,function() {
+            winScroll();
+        }));
+        $(window).resize(function() {
+            winScroll();
+        });
+    });
+    $(window).on( "load", function() {
         winScroll();
     });
 }(jQuery));
