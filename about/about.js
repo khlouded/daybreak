@@ -24,10 +24,19 @@ function winScroll() {
     // Heights
     let abHeadLength = aboutHead.innerHeight();
     $(window).scroll($.throttle( 10,function() {
+        // Heights
+        //position information || - windowH*titleChange
+        let headStart = aboutHead.offset().top;
+        let illStart = aboutIll.offset().top;
+        let tagStart = aboutTag.offset().top;
+        let desStart = aboutDes.offset().top;
+        let skillStart = aboutSkill.offset().top;
+        let workStart = aboutWork.offset().top;
+        let footStart = aboutFoot.offset().top;
+
         let wScroll = $(window).scrollTop();
 
-        //position information || - windowH*titleChange
-        let abHeadStart = aboutHead.offset().top;
+        
 
         if (wScroll >= -20 && wScroll < abHeadStart + abHeadLength ) {
             typeWriter();
