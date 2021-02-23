@@ -68,14 +68,12 @@ function winScroll() {
         }
 }
 (function($) {
-    $(document).ready(function() {
-        typeWriter();
-        $(window).scroll($.throttle( 10,function() {
-            winScroll();
-        }));
-        $(window).resize(function() {
-            winScroll();
-        });
+    typeWriter();
+    $(window).scroll($.throttle( 10,function() {
+        winScroll();
+    }));
+    $(window).resize(function() {
+        winScroll();
     });
     $(window).on( "load", function() {
         winScroll();
