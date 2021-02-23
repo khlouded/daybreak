@@ -21,8 +21,6 @@ function winScroll() {
     let workLength = aboutWork.innerHeight();
     let footLength = aboutFoot.innerHeight();
 
-    // Heights
-    let abHeadLength = aboutHead.innerHeight();
     $(window).scroll($.throttle( 10,function() {
         // Heights
         //position information || - windowH*titleChange
@@ -38,7 +36,7 @@ function winScroll() {
 
         
 
-        if (wScroll >= -20 && wScroll < abHeadStart + abHeadLength ) {
+        if (wScroll >= -20 && wScroll < headStart + headLength ) {
             typeWriter();
             mainP.css('color','#fff');
             block.css("background-color", "#000"); 
