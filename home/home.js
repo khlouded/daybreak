@@ -33,7 +33,7 @@ function winScroll() {
     if (wScroll >= -20 && wScroll < headStart + headLength - windowH*titleChange) {
         mainP.css({"color":"#000"});
         caseImg.css({"background-color":"#f1f1f1"});
-        block.css("background-color", "#D4DCDE");
+        block.css("background-color", "#fff");
         aboutArrow.css({"color":"#000"});
     } else if (wScroll >= headStart + headLength  - windowH*titleChange && wScroll < C_oneStart + C_oneLength - windowH*titleChange) {
         //case one ,"background-image": "linear-gradient(180deg, #BCCAEF 0%, #E5D4E2 100%)"

@@ -69,11 +69,14 @@ function winScroll() {
 }
 (function($) {
     typeWriter();
-    $(window).scroll($.throttle( 10,function() {
-        winScroll();
-    }));
-    $(window).resize(function() {
-        winScroll();
+    $(document).ready(function() {
+        
+        $(window).scroll($.throttle( 10,function() {
+            winScroll();
+        }));
+        $(window).resize(function() {
+            winScroll();
+        });
     });
     $(window).on( "load", function() {
         winScroll();
