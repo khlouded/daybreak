@@ -12,11 +12,6 @@ function winScroll() {
     const aboutArrow = $('.about_arrow svg path');
     const caseImg = $('.case_item');
     const c1_i2 = $('.caseone_imagetwo');
-    const c1_i3 = $('.caseone_imagethree');
-    const c2_i2 = $('.home_imageclyx');
-    const c2_i3 = $('.casetwo_imagethree');
-    const c3_i3_m1 = $('.home_caseimage_snacks.c3_vid1');
-    const c3_i3_m2 = $('.home_caseimage_snacks.c3_vid2');
 
     // Heights
     let headLength = secHead.innerHeight();
@@ -55,22 +50,15 @@ function winScroll() {
         mainP.css({"color":"#4303A7"});
         caseImg.css({"background-color":"#FFF9DB"});
         block.css("background-color", "#FFE66A");       
-        let scrollValue2 = Math.abs(wScroll - (C_twoStart - windowH*titleChange)); 
-        let scrollPercent2 = (scrollValue2 / C_twoLength) * 100;
-        // images
-        c2_i2.css({"bottom": "-" + 3*(Math.abs(100-scrollPercent2)) + 150 + "px"});
-        c2_i3.css({"background-position":  50+"% 10%"});
-        c3_i3_m1.css({"transform":"translate(0, " + (-1)*((100/1)) + "%)"});
-        c3_i3_m2.css({"transform":"translate(0, " + ((100/1)) + "%)"});
+        //let scrollValue2 = Math.abs(wScroll - (C_twoStart - windowH*titleChange)); 
+        //let scrollPercent2 = (scrollValue2 / C_twoLength) * 100;
     } else if (wScroll >= C_twoStart + C_twoLength - windowH*titleChange && wScroll < C_threeStart + C_threeLength - windowH*titleChange) {
         //case three
         mainP.css({"color":"#295849"});
         caseImg.css({"background-color":"#ADDAD5"});
         block.css("background-color", "#FCFAF7"); 
-        let scrollValue3 = Math.abs(wScroll - (C_threeStart - windowH*titleChange));
-        let scrollPercent3 = (scrollValue3 / C_threeLength) * 100;
-        // console.log(scrollPercent3+" percent3");
-
+        //let scrollValue3 = Math.abs(wScroll - (C_threeStart - windowH*titleChange));
+        //let scrollPercent3 = (scrollValue3 / C_threeLength) * 100;
     } else if (wScroll >= C_threeStart + C_threeLength - windowH*titleChange && wScroll < footerStart + footerLength - windowH*titleChange) {
 
         //footer
