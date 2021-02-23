@@ -11,15 +11,12 @@ function winScroll() {
     const mainP = $('.home_colour');
     const aboutArrow = $('.about_arrow svg path');
     const caseImg = $('.case_item');
-    const c1_i1 = $('.caseone_imageone');
     const c1_i2 = $('.caseone_imagetwo');
     const c1_i3 = $('.caseone_imagethree');
     const c2_i2 = $('.home_imageclyx');
     const c2_i3 = $('.casetwo_imagethree');
-
     const c3_i3_m1 = $('.home_caseimage_snacks.c3_vid1');
     const c3_i3_m2 = $('.home_caseimage_snacks.c3_vid2');
-
 
     // Heights
     let headLength = secHead.innerHeight();
@@ -39,13 +36,13 @@ function winScroll() {
 
     if (wScroll >= -20 && wScroll < headStart + headLength - windowH*titleChange) {
         mainP.css({"color":"#000"});
-        caseImg.css({"background-color":"#f1f1f1"});
+        caseImg.css({"background-color":"#f1f1f1","background-image":"none"});
         block.css("background-color", "#D4DCDE");
         aboutArrow.css({"color":"#000"});
     } else if (wScroll >= headStart + headLength  - windowH*titleChange && wScroll < C_oneStart + C_oneLength - windowH*titleChange) {
         //case one
         mainP.css({"color":"#fff"});
-        caseImg.css({"background-image": "linear-gradient(180deg, #BCCAEF 0%, #E5D4E2 100%)"});
+        caseImg.css({"background-color":"#f1f1f1","background-image": "linear-gradient(180deg, #BCCAEF 0%, #E5D4E2 100%)"});
         aboutArrow.css({"color":"#fff"});
         block.css("background-color", "#000");
         let scrollValue1 = Math.abs(wScroll - (C_oneStart - windowH*titleChange));
@@ -53,11 +50,10 @@ function winScroll() {
         // images
         c1_i1.css({"background-position": scrollPercent1 + "% " + scrollPercent1 +"%"});
         c1_i2.css({"background-position": scrollPercent1 + "% " + scrollPercent1 +"%"});
-        c1_i3.css({"background-position": scrollPercent1 + "% " + scrollPercent1 +"%"});
     } else if (wScroll >= C_oneStart + C_oneLength - windowH*titleChange && wScroll < C_twoStart + C_twoLength - windowH*titleChange) {
         //case two
         mainP.css({"color":"#4303A7"});
-        caseImg.css({"background-color":"#FFF9DB"});
+        caseImg.css({"background-color":"#FFF9DB","background-image":"none"});
         block.css("background-color", "#FFE66A");       
         let scrollValue2 = Math.abs(wScroll - (C_twoStart - windowH*titleChange)); 
         let scrollPercent2 = (scrollValue2 / C_twoLength) * 100;
@@ -65,15 +61,15 @@ function winScroll() {
         c2_i2.css({"bottom": "-" + 3*(Math.abs(100-scrollPercent2)) + 150 + "px"});
         c2_i3.css({"background-position":  50+"% 10%"});
         c3_i3_m1.css({"transform":"translate(0, " + (-1)*((100/1)) + "%)"});
-            c3_i3_m2.css({"transform":"translate(0, " + ((100/1)) + "%)"});
+        c3_i3_m2.css({"transform":"translate(0, " + ((100/1)) + "%)"});
     } else if (wScroll >= C_twoStart + C_twoLength - windowH*titleChange && wScroll < C_threeStart + C_threeLength - windowH*titleChange) {
         //case three
         mainP.css({"color":"#295849"});
-        caseImg.css({"background-color":"#ADDAD5"});
+        caseImg.css({"background-color":"#ADDAD5","background-image":"none"});
         block.css("background-color", "#FCFAF7"); 
         let scrollValue3 = Math.abs(wScroll - (C_threeStart - windowH*titleChange));
         let scrollPercent3 = (scrollValue3 / C_threeLength) * 100;
-        console.log(scrollPercent3+" percent3");
+        // console.log(scrollPercent3+" percent3");
 
         // vids
         if (scrollPercent3 >= 1 ){
