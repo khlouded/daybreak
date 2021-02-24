@@ -13,6 +13,7 @@ function winScroll() {
     const caseImg = $('.case_item');
     const c1_i2 = $('.caseone_imagetwo');
     const c1_i3 = $('.caseone_imagethree');
+    const title = $('.home_h1_title');
 
     // Heights
     let headLength = secHead.innerHeight();
@@ -30,6 +31,7 @@ function winScroll() {
     let C_threeStart = secC_three.offset().top;
     let footerStart = secFooter.offset().top;
 
+
     if (wScroll >= -20 && wScroll < headStart + headLength - windowH*titleChange) {
         mainP.css({"color":"#000"});
         caseImg.css({"background-color":"#f1f1f1"});
@@ -39,9 +41,11 @@ function winScroll() {
         //case one ,"background-image": "linear-gradient(180deg, #BCCAEF 0%, #E5D4E2 100%)"
         introText.removeClass("word_enter");
         mainP.css({"color":"#fff"});
+        title.css({"color":"#000"});
         caseImg.css({"background-color":"#f1f1f1"});
         aboutArrow.css({"color":"#fff"});
         block.css("background-color", "#000");
+
         let scrollValue1 = Math.abs(wScroll - (C_oneStart - windowH*titleChange));
         let scrollPercent1 = (scrollValue1 / C_oneLength) * 100;  
         // images
