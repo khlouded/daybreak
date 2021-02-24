@@ -66,7 +66,6 @@ function winScroll() {
         caseImg.css({"background-color":"#f1f1f1"});
         block.css("background-color", "#FCFAF7");
     }
-
 }
 function worksTransition() {
     let napLink = $(".nap_link");

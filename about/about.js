@@ -36,12 +36,12 @@ function winScroll() {
 
         
 
-        if (wScroll >= -20 && wScroll < headStart + headLength ) {
+        if (wScroll >= -20 && wScroll < headStart + headLength + windowH*titleChange) {
             typeWriter();
             mainP.css('color','#fff');
             block.css("background-color", "#000"); 
         } 
-        else if (wScroll >= headStart + headLength && wScroll < illStart + illLength - windowH*titleChange  ) {
+        else if (wScroll >= headStart + headLength + windowH*titleChange && wScroll < illStart + illLength - windowH*titleChange  ) {
             introText.removeClass("word_enter");
             mainP.css('color','#fff');
             block.css("background-color", "#000"); 
