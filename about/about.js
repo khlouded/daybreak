@@ -36,21 +36,21 @@ function winScroll() {
 
         
 
-        if (wScroll >= -20 && wScroll < headStart + headLength + windowH*titleChange) {
+        if (wScroll >= -20 && wScroll < headStart + headLength - windowH*titleChange) {
             typeWriter();
             mainP.css('color','#fff');
             block.css("background-color", "#000"); 
         } 
-        else if (wScroll >= headStart + headLength + windowH*titleChange && wScroll < illStart + illLength - windowH*titleChange  ) {
+        else if (wScroll >= headStart + headLength - windowH*titleChange && wScroll < illStart + illLength - windowH*titleChange  ) {
             introText.removeClass("word_enter");
             mainP.css('color','#fff');
             block.css("background-color", "#000"); 
         }
-        else if (wScroll >= illStart + illLength - windowH*titleChange  && wScroll < tagStart + tagLength - windowH*titleChange  ) {
+        else if (wScroll >= illStart + illLength - windowH*titleChange  && wScroll < tagStart + tagLength + windowH*titleChange  ) {
             mainP.css('color','#fff');
             block.css("background-color", "#000"); 
         }
-        else if (wScroll >= tagStart + tagLength - windowH*titleChange  && wScroll < desStart + desLength - windowH*titleChange  ) {
+        else if (wScroll >= tagStart + tagLength + windowH*titleChange  && wScroll < desStart + desLength - windowH*titleChange  ) {
             mainP.css('color','#000');
             block.css("background-color", "#FFFFFF"); 
         }
