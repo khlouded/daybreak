@@ -121,7 +121,9 @@ function worksTransition() {
 }
 
 (function($) {
-    typeWriter();
+    window.setTimeout(function () {
+        typeWriter();
+    }, 300);
     $(document).ready(function() {
 
         worksTransition();
