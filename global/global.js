@@ -270,10 +270,10 @@ function customCursor(){
         mouseCursor.style.left = e.pageX + "px";
     }
     hoverable.mouseover(function(){
-        mouseItem.addClass(".circle");
+        mouseItem.addClass("circle");
     });
     hoverable.mouseleave(function(){
-        mouseItem.removeClass(".circle");
+        mouseItem.removeClass("circle");
     });
     
 }
