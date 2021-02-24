@@ -5,6 +5,7 @@ function winScroll() {
     const secC_one = $('#sec_caseOne');
     const secC_two = $('#sec_caseTwo');
     const secC_three = $('#sec_caseThree');
+    const secFooter = $('#sec_footer');
     
     // Case Study Images
     const mainP = $('.home_colour');
