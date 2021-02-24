@@ -263,9 +263,9 @@ function customCursor(){
     let mouseItem = $('.cursor');
 
     $(window).mousemove($.throttle( 5,function(e) {
-        cursor.css({
-            'top': e.clientY - cursor.height() / 2,
-            'left': e.clientX - cursor.width() / 2
+        mouseItem.css({
+            'top': e.clientY - mouseItem.height() / 2,
+            'left': e.clientX - mouseItem.width() / 2
         });
     }));
 
