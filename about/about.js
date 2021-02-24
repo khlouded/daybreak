@@ -67,10 +67,31 @@ function winScroll() {
             block.css("background-color", "#000"); 
         }
 }
+function wwuTransition() {
+    // navigation links
+    $('about_select_area').click(function (e) {
+        if (document.location.pathname !== "/contact" ){
+            console.log('transition start');
+            e.preventDefault();
+
+            let goTo = this.getAttribute("href");
+
+            window.setTimeout(function () {
+                linkTrans.addClass('tonap');
+                setTimeout(function () {
+                    console.log('transition complete');
+                    window.location = goTo;
+                }, 900);
+            }, 200);
+        } else {
+            e.preventDefault();
+        }
+    });
+}
 (function($) {
     typeWriter();
     $(document).ready(function() {
-        
+        wwuTransition();
         $(window).scroll($.throttle( 10,function() {
             winScroll();
         }));
