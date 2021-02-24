@@ -259,16 +259,16 @@ function splitFont() {
     $(".variable_word").lettering('words');
 }
 function customCursor(){
-    let mouseCursor = document.querySelector(".cursor");
     let hoverable = $("a[href]");
-    let mouseItem = $(".cursor");
+    let mouseItem = $('.cursor');
 
-    window.addEventListener("mousemove",cursor);
+    $(window).mousemove($.throttle( 5,function(e) {
+        cursor.css({
+            'top': e.clientY - cursor.height() / 2,
+            'left': e.clientX - cursor.width() / 2
+        });
+    }));
 
-    function cursor(e) {
-        mouseCursor.style.top = e.pageY + "px";
-        mouseCursor.style.left = e.pageX + "px";
-    }
     hoverable.mouseover(function(){
         mouseItem.addClass("circle").css({"clip-path": "circle(15% at 50% 50%)"});
     });
