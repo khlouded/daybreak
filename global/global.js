@@ -38,8 +38,9 @@ function navClick() {
     navButt.click(function () {
         navMenu.addClass("nav_menu");
         if ($('.home_h1_title').length){
-            $('.home_h1_title').css({"z-index":"99"});
-            $('.studio_reel').css({"z-index":"99"});
+            $('.home_h1_title').css({"z-index":"9"});
+            $('.studio_reel').css({"z-index":"9"});
+            $('.heading_item').css({"z-index":"9"});
         }
         function show_menu() {
             navMenu.addClass("menu_transition");
@@ -58,8 +59,9 @@ function navClick() {
     navClose.click(function () {
         navText.removeClass("nav_linkShow");
         if ($('.home_h1_title').length){
-            $('.home_h1_title').css({"z-index":"99"});
-            $('.studio_reel').css({"z-index":"99"});
+            $('.home_h1_title').css({"z-index":"9"});
+            $('.studio_reel').css({"z-index":"9"});
+            $('.heading_item').css({"z-index":"9"});
         }
 
         function close_menu() {
@@ -84,8 +86,9 @@ function navClick() {
 
             let goTo = this.getAttribute("href");
             if ($('.home_h1_title').length){
-                $('.home_h1_title').css({"z-index":"99"});
-                $('.studio_reel').css({"z-index":"99"});
+                $('.home_h1_title').css({"z-index":"9"});
+                $('.studio_reel').css({"z-index":"9"});
+                $('.heading_item').css({"z-index":"9"});
             }
 
             window.setTimeout(function () {
