@@ -46,13 +46,13 @@ function winScroll() {
             mainP.css('color','#fff');
             block.css("background-color", "#000"); 
         }
-        else if (wScroll >= illStart + illLength - windowH*titleChange  && wScroll < tagStart + tagLength ) {
+        else if (wScroll >= illStart + illLength - windowH*titleChange  && wScroll < tagStart + tagLength  - windowH*titleChange ) {
             mainP.css('color','#fff');
             block.css("background-color", "#000"); 
         }
-        else if (wScroll >= tagStart + tagLength && wScroll < desStart + desLength - windowH*titleChange  ) {
-            mainP.css('color','#000');
-            block.css("background-color", "#FFFFFF"); 
+        else if (wScroll >= tagStart + tagLength  - windowH*titleChange && wScroll < desStart + desLength - windowH*titleChange  ) {
+            mainP.css('color','#fff');
+            block.css("background-color", "#000"); 
         }
         else if (wScroll >= desStart + desLength - windowH*titleChange  && wScroll < skillStart + skillLength  - windowH*titleChange ) {
             mainP.css('color','#000');
