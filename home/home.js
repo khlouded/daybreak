@@ -37,6 +37,7 @@ function winScroll() {
         aboutArrow.css({"color":"#000"});
     } else if (wScroll >= headStart + headLength  - windowH*titleChange && wScroll < C_oneStart + C_oneLength - windowH*titleChange) {
         //case one ,"background-image": "linear-gradient(180deg, #BCCAEF 0%, #E5D4E2 100%)"
+        introText.removeClass("word_enter");
         mainP.css({"color":"#fff"});
         caseImg.css({"background-color":"#f1f1f1"});
         aboutArrow.css({"color":"#fff"});
