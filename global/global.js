@@ -89,7 +89,7 @@ function navClick() {
             }
 
             window.setTimeout(function () {
-                linkTrans.addClass('toabout');
+                linkTrans.addClass('tohome');
                 setTimeout(function () {
                     console.log('transition complete');
                     window.location = goTo;
