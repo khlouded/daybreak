@@ -33,7 +33,6 @@ const logoHeaderWidth = 50;
 //page transition
 const linkTrans = $('.linktransition');
 
-
 function navClick() {
     navButt.click(function () {
         navMenu.addClass("nav_menu");
@@ -419,7 +418,7 @@ function screenLarger() {
     navButtonFix();
     navDescription();
     navClick();
-    if (secFooter.length) {
+    if ($('#sec_footer').length) {
         footerReveal();
     }
     splitFont();
