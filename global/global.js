@@ -270,10 +270,10 @@ function customCursor(){
         mouseCursor.style.left = e.pageX + "px";
     }
     hoverable.mouseover(function(){
-        mouseItem.addClass("circle");
+        mouseItem.addClass("circle").css({"clip-path": "circle(15% at 50% 50%);"});
     });
     hoverable.mouseleave(function(){
-        mouseItem.removeClass("circle");
+        mouseItem.removeClass("circle").css({"clip-path": "circle(72% at 50% 50%);"});
     });
     
 }
