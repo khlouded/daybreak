@@ -5,7 +5,6 @@ function winScroll() {
     const secC_one = $('#sec_caseOne');
     const secC_two = $('#sec_caseTwo');
     const secC_three = $('#sec_caseThree');
-    const secFooter = $('#sec_footer');
     
     // Case Study Images
     const mainP = $('.home_colour');
@@ -14,6 +13,7 @@ function winScroll() {
     const c1_i2 = $('.caseone_imagetwo');
     const c1_i3 = $('.caseone_imagethree');
     const title = $('.home_h1_title');
+    const introText = $('.variable_word span');
 
     // Heights
     let headLength = secHead.innerHeight();

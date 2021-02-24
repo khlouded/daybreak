@@ -4,6 +4,8 @@ const navButt = $('.nav_button');
 const navMenu = $('.nav_menu_base');
 const navMenuOpen = $('.nav_menu_base');
 const navClose = $('.nav_menu_base .close_button');
+const secFooter = $('#sec_footer');
+const footerText = $('.footer_link');
 //text items
 const navText = $('.nav_menulink');
 const navLinks = $('.navmenu_link');
@@ -73,6 +75,10 @@ function navClick() {
             e.preventDefault();
 
             let goTo = this.getAttribute("href");
+            if ($('.home_h1_title').length){
+                $('.home_h1_title').css({"z-index":"99"});
+                $('.studio_reel').css({"z-index":"99"});
+            }
 
             window.setTimeout(function () {
                 linkTrans.addClass('toabout');
@@ -213,8 +219,6 @@ function smoothScroll() {
     });
 }
 function footerReveal() {
-    const secFooter = $('#sec_footer');
-    const footerText = $('.footer_link');
 
     $(window).scroll(function () {
         let wScroll = $(window).scrollTop();
@@ -404,7 +408,7 @@ function screenLarger() {
     navButtonFix();
     navDescription();
     navClick();
-    if ($('#sec_footer').length) {
+    if (secFooter.length) {
         footerReveal();
     }
     splitFont();
