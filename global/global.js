@@ -261,6 +261,7 @@ function splitFont() {
 function customCursor(){
     let mouseCursor = document.querySelector(".cursor");
     let hoverable = document.querySelector("a");
+    let mouseItem = $(".cursor");
 
     window.addEventListener("mousemove",cursor);
 
@@ -268,6 +269,13 @@ function customCursor(){
         mouseCursor.style.top = e.pageY + "px";
         mouseCursor.style.left = e.pageX + "px";
     }
+    hoverable.mouseover(function(){
+        mouseItem.addClass(".circle");
+    });
+    hoverable.mouseleave(function(){
+        mouseItem.removeClass(".circle");
+    });
+    
 }
 function pageTransition() {
     //menu links
