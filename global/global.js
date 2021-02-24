@@ -260,7 +260,7 @@ function splitFont() {
 }
 function customCursor(){
     let mouseCursor = document.querySelector(".cursor");
-    let hoverable = document.querySelector("a");
+    let hoverable = $("a[href]");
     let mouseItem = $(".cursor");
 
     window.addEventListener("mousemove",cursor);
