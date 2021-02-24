@@ -116,7 +116,9 @@ function worksTransition() {
 }
 
 (function($) {
+    typeWriter();
     $(document).ready(function() {
+
         worksTransition();
         $(window).scroll($.throttle( 10,function() {
             winScroll();
