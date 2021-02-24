@@ -11,7 +11,6 @@ function winScroll() {
     const mainP = $('.home_colour');
     const aboutArrow = $('.about_arrow svg path');
     const caseImg = $('.case_item');
-    const c1_i2 = $('.caseone_imagetwo');
     const c1_i3 = $('.caseone_imagethree');
     const title = $('.home_h1_title');
     const introText = $('.variable_word span');
@@ -47,11 +46,13 @@ function winScroll() {
         aboutArrow.css({"color":"#fff"});
         block.css("background-color", "#000");
 
-        let scrollValue1 = Math.abs(wScroll - (C_oneStart - windowH*titleChange));
-        let scrollPercent1 = (scrollValue1 / C_oneLength) * 100;  
+        
         // images
-        c1_i3.css({"background-position": scrollPercent1 + "% " + scrollPercent1 +"%"});
-        c1_i2.css({"background-position": scrollPercent1 + "% " + scrollPercent1 +"%"});
+        if (wScroll >= headStart + headLength && wScroll < C_oneStart + C_oneLength) {
+            let scrollValue1 = Math.abs(wScroll - (C_oneStart));
+        let scrollPercent1 = (scrollValue1 / C_oneLength) * 100;  
+            c1_i3.css({"background-position": scrollPercent1 + "% " + scrollPercent1 +"%"});
+        }
     } else if (wScroll >= C_oneStart + C_oneLength - windowH*titleChange && wScroll < C_twoStart + C_twoLength - windowH*titleChange) {
         //case two
         mainP.css({"color":"#4303A7"});
