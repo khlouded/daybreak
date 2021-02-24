@@ -258,6 +258,17 @@ function typeWriter() {
 function splitFont() {
     $(".variable_word").lettering('words');
 }
+function customCursor(){
+    let mouseCursor = document.querySelector(".cursor");
+    let hoverable = document.querySelector("a");
+
+    window.addEventListener("mousemove",cursor);
+
+    function cursor(e) {
+        mouseCursor.style.top = e.pageY + "px";
+        mouseCursor.style.left = e.pageX + "px";
+    }
+}
 function pageTransition() {
     //menu links
     navMHome.click(function (e) {
@@ -418,6 +429,7 @@ function screenLarger() {
     navButtonFix();
     navDescription();
     navClick();
+    customCursor();
     if ($('#sec_footer').length) {
         footerReveal();
     }
