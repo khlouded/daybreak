@@ -456,13 +456,22 @@ function screenLarger() {
     }
     splitFont();
     smoothScroll();
-    $(window).resize(function() {
-        customCursor();
+    $(window).resize(function(e) {
+        mouseItem.css({
+            top : e.pageY,
+            left: e.pageX
+        });
     });
-    $(window).scroll($.throttle( 10,function() {
-        customCursor();
+    $(window).scroll($.throttle( 10,function(ed) {
+        mouseItem.css({
+            top : e.pageY,
+            left: e.pageX
+        });
     }));
-    $(window).on( "load", function() {
-        customCursor();
+    $(window).on( "load", function(ed) {
+        mouseItem.css({
+            top : e.pageY,
+            left: e.pageX
+        });
     });
 }(jQuery));
