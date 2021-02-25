@@ -266,8 +266,8 @@ function customCursor(){
         var valueX = e.clientX;
         var valueY = e.clientY;
         mouseItem.css({
-            top : valueX,
-            left: valueY
+            top : valueY,
+            left: valueX
         });
     }));
 
