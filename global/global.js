@@ -276,16 +276,16 @@ function customCursor(){
         mouseItem.removeClass("circle").css({"clip-path": "circle(72% at 50% 50%)"});
     });
     navLink_event.mouseover(function(){
-        mouseItem.addClass("circle").css({"clip-path": "circle(15% at 50% 50%)","transform": "scale(1.32)"});
+        mouseItem.addClass("circle").css({"clip-path": "circle(15% at 50% 50%)"});
     });
     navLink_event.mouseleave(function(){
-        mouseItem.removeClass("circle").css({"clip-path": "circle(72% at 50% 50%)","transform": "scale(1)"});
+        mouseItem.removeClass("circle").css({"clip-path": "circle(72% at 50% 50%)"});
     });
     navButt.mouseover(function(){
-        mouseItem.addClass("circle").css({"clip-path": "circle(15% at 50% 50%)","transform": "scale(1.32)"});
+        mouseItem.addClass("circle").css({"clip-path": "circle(15% at 50% 50%)"});
     });
     navButt.mouseleave(function(){
-        mouseItem.removeClass("circle").css({"clip-path": "circle(72% at 50% 50%)","transform": "scale(1)"});
+        mouseItem.removeClass("circle").css({"clip-path": "circle(72% at 50% 50%)"});
     });
     
 }
