@@ -286,8 +286,8 @@ function customCursor(){
     $(window).mousemove($.throttle( 2,function(e) {
 
         mouseItem.css({
-            top : e.clientY,
-            left: e.clientX,
+            top : e.clientY -10,
+            left: e.clientX -10,
             "opacity":1
         });
     }));
@@ -486,20 +486,20 @@ function screenLarger() {
     smoothScroll();
     $(window).resize(function(e) {
         mouseItem.css({
-            top : e.clientY,
-            left: e.clientX
+            top : e.clientY-10,
+            left: e.clientX-10
         });
     });
     $(window).scroll($.throttle( 2,function(e) {
         mouseItem.css({
-            top : e.clientY,
-            left: e.clientX
+            top : e.clientY-10,
+            left: e.clientX-10
         });
     }));
     $(window).on( "load", function(e) {
         mouseItem.css({
-            top : e.clientY,
-            left: e.clientX
+            top : e.clientY-10,
+            left: e.clientX-10
         });
     });
 }(jQuery));
