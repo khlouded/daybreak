@@ -24,6 +24,10 @@ const navLink_event = $('.nav_logo_link');
 let block = $('#block');
 let maxHeight = $('body').innerHeight();
 let windowH = $(window).innerHeight();
+
+//cursor
+const hoverable = $("a[href]");
+const mouseItem = $('.cursor');
 //global actions and effects
 //numbers
 const titleChange = 0.25;
@@ -259,9 +263,6 @@ function splitFont() {
     $(".variable_word").lettering('words');
 }
 function customCursor(){
-    let hoverable = $("a[href]");
-    let mouseItem = $('.cursor');
-
     $(window).mousemove($.throttle( 2,function(e) {
         mouseItem.css({
             top : e.pageY,
@@ -455,4 +456,22 @@ function screenLarger() {
     }
     splitFont();
     smoothScroll();
+    $(window).resize(function() {
+        mouseItem.css({
+            top : e.pageY,
+            left: e.pageX
+        });
+    });
+    $(window).scroll($.throttle( 10,function() {
+        mouseItem.css({
+            top : e.pageY,
+            left: e.pageX
+        });
+    }));
+    $(window).on( "load", function() {
+        mouseItem.css({
+            top : e.pageY,
+            left: e.pageX
+        });
+    });
 }(jQuery));
