@@ -263,9 +263,9 @@ function customCursor(){
     let mouseItem = $('.cursor');
 
     $(window).mousemove($.throttle( 5,function(e) {
-        mouseItem.css({
-            top: e.pageY - mouseItem.height() / 2,
-            left: e.pageX - mouseItem.width() / 2
+        var valueX = e.clientX;
+        var valueY = e.clientY;
+        mouseItem.css({"transform" : 'translate3D(' + valueX + 'px,' + valueY + 'px,0)'
         });
     }));
 
