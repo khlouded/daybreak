@@ -20,6 +20,7 @@ const navDelay = $('.nav_delay');
 const pageTrans = $('.pagetransition');
 const navPseudoSVG = $(".nav_pseudo_container svg path");
 const navLink_event = $('.nav_logo_link');
+const caseLink = $('.caselink');
 // main large size variables
 let block = $('#block');
 let maxHeight = $('body').innerHeight();
@@ -287,6 +288,12 @@ function customCursor(){
     });
     navButt.mouseleave(function(){
         mouseItem.css({"clip-path": "circle(72% at 50% 50%)"});
+    });
+    caseLink.mouseover(function(){
+        mouseItem.css({"transform": "scale(1.5)","clip-path": "circle(72% at 50% 50%)"});
+    });
+    caseLink.mouseleave(function(){
+        mouseItem.css({"transform": "scale(1)","clip-path": "circle(72% at 50% 50%)"});
     });
     
 }
