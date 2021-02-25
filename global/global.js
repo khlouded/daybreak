@@ -259,8 +259,11 @@ function footerReveal() {
         let footerStart = secFooter.offset().top;
         if (wScroll >= footerStart - (windowH - 100)) {
             footerText.addClass('footer_show');
+            window.setTimeout(function () {
+                footerText.addClass('clipRemove');
+            }, 300);
         } else {
-            footerText.removeClass('footer_show');
+            footerText.removeClass('footer_show clipRemove');
         }
     });
 }
