@@ -21,6 +21,7 @@ const pageTrans = $('.pagetransition');
 const navPseudoSVG = $(".nav_pseudo_container svg path");
 const navLink_event = $('.nav_logo_link');
 const caseLink = $('.caselink');
+const footLink = $('.footer_link');
 // main large size variables
 let block = $('#block');
 let maxHeight = $('body').innerHeight();
@@ -108,6 +109,24 @@ function navClick() {
     });
     $('.nav_wwu').click(function (e) {
         if (document.location.pathname !== "/contact" ){
+            console.log('transition start');
+            e.preventDefault();
+
+            let goTo = this.getAttribute("href");
+
+            window.setTimeout(function () {
+                linkTrans.addClass('tonap');
+                setTimeout(function () {
+                    console.log('transition complete');
+                    window.location = goTo;
+                }, 900);
+            }, 200);
+        } else {
+            e.preventDefault();
+        }
+    });
+    footLink.click(function (e) {
+        if ($('#sec_footer').length){
             console.log('transition start');
             e.preventDefault();
 
