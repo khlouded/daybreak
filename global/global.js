@@ -284,9 +284,11 @@ function splitFont() {
 }
 function customCursor(){
     $(window).mousemove($.throttle( 2,function(e) {
+
         mouseItem.css({
             top : e.clientY,
-            left: e.clientX
+            left: e.clientX,
+            "opacity":1
         });
     }));
 
