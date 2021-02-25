@@ -264,8 +264,8 @@ function customCursor(){
 
     $(window).mousemove($.throttle( 2,function(e) {
         mouseItem.css({
-            top : e.clientY,
-            left: e.clientX
+            top : e.pageY,
+            left: e.pageX
         });
     }));
 
