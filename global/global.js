@@ -143,6 +143,24 @@ function navClick() {
             e.preventDefault();
         }
     });
+    $('.home_link').click(function (e) {
+        if ($('#sec_footer').length){
+            console.log('transition start');
+            e.preventDefault();
+
+            let goTo = this.getAttribute("href");
+
+            window.setTimeout(function () {
+                linkTrans.addClass('toabout');
+                setTimeout(function () {
+                    console.log('transition complete');
+                    window.location = goTo;
+                }, 900);
+            }, 200);
+        } else {
+            e.preventDefault();
+        }
+    });
 }
 function navButtonFix() {
     navButt.removeAttr("href");
