@@ -265,7 +265,9 @@ function customCursor(){
     $(window).mousemove($.throttle( 5,function(e) {
         var valueX = e.clientX;
         var valueY = e.clientY;
-        mouseItem.css({"transform" : 'translate3D(' + valueX + 'px,' + valueY + 'px,0)'
+        mouseItem.css({
+            top : valueX,
+            left: valueY
         });
     }));
 
