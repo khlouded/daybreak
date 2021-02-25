@@ -265,8 +265,8 @@ function splitFont() {
 function customCursor(){
     $(window).mousemove($.throttle( 2,function(e) {
         mouseItem.css({
-            top : e.pageY,
-            left: e.pageX
+            top : e.clientY,
+            left: e.clientX
         });
     }));
 
@@ -458,20 +458,20 @@ function screenLarger() {
     smoothScroll();
     $(window).resize(function(e) {
         mouseItem.css({
-            top : e.pageY,
-            left: e.pageX
+            top : e.clientY,
+            left: e.clientX
         });
     });
     $(window).scroll($.throttle( 2,function(e) {
         mouseItem.css({
-            top : e.pageY,
-            left: e.pageX
+            top : e.clientY,
+            left: e.clientX
         });
     }));
     $(window).on( "load", function(e) {
         mouseItem.css({
-            top : e.pageY,
-            left: e.pageX
+            top : e.clientY,
+            left: e.clientX
         });
     });
 }(jQuery));
