@@ -282,10 +282,10 @@ function customCursor(){
         mouseItem.removeClass("circle").css({"clip-path": "circle(72% at 50% 50%)","transform": "scale(1)"});
     });
     navButt.mouseover(function(){
-        mouseItem.addClass("circle").css({"transform": "rotate(45deg)"});
+        mouseItem.addClass("circle").css({"clip-path": "circle(15% at 50% 50%)","transform": "scale(1.32)"});
     });
     navButt.mouseleave(function(){
-        mouseItem.removeClass("circle").css({"transform": "rotate(0deg)"});
+        mouseItem.removeClass("circle").css({"clip-path": "circle(72% at 50% 50%)","transform": "scale(1)"});
     });
     
 }
