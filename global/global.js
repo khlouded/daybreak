@@ -462,13 +462,13 @@ function screenLarger() {
             left: e.pageX
         });
     });
-    $(window).scroll($.throttle( 10,function(ed) {
+    $(window).scroll($.throttle( 2,function(e) {
         mouseItem.css({
             top : e.pageY,
             left: e.pageX
         });
     }));
-    $(window).on( "load", function(ed) {
+    $(window).on( "load", function(e) {
         mouseItem.css({
             top : e.pageY,
             left: e.pageX
