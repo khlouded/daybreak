@@ -271,22 +271,22 @@ function customCursor(){
     }));
 
     hoverable.mouseover(function(){
-        mouseItem.addClass("circle").css({"clip-path": "circle(15% at 50% 50%)"});
+        mouseItem.css({"clip-path": "circle(15% at 50% 50%)"});
     });
     hoverable.mouseleave(function(){
-        mouseItem.removeClass("circle").css({"clip-path": "circle(72% at 50% 50%)"});
+        mouseItem.css({"clip-path": "circle(72% at 50% 50%)"});
     });
     navLink_event.mouseover(function(){
-        mouseItem.addClass("circle").css({"clip-path": "circle(15% at 50% 50%)"});
+        mouseItem.css({"clip-path": "circle(15% at 50% 50%)"});
     });
     navLink_event.mouseleave(function(){
-        mouseItem.removeClass("circle").css({"clip-path": "circle(72% at 50% 50%)"});
+        mouseItem.css({"clip-path": "circle(72% at 50% 50%)"});
     });
     navButt.mouseover(function(){
-        mouseItem.addClass("circle").css({"clip-path": "circle(15% at 50% 50%)"});
+        mouseItem.css({"clip-path": "circle(15% at 50% 50%)"});
     });
     navButt.mouseleave(function(){
-        mouseItem.removeClass("circle").css({"clip-path": "circle(72% at 50% 50%)"});
+        mouseItem.css({"clip-path": "circle(72% at 50% 50%)"});
     });
     
 }
@@ -457,21 +457,12 @@ function screenLarger() {
     splitFont();
     smoothScroll();
     $(window).resize(function() {
-        mouseItem.css({
-            top : e.pageY,
-            left: e.pageX
-        });
+        customCursor();
     });
     $(window).scroll($.throttle( 10,function() {
-        mouseItem.css({
-            top : e.pageY,
-            left: e.pageX
-        });
+        customCursor();
     }));
     $(window).on( "load", function() {
-        mouseItem.css({
-            top : e.pageY,
-            left: e.pageX
-        });
+        customCursor();
     });
 }(jQuery));
