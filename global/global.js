@@ -262,7 +262,7 @@ function customCursor(){
     let hoverable = $("a[href]");
     let mouseItem = $('.cursor');
 
-    $(window).mousemove($.throttle( 5,function(e) {
+    $(window).mousemove($.throttle( 2,function(e) {
         var valueX = e.clientX;
         var valueY = e.clientY;
         mouseItem.css({
