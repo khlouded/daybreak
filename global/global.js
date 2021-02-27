@@ -131,7 +131,7 @@ function navClick() {
             e.preventDefault();
 
             let goTo = this.getAttribute("href");
-
+            
             window.setTimeout(function () {
                 linkTrans.addClass('tonap');
                 setTimeout(function () {
@@ -149,7 +149,11 @@ function navClick() {
             e.preventDefault();
 
             let goTo = this.getAttribute("href");
-
+            if ($('.home_h1_title').length){
+                $('.home_h1_title').css({"z-index":"9"});
+                $('.studio_reel').css({"z-index":"9"});
+                $('.heading_item').css({"z-index":"9"});
+            }
             window.setTimeout(function () {
                 linkTrans.addClass('toabout');
                 setTimeout(function () {
