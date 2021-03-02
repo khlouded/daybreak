@@ -315,11 +315,11 @@ function customCursor(){
             "opacity":1
         });
     }));
-    $(window).touchmove($.throttle( 2,function(e) {
+    $(window).on("touchmove", function(e) {
         mouseItem.css({
             "opacity":0
         });
-    }));
+    });
 
     hoverable.mouseover(function(){
         mouseItem.css({"clip-path": "circle(15% at 50% 50%)"});
