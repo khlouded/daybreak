@@ -308,14 +308,19 @@ function splitFont() {
     $(".variable_word").lettering('words');
 }
 function customCursor(){
-    $(window).mousemove($.throttle( 2,function(e) {
+    $(window).mousemove($.throttle( 3,function(e) {
         mouseItem.css({
             top : e.clientY -10,
             left: e.clientX -10,
             "opacity":1
         });
     }));
-    $(window).on("touchmove", function(e) {
+    $(window).on("touchstart", function(e) {
+        mouseItem.css({
+            "opacity":0
+        });
+    });
+    $(window).on("touchend", function(e) {
         mouseItem.css({
             "opacity":0
         });
