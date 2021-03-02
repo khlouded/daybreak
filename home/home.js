@@ -132,6 +132,11 @@ function worksTransition() {
         worksTransition();
         $(window).scroll($.throttle( 10,function() {
             winScroll();
+            setTimeout(function () {
+                $('.home_h1_title').css({"z-index":"9"});
+                $('.studio_reel').css({"z-index":"9"});
+                $('.heading_item').css({"z-index":"9"});
+            }, 400);
         }));
         footerReveal();
         $(window).resize(function() {
