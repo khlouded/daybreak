@@ -309,11 +309,15 @@ function splitFont() {
 }
 function customCursor(){
     $(window).mousemove($.throttle( 2,function(e) {
-
         mouseItem.css({
             top : e.clientY -10,
             left: e.clientX -10,
             "opacity":1
+        });
+    }));
+    $(window).touchmove($.throttle( 2,function(e) {
+        mouseItem.css({
+            "opacity":0
         });
     }));
 
