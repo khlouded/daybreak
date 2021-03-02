@@ -136,7 +136,7 @@ function worksTransition() {
                 $('.home_h1_title').css({"z-index":"9"});
                 $('.studio_reel').css({"z-index":"9"});
                 $('.heading_item').css({"z-index":"9"});
-            }, 400);
+            }, 700);
         }));
         footerReveal();
         $(window).resize(function() {
