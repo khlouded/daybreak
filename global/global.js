@@ -370,6 +370,23 @@ function customCursor(){
     });
     
 }
+function backTransition() {
+    window.onpopstate = function(e) {
+        console.log('transition start');
+        e.preventDefault();
+
+        let goTo = history.go(-1);
+
+        window.setTimeout(function () {
+            linkTrans.addClass('tonap');
+            setTimeout(function () {
+                console.log('transition complete');
+                window.location = goTo;
+            }, 900);
+        }, 200);
+    };
+}
+
 function pageTransition() {
     //menu links
     navMHome.click(function (e) {
@@ -531,6 +548,7 @@ function screenLarger() {
     navDescription();
     navClick();
     customCursor();
+    backTransition();
     if ($('#sec_footer').length) {
         footerReveal();
     }
