@@ -289,6 +289,7 @@ function footerReveal() {
         }
     });
 }
+
 function typeWriter() {
     var textlength = $(".variable_word").children().length;
     var i = 1;
