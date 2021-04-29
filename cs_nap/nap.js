@@ -167,9 +167,10 @@ let windowH = $(window).innerHeight();
         // }
     }));
 }
+
 function nextSlide() {
     nextLink.click(function (e) {
-        console.log('transition start');
+        // console.log('transition start');
         e.preventDefault();
 
         let goTo = this.getAttribute("href");
@@ -177,9 +178,9 @@ function nextSlide() {
         timeout = window.setTimeout(function () {
             linkTrans.addClass('toclyx');
             setTimeout(function () {
-                console.log('transition complete');
+                // console.log('transition complete');
                 window.location = goTo;
-            }, 900);
+            }, 900); // timing in miliseconds
         }, 200);
     });
 }

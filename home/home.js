@@ -75,7 +75,7 @@ function winScroll() {
         block.css("background-color", "#FCFAF7");
     }
 }
-function worksTransition() {
+function worksTransition() { //the LinkTrans changes colours depending on where it is linked to
     let napLink = $(".nap_link");
     let clyxLink = $(".clyx_link");
     let stacksLink = $(".stacks_link");

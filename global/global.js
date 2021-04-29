@@ -195,8 +195,8 @@ function navDescription() {
                 change_menuShow();
             }, 150);
         }, 150);
-    });
-}   
+        });
+    }   
     //home button hover
     navMHome.on('mouseenter touchstart', function () {
         change_menuHide();
@@ -262,7 +262,6 @@ function navDescription() {
             }, 150);
         }, 150);
     });
-
 }
 function smoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
