@@ -18,8 +18,8 @@ function winScroll() {
     // Heights
     let headLength = secHead.innerHeight();
     let C_oneLength = secC_one.innerHeight();
-    let C_twoLength = secC_two.innerHeight();
-    let C_threeLength = secC_three.innerHeight();
+    // let C_twoLength = secC_two.innerHeight();
+    // let C_threeLength = secC_three.innerHeight();
     let footerLength = secFooter.innerHeight();
 
     let wScroll = $(window).scrollTop();
@@ -27,8 +27,8 @@ function winScroll() {
     //position information
     let headStart = secHead.offset().top;
     let C_oneStart = secC_one.offset().top;
-    let C_twoStart = secC_two.offset().top;
-    let C_threeStart = secC_three.offset().top;
+    // let C_twoStart = secC_two.offset().top;
+    // let C_threeStart = secC_three.offset().top;
     let footerStart = secFooter.offset().top;
 
 
@@ -41,11 +41,11 @@ function winScroll() {
     } else if (wScroll >= headStart + headLength  - windowH*titleChange && wScroll < C_oneStart + C_oneLength - windowH*titleChange) {
         //case one ,"background-image": "linear-gradient(180deg, #BCCAEF 0%, #E5D4E2 100%)"
         introText.removeClass("word_enter");
-        mainP.css({"color":"#fff"});
+        mainP.css({"color":"#000"});
         title.css({"color":"#000"});
-        caseImg.css({"background-color":"#f1f1f1"});
-        aboutArrow.css({"color":"#fff"});
-        block.css("background-color", "#000");
+        caseImg.css({"background-color":"#fff9db"});
+        aboutArrow.css({"color":"#000"});
+        block.css("background-color", "#fff");
 
         
         // images
