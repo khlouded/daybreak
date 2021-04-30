@@ -82,6 +82,7 @@ function worksTransition() { //the LinkTrans changes colours depending on where 
     let napLink = $(".nap_link");
     let clyxLink = $(".clyx_link");
     let stacksLink = $(".stacks_link");
+    let almostLink = $(".almost_link");
     napLink.click(function (e) {
         console.log('transition nap');
 
@@ -118,6 +119,20 @@ function worksTransition() { //the LinkTrans changes colours depending on where 
         let goTo = this.getAttribute("href");
         window.setTimeout(function () {
             linkTrans.addClass('tostacks');
+            setTimeout(function () {
+                console.log('transition complete');
+                window.location = goTo;
+            }, 900);
+        }, 200);
+    });
+    stacksLink.click(function (e) {
+        console.log('transition stacks');
+
+        e.preventDefault();
+
+        let goTo = this.getAttribute("href");
+        window.setTimeout(function () {
+            linkTrans.addClass('toalmost');
             setTimeout(function () {
                 console.log('transition complete');
                 window.location = goTo;
