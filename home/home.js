@@ -10,7 +10,7 @@ function winScroll() {
     // Case Study Images
     const mainP = $('.home_colour');
     const aboutArrow = $('.about_arrow svg path');
-    const caseImg = $('.case_item');
+    // const caseImg = $('.case_item');
     const c1_i3 = $('.caseone_imagethree');
     const title = $('.home_h1_title');
     const introText = $('.variable_word span');
@@ -34,7 +34,7 @@ function winScroll() {
 
     if (wScroll >= -20 && wScroll < headStart + headLength - windowH*titleChange) {
         mainP.css({"color":"#000"});
-        caseImg.css({"background-color":"#f1f1f1"});
+        // caseImg.css({"background-color":"#f1f1f1"});
         block.css("background-color", "#fff");
         aboutArrow.css({"color":"#000"});
         typeWriter();
@@ -43,7 +43,7 @@ function winScroll() {
         introText.removeClass("word_enter");
         mainP.css({"color":"#000"});
         title.css({"color":"#000"});
-        caseImg.css({"background-color":"#fff9db"});
+        // caseImg.css({"background-color":"#fff9db"});
         aboutArrow.css({"color":"#000"});
         block.css("background-color", "#fff");
 
