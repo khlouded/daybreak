@@ -3,8 +3,8 @@ function winScroll() {
     // sections
     const secHead = $('#sec_heading');
     const secC_one = $('#sec_caseOne');
-    const secC_two = $('#sec_caseTwo');
-    const secC_three = $('#sec_caseThree');
+    // const secC_two = $('#sec_caseTwo');
+    // const secC_three = $('#sec_caseThree');
     const secFooter = $('#sec_footer');
     
     // Case Study Images
@@ -54,26 +54,29 @@ function winScroll() {
         let scrollPercent1 = (scrollValue1 / C_oneLength) * 100;  
             c1_i3.css({"background-position": scrollPercent1 + "% " + scrollPercent1 +"%"});
         }
-    } else if (wScroll >= C_oneStart + C_oneLength - windowH*titleChange && wScroll < C_twoStart + C_twoLength - windowH*titleChange) {
-        //case two
-        mainP.css({"color":"#4303A7"});
-        caseImg.css({"background-color":"#FFF9DB"});
-        block.css("background-color", "#FFE66A");       
-        //let scrollValue2 = Math.abs(wScroll - (C_twoStart - windowH*titleChange)); 
-        //let scrollPercent2 = (scrollValue2 / C_twoLength) * 100;
-    } else if (wScroll >= C_twoStart + C_twoLength - windowH*titleChange && wScroll < C_threeStart + C_threeLength - windowH*titleChange) {
-        //case three
-        mainP.css({"color":"#295849"});
-        caseImg.css({"background-color":"#ADDAD5"});
-        block.css("background-color", "#FCFAF7"); 
-        //let scrollValue3 = Math.abs(wScroll - (C_threeStart - windowH*titleChange));
-        //let scrollPercent3 = (scrollValue3 / C_threeLength) * 100;
-    } else if (wScroll >= C_threeStart + C_threeLength - windowH*titleChange && wScroll < footerStart + footerLength - windowH*titleChange) {
-        //footer
-        mainP.css({"color":"#000"});
-        caseImg.css({"background-color":"#f1f1f1"});
-        block.css("background-color", "#FCFAF7");
+    } else if (wScroll >= C_oneStart + C_oneLength - windowH*titleChange && wScroll < footerStart + footerLength - windowH*titleChange){
+
     }
+    // else if (wScroll >= C_oneStart + C_oneLength - windowH*titleChange && wScroll < C_twoStart + C_twoLength - windowH*titleChange) {
+    //     //case two
+    //     mainP.css({"color":"#4303A7"});
+    //     caseImg.css({"background-color":"#FFF9DB"});
+    //     block.css("background-color", "#FFE66A");       
+    //     //let scrollValue2 = Math.abs(wScroll - (C_twoStart - windowH*titleChange)); 
+    //     //let scrollPercent2 = (scrollValue2 / C_twoLength) * 100;
+    // } else if (wScroll >= C_twoStart + C_twoLength - windowH*titleChange && wScroll < C_threeStart + C_threeLength - windowH*titleChange) {
+    //     //case three
+    //     mainP.css({"color":"#295849"});
+    //     caseImg.css({"background-color":"#ADDAD5"});
+    //     block.css("background-color", "#FCFAF7"); 
+    //     //let scrollValue3 = Math.abs(wScroll - (C_threeStart - windowH*titleChange));
+    //     //let scrollPercent3 = (scrollValue3 / C_threeLength) * 100;
+    // } else if (wScroll >= C_threeStart + C_threeLength - windowH*titleChange && wScroll < footerStart + footerLength - windowH*titleChange) {
+    //     //footer
+    //     mainP.css({"color":"#000"});
+    //     caseImg.css({"background-color":"#f1f1f1"});
+    //     block.css("background-color", "#FCFAF7");
+    // }
 }
 function worksTransition() { //the LinkTrans changes colours depending on where it is linked to
     let napLink = $(".nap_link");
