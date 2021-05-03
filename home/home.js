@@ -46,14 +46,12 @@ function winScroll() {
         // caseImg.css({"background-color":"#fff9db"});
         aboutArrow.css({"color":"#000"});
         block.css("background-color", "#fff");
-
-        
         // images
-        if (wScroll >= headStart + headLength && wScroll < C_oneStart + C_oneLength) {
-            let scrollValue1 = Math.abs(wScroll - (C_oneStart));
-        let scrollPercent1 = (scrollValue1 / C_oneLength) * 100;  
-            c1_i3.css({"background-position": scrollPercent1 + "% " + scrollPercent1 +"%"});
-        }
+        // if (wScroll >= headStart + headLength && wScroll < C_oneStart + C_oneLength) {
+        //     let scrollValue1 = Math.abs(wScroll - (C_oneStart));
+        // let scrollPercent1 = (scrollValue1 / C_oneLength) * 100;  
+        //     c1_i3.css({"background-position": scrollPercent1 + "% " + scrollPercent1 +"%"});
+        // }
     } else if (wScroll >= C_oneStart + C_oneLength - windowH*titleChange && wScroll < footerStart + footerLength - windowH*titleChange){
 
     }
