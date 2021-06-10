@@ -123,7 +123,7 @@ function worksTransition() { //the LinkTrans changes colours depending on where 
             }, 900);
         }, 200);
     });
-    stacksLink.click(function (e) {
+    almostLink.click(function (e) {
         console.log('transition stacks');
 
         e.preventDefault();
