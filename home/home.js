@@ -11,7 +11,7 @@ function winScroll() {
     const mainP = $('.home_colour');
     const aboutArrow = $('.about_arrow svg path');
     // const caseImg = $('.case_item');
-    const c1_i3 = $('.caseone_imagethree');
+    // const c1_i3 = $('.caseone_imagethree');
     const title = $('.home_h1_title');
     const introText = $('.variable_word span');
 
