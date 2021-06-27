@@ -77,10 +77,11 @@ function winScroll() {
     // }
 }
 function worksTransition() { //the LinkTrans changes colours depending on where it is linked to
-    let napLink = $(".nap_link");
-    let clyxLink = $(".clyx_link");
-    let stacksLink = $(".stacks_link");
-    let almostLink = $(".almost_link");
+    let napLink = $("#nap_link");
+    let clyxLink = $("#clyx_link");
+    let stacksLink = $("#stacks_link");
+    let almostLink = $("#almost_link");
+
     napLink.click(function (e) {
         console.log('transition nap');
 
@@ -124,7 +125,7 @@ function worksTransition() { //the LinkTrans changes colours depending on where 
         }, 200);
     });
     almostLink.click(function (e) {
-        console.log('transition stacks');
+        console.log('transition almost');
 
         e.preventDefault();
 
