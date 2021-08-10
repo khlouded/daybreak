@@ -77,10 +77,27 @@ function winScroll() {
     // }
 }
 function worksTransition() { //the LinkTrans changes colours depending on where it is linked to
+
+    //add transition for tee page
     let napLink = $(".nap_link");
     let clyxLink = $(".clyx_link");
     let stacksLink = $(".stacks_link");
     let almostLink = $(".almost_link");
+    let teeLink = $(".tee_link");
+    teeLink.click(function (e) {
+        console.log('transition nap');
+
+        e.preventDefault();
+
+        let goTo = this.getAttribute("href");
+        window.setTimeout(function () {
+            linkTrans.addClass('tonap');
+            setTimeout(function () {
+                console.log('transition complete');
+                window.location = goTo;
+            }, 900);
+        }, 200);
+    });
     napLink.click(function (e) {
         console.log('transition nap');
 
