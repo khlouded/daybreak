@@ -350,6 +350,12 @@ function customCursor(){
     hoverable.mouseleave(function(){
         mouseItem.css({"clip-path": "circle(72% at 50% 50%)"});
     });
+    cart.mouseover(function(){
+        mouseItem.css({"clip-path": "circle(15% at 50% 50%)"});
+    });
+    cart.mouseleave(function(){
+        mouseItem.css({"clip-path": "circle(72% at 50% 50%)"});
+    });
     navLink_event.mouseover(function(){
         mouseItem.css({"clip-path": "circle(15% at 50% 50%)"});
     });
