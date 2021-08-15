@@ -548,6 +548,9 @@ function screenLarger() {
     var mq = window.matchMedia("(min-width: 1920px)");
     return mq.matches;
 }
+function cartFix() {
+    $("#cart_wrapper").appendTo("#block");
+}
 (function ($) {
     pageTransition();
     navButtonFix();
@@ -555,6 +558,7 @@ function screenLarger() {
     navClick();
     customCursor();
     backTransition();
+    cartFix();
     if ($('#sec_footer').length) {
         footerReveal();
     }
