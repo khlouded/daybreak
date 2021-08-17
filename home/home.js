@@ -85,13 +85,13 @@ function worksTransition() { //the LinkTrans changes colours depending on where 
     let almostLink = $(".almost_link");
     let teeLink = $(".tee_link");
     teeLink.click(function (e) {
-        console.log('transition nap');
+        console.log('transition tee');
 
         e.preventDefault();
 
         let goTo = this.getAttribute("href");
         window.setTimeout(function () {
-            linkTrans.addClass('tonap');
+            linkTrans.addClass('toalmost');
             setTimeout(function () {
                 console.log('transition complete');
                 window.location = goTo;
@@ -141,7 +141,7 @@ function worksTransition() { //the LinkTrans changes colours depending on where 
         }, 200);
     });
     almostLink.click(function (e) {
-        console.log('transition stacks');
+        console.log('transition almost');
 
         e.preventDefault();
 
