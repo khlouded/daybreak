@@ -29,6 +29,7 @@ let windowH = $(window).innerHeight();
 
 //cursor
 const hoverable = $("a[href]");
+const cart = $(".cart_icon");
 const mouseItem = $('.cursor');
 //global actions and effects
 //numbers
@@ -548,9 +549,6 @@ function screenLarger() {
     var mq = window.matchMedia("(min-width: 1920px)");
     return mq.matches;
 }
-function cartFix() {
-    $("#cart_wrapper").appendTo("#block");
-}
 (function ($) {
     pageTransition();
     navButtonFix();
@@ -558,7 +556,6 @@ function cartFix() {
     navClick();
     customCursor();
     backTransition();
-    cartFix();
     if ($('#sec_footer').length) {
         footerReveal();
     }
