@@ -31,6 +31,8 @@ let windowH = $(window).innerHeight();
 const hoverable = $("a[href]");
 const cart = $(".cart_icon");
 const cart_button = $(".cart_button");
+const cart_wrapper = $(".cart_wrapper");
+const cart_block = $(".cart_block");
 const mouseItem = $('.cursor');
 //global actions and effects
 //numbers
@@ -168,20 +170,20 @@ function navClick() {
         }
     });
     cart.click(function() {
-        $(".cart_block").removeClass("cart_diff");
+        cart_block.removeClass("cart_diff");
     });
     cart_button.click(function() {
-        $(".cart_block").removeClass("cart_diff");
+        cart_block.removeClass("cart_diff");
     });
     $('.w-commerce-commercecartcloselink').click(function() {
         setTimeout(
             function() {
-                $(".cart_block").addClass("cart_diff");
+                cart_block.addClass("cart_diff");
             },
             500);
     });
-    if( $(".cart_wrapper").css('display').toLowerCase() == 'none') {
-        $(".cart_block").addClass("cart_diff");
+    if( cart_wrapper.css('display').toLowerCase() == 'none') {
+        cart_block.addClass("cart_diff");
     }
 }
 function navButtonFix() {
