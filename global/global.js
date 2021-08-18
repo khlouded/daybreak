@@ -177,19 +177,20 @@ function cartCheck() {
     cartButton.click(function() {
         cartBlock.removeClass("cart_diff");
     });
-    // $('.w-commerce-commercecartcloselink').click(function() {
-    //     setTimeout(
-    //         function() {
-    //             cartBlock.addClass("cart_diff");
-    //         },
-    //         500);
-    // });
-    if( cartWrapper.css('display').toLowerCase() == 'none') {
+    $('.w-commerce-commercecartcloselink').click(function() {
+        if( $('#cart_wrapper:visible').length == 0) {
+            cartBlock.addClass("cart_diff");
+            console.log("it's different 2");
+        }
+        // setTimeout(
+        //     function() {
+        //         cartBlock.addClass("cart_diff");
+        //     },
+        //     500);
+    });
+    if( $('#cart_wrapper:visible').length == 0) {
         cartBlock.addClass("cart_diff");
         console.log("it's different");
-    } else {
-        cartBlock.removeClass("cart_diff");
-        console.log("it's normal");
     }
 }
 function navButtonFix() {
