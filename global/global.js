@@ -169,21 +169,27 @@ function navClick() {
             e.preventDefault();
         }
     });
-    cart.click(function() {
-        cart_block.removeClass("cart_diff");
-    });
-    cart_button.click(function() {
-        cart_block.removeClass("cart_diff");
-    });
-    $('.w-commerce-commercecartcloselink').click(function() {
-        setTimeout(
-            function() {
-                cart_block.addClass("cart_diff");
-            },
-            500);
-    });
+}
+function cartCheck() {
+    // cart.click(function() {
+    //     cart_block.removeClass("cart_diff");
+    // });
+    // cart_button.click(function() {
+    //     cart_block.removeClass("cart_diff");
+    // });
+    // $('.w-commerce-commercecartcloselink').click(function() {
+    //     setTimeout(
+    //         function() {
+    //             cart_block.addClass("cart_diff");
+    //         },
+    //         500);
+    // });
     if( cart_wrapper.css('display').toLowerCase() == 'none') {
         cart_block.addClass("cart_diff");
+        console.log("it's different");
+    } else {
+        cart_block.removeClass("cart_diff");
+        console.log("it's normal");
     }
 }
 function navButtonFix() {
@@ -576,6 +582,7 @@ function screenLarger() {
     navClick();
     customCursor();
     backTransition();
+    cartCheck();
     if ($('#sec_footer').length) {
         footerReveal();
     }
