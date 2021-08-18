@@ -166,6 +166,13 @@ function navClick() {
             e.preventDefault();
         }
     });
+    cart.click(function() {
+        cart.toggle(function () {
+            $(".cart_block").removeClass("cart_diff");
+        }, function () {
+            $(".cart_block").addClass("cart_diff");
+        });
+    });
 }
 function navButtonFix() {
     navButt.removeAttr("href");
