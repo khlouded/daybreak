@@ -170,7 +170,11 @@ function navClick() {
         $(".cart_block").removeClass("cart_diff");
     });
     $('.w-commerce-commercecartcloselink').click(function() {
-        $(".cart_block").addClass("cart_diff");
+        setTimeout(
+            function() {
+                $(".cart_block").addClass("cart_diff");
+            },
+            1000);
     });
 }
 function navButtonFix() {
