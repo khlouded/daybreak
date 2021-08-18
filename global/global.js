@@ -34,6 +34,7 @@ const cartButton = $(".cart_button");
 const cartWrapper = $("#cart_wrapper");
 const cartBlock = $(".cart_block");
 const mouseItem = $('.cursor');
+var cartTimer; 
 //global actions and effects
 //numbers
 const titleChange = 0.25;
@@ -173,20 +174,19 @@ function navClick() {
 function cartCheck() {
     cart.click(function() {
         cartBlock.removeClass("cart_diff");
+        window.clearTimeout(cartTimer);
     });
     cartButton.click(function() {
         cartBlock.removeClass("cart_diff");
+        window.clearTimeout(cartTimer);
     });
+    
     $('.w-commerce-commercecartcloselink').click(function() {
-        if( $('#cart_wrapper:visible').length == 0) {
-            cartBlock.addClass("cart_diff");
-            console.log("it's different 2");
-        }
-        // setTimeout(
-        //     function() {
-        //         cartBlock.addClass("cart_diff");
-        //     },
-        //     500);
+        cartTimer = setTimeout(
+            function() {
+                cartBlock.addClass("cart_diff");
+            },
+        500);
     });
     if( $('#cart_wrapper:visible').length == 0) {
         cartBlock.addClass("cart_diff");
@@ -588,7 +588,6 @@ function screenLarger() {
         footerReveal();
     }
     splitFont();
-    smoothScroll();
     $(window).resize(function(e) {
         mouseItem.css({
             top : e.clientY-10,
@@ -607,4 +606,5 @@ function screenLarger() {
             left: e.clientX-10
         });
     });
+    smoothScroll();
 }(jQuery));
