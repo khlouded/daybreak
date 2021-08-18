@@ -30,6 +30,7 @@ let windowH = $(window).innerHeight();
 //cursor
 const hoverable = $("a[href]");
 const cart = $(".cart_icon");
+const cart_button = $(".cart_button");
 const mouseItem = $('.cursor');
 //global actions and effects
 //numbers
@@ -167,6 +168,9 @@ function navClick() {
         }
     });
     cart.click(function() {
+        $(".cart_block").removeClass("cart_diff");
+    });
+    cart_button.click(function() {
         $(".cart_block").removeClass("cart_diff");
     });
     $('.w-commerce-commercecartcloselink').click(function() {
