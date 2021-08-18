@@ -188,10 +188,10 @@ function cartCheck() {
             },
         500);
     });
-    if( $('#cart_wrapper:visible').length == 0) {
-        cartBlock.addClass("cart_diff");
-        console.log("it's different");
-    }
+    // if( $('#cart_wrapper:visible').length == 0) {
+    //     cartBlock.addClass("cart_diff");
+    //     console.log("it's different");
+    // }
 }
 function navButtonFix() {
     navButt.removeAttr("href");
