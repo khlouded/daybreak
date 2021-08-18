@@ -178,8 +178,11 @@ function navClick() {
             function() {
                 $(".cart_block").addClass("cart_diff");
             },
-            1000);
+            500);
     });
+    if( $(".cart_wrapper").css('display').toLowerCase() == 'none') {
+        $(".cart_block").addClass("cart_diff");
+    }
 }
 function navButtonFix() {
     navButt.removeAttr("href");
