@@ -30,9 +30,9 @@ let windowH = $(window).innerHeight();
 //cursor
 const hoverable = $("a[href]");
 const cart = $(".cart_icon");
-const cart_button = $(".cart_button");
-const cart_wrapper = $(".cart_wrapper");
-const cart_block = $(".cart_block");
+const cartButton = $(".cart_button");
+const cartWrapper = $("#cart_wrapper");
+const cartBlock = $(".cart_block");
 const mouseItem = $('.cursor');
 //global actions and effects
 //numbers
@@ -171,24 +171,24 @@ function navClick() {
     });
 }
 function cartCheck() {
-    // cart.click(function() {
-    //     cart_block.removeClass("cart_diff");
-    // });
-    // cart_button.click(function() {
-    //     cart_block.removeClass("cart_diff");
-    // });
+    cart.click(function() {
+        cartBlock.removeClass("cart_diff");
+    });
+    cartButton.click(function() {
+        cartBlock.removeClass("cart_diff");
+    });
     // $('.w-commerce-commercecartcloselink').click(function() {
     //     setTimeout(
     //         function() {
-    //             cart_block.addClass("cart_diff");
+    //             cartBlock.addClass("cart_diff");
     //         },
     //         500);
     // });
-    if( cart_wrapper.css('display').toLowerCase() == 'none') {
-        cart_block.addClass("cart_diff");
+    if( cartWrapper.css('display').toLowerCase() == 'none') {
+        cartBlock.addClass("cart_diff");
         console.log("it's different");
     } else {
-        cart_block.removeClass("cart_diff");
+        cartBlock.removeClass("cart_diff");
         console.log("it's normal");
     }
 }
