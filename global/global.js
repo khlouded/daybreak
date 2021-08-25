@@ -175,10 +175,12 @@ function cartCheck() {
     cart.on('click touchend', function() {
         cartBlock.removeClass("cart_diff");
         window.clearTimeout(cartTimer);
+        location.reload();
     });
     cartButton.on('click touchend', function() {
         cartBlock.removeClass("cart_diff");
         window.clearTimeout(cartTimer);
+        location.reload();
     });
     
     $('.w-commerce-commercecartcloselink').on('click touchend', function() {
@@ -187,6 +189,7 @@ function cartCheck() {
                 cartBlock.addClass("cart_diff");
             },
         400);
+        location.reload();
     });
     // if( $('#cart_wrapper').is(":visible")) {
     //     cartBlock.addClass("cart_diff");
