@@ -172,16 +172,16 @@ function navClick() {
     });
 }
 function cartCheck() {
-    cart.on('click', function() {
+    cart.on('click touchend', function() {
         cartBlock.removeClass("cart_diff");
         window.clearTimeout(cartTimer);
     });
-    cartButton.on('click', function() {
+    cartButton.on('click touchend', function() {
         cartBlock.removeClass("cart_diff");
         window.clearTimeout(cartTimer);
     });
     
-    $('.w-commerce-commercecartcloselink').on('click', function() {
+    $('.w-commerce-commercecartcloselink').on('click touchend', function() {
         cartTimer = setTimeout(
             function() {
                 cartBlock.addClass("cart_diff");
