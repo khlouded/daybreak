@@ -188,12 +188,12 @@ function cartCheck() {
             },
         400);
     });
-    if( $('#cart_wrapper').is(":visible")) {
-        cartBlock.removeClass("cart_diff");
-        console.log("it's different");
-    } else {
-        cartBlock.addClass("cart_diff");
-    }
+    // if( $('#cart_wrapper').is(":visible")) {
+    //     cartBlock.addClass("cart_diff");
+    //     console.log("it's different");
+    // } else {
+    //     cartBlock.removeClass("cart_diff");
+    // }
 }
 function navButtonFix() {
     navButt.removeAttr("href");
