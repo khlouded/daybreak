@@ -45,7 +45,7 @@ const logoHeaderWidth = 50;
 const linkTrans = $('.linktransition');
 
 function navClick() {
-    navButt.click(function () {
+    navButt.on('click', function () {
         navMenu.addClass("nav_menu");
         if ($('.home_h1_title').length){
             $('.home_h1_title').css({"z-index":"9"});
@@ -66,7 +66,7 @@ function navClick() {
         }, 10);
     });
 
-    navClose.click(function () {
+    navClose.on('click',function () {
         navText.removeClass("nav_linkShow");
         if ($('.home_h1_title').length){
             $('.home_h1_title').css({"z-index":"9"});
@@ -89,7 +89,7 @@ function navClick() {
     });
 
     // navigation links
-    navLink_event.click(function (e) {
+    navLink_event.on('click',function (e) {
         if (document.location.pathname !== "/" ){
             console.log('transition start');
             e.preventDefault();
@@ -112,25 +112,25 @@ function navClick() {
             e.preventDefault();
         }
     });
-    $('.nav_wwu').click(function (e) {
-        if (document.location.pathname !== "/contact" ){
-            console.log('transition start');
-            e.preventDefault();
+    // $('.nav_wwu').on('click',function (e) {
+    //     if (document.location.pathname !== "/contact" ){
+    //         console.log('transition start');
+    //         e.preventDefault();
 
-            let goTo = this.getAttribute("href");
+    //         let goTo = this.getAttribute("href");
 
-            window.setTimeout(function () {
-                linkTrans.addClass('tonap');
-                setTimeout(function () {
-                    console.log('transition complete');
-                    window.location = goTo;
-                }, 900);
-            }, 200);
-        } else {
-            e.preventDefault();
-        }
-    });
-    footLink.click(function (e) {
+    //         window.setTimeout(function () {
+    //             linkTrans.addClass('tonap');
+    //             setTimeout(function () {
+    //                 console.log('transition complete');
+    //                 window.location = goTo;
+    //             }, 900);
+    //         }, 200);
+    //     } else {
+    //         e.preventDefault();
+    //     }
+    // });
+    footLink.on('click',function (e) {
         if ($('#sec_footer').length){
             console.log('transition start');
             e.preventDefault();
@@ -148,7 +148,7 @@ function navClick() {
             e.preventDefault();
         }
     });
-    $('.home_link').click(function (e) {
+    $('.home_link').on('click',function (e) {
         if ($('#sec_footer').length){
             console.log('transition start');
             e.preventDefault();
@@ -172,11 +172,11 @@ function navClick() {
     });
 }
 function cartCheck() {
-    cart.on('click',function() {
+    cart.on('click', function() {
         cartBlock.removeClass("cart_diff");
         window.clearTimeout(cartTimer);
     });
-    cartButton.on('click',function() {
+    cartButton.on('click', function() {
         cartBlock.removeClass("cart_diff");
         window.clearTimeout(cartTimer);
     });
@@ -423,7 +423,7 @@ function backTransition() {
 
 function pageTransition() {
     //menu links
-    navMHome.click(function (e) {
+    navMHome.on('click', function (e) {
         if (document.location.pathname !== "/" ){
             console.log('transition start');
             e.preventDefault();
@@ -450,7 +450,7 @@ function pageTransition() {
         }
     });
 
-    navMWork.click(function (e) {
+    navMWork.on('click', function (e) {
         if (document.location.pathname !== "/work" ){
             console.log('transition start');
 
@@ -474,7 +474,7 @@ function pageTransition() {
             }, 700);
         }
     });
-    navMAbout.click(function (e) {
+    navMAbout.on('click', function (e) {
         if (document.location.pathname !== "/about" ){
             console.log('transition start');
 
@@ -503,7 +503,7 @@ function pageTransition() {
         }
     });
 
-    navMContact.click(function (e) {
+    navMContact.on('click', function (e) {
         if (document.location.pathname !== "/contact" ){
             console.log('transition start');
 
