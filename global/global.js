@@ -172,16 +172,16 @@ function navClick() {
     });
 }
 function cartCheck() {
-    cart.click(function() {
+    cart.on('click',function() {
         cartBlock.removeClass("cart_diff");
         window.clearTimeout(cartTimer);
     });
-    cartButton.click(function() {
+    cartButton.on('click',function() {
         cartBlock.removeClass("cart_diff");
         window.clearTimeout(cartTimer);
     });
     
-    $('.w-commerce-commercecartcloselink').click(function() {
+    $('.w-commerce-commercecartcloselink').on('click', function() {
         cartTimer = setTimeout(
             function() {
                 cartBlock.addClass("cart_diff");
