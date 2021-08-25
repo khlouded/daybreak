@@ -188,11 +188,11 @@ function cartCheck() {
             },
         500);
     });
-    if( $('#cart_wrapper').is("hidden")) {
-        cartBlock.addClass("cart_diff");
+    if( $('#cart_wrapper').is(":visible")) {
+        cartBlock.removeClass("cart_diff");
         console.log("it's different");
     } else {
-        cartBlock.removeClass("cart_diff");
+        cartBlock.addClass("cart_diff");
     }
 }
 function navButtonFix() {
