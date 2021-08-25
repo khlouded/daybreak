@@ -186,7 +186,7 @@ function cartCheck() {
             function() {
                 cartBlock.addClass("cart_diff");
             },
-        500);
+        400);
     });
     if( $('#cart_wrapper').is(":visible")) {
         cartBlock.removeClass("cart_diff");
