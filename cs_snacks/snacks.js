@@ -97,7 +97,7 @@ function nextSlide() {
         let goTo = this.getAttribute("href");
 
         timeout = window.setTimeout(function () {
-            linkTrans.addClass('toalmost');
+            linkTrans.addClass('toworkweek');
             setTimeout(function () {
                 console.log('transition complete');
                 window.location = goTo;
