@@ -85,6 +85,7 @@ function worksTransition() { //the LinkTrans changes colours depending on where 
     let almostLink = $(".almost_link");
     let teeLink = $(".tee_link");
     let workweekLink = $(".workweek_link");
+    let prologueLink = $(".prologue_link");
     teeLink.click(function (e) {
         console.log('transition tee');
 
@@ -163,6 +164,20 @@ function worksTransition() { //the LinkTrans changes colours depending on where 
         let goTo = this.getAttribute("href");
         window.setTimeout(function () {
             linkTrans.addClass('toworkweek');
+            setTimeout(function () {
+                console.log('transition complete');
+                window.location = goTo;
+            }, 900);
+        }, 200);
+    });
+    prologueLink.click(function (e) {
+        console.log('transition prologue');
+
+        e.preventDefault();
+
+        let goTo = this.getAttribute("href");
+        window.setTimeout(function () {
+            linkTrans.addClass('toprologue');
             setTimeout(function () {
                 console.log('transition complete');
                 window.location = goTo;
